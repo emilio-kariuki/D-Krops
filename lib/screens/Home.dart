@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
                                 child: GestureDetector(
                                   onTap:()=> Navigator.pop(context),
                                   child: BuildBar(
-                                    iconUrl: "assets/backward.json",
+                                    iconUrl: "assets/lottie/backward.json",
                                     func: () {
                                       Navigator.pop(context);
                                     },
@@ -63,7 +63,7 @@ class _HomeState extends State<Home> {
                               Padding(
                                 padding: const EdgeInsets.only(left:20,bottom:8,top: 8),
                                 child: BuildBar(
-                                  iconUrl: "assets/seetings.json",
+                                  iconUrl: "assets/lottie/seetings.json",
                                   func: () {
                                     Navigator.pop(context);
                                   },
@@ -97,13 +97,13 @@ class _HomeState extends State<Home> {
                 Positioned(
                   top: 3,
                   right: 25,
-                  child: Lottie.asset("assets/celebration.json",
+                  child: Lottie.asset("assets/lottie/celebration.json",
                       height: 200.1, width: 100.1, animate: true),
                 ),
                 Positioned(
                   top: 3,
                   left: 25,
-                  child: Lottie.asset("assets/celebration.json",
+                  child: Lottie.asset("assets/lottie/celebration.json",
                       height: 200.1, width: 100.1, animate: true),
                 ),
               ]),
