@@ -1,7 +1,11 @@
+import 'dart:io';
+
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:finalspace/build/build_appBar.dart';
 import "package:flutter/material.dart";
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:lottie/lottie.dart';
 
 class Home extends StatefulWidget {
@@ -12,6 +16,22 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  File? image;
+  ImagePicker picker = ImagePicker();
+
+  void takePhoto(ImageSource source) async {
+    final image = await picker.pickImage(source: source);
+    try {
+      if (image == null) return;
+
+      final imageTempo = File(image.path);
+      setState(() {
+        this.image = imageTempo;
+      });
+    } on PlatformException catch (e) {
+      print("Failed to pick image $e");
+    }
+  }
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
