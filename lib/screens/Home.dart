@@ -108,7 +108,7 @@ class _HomeState extends State<Home> {
                 ),
               ]),
               Lottie.asset(
-              "assets/lottie/welcome.json",
+              "assets/lottie/calendar_date.json",
               animate: true,
               height: size.height * 0.37,
               width: size.width,
