@@ -28,7 +28,7 @@ class _HomeState extends State<Home> {
                             bottomLeft: Radius.circular(40),
                             bottomRight: Radius.circular(40))),
                     child: Container(
-                      height: size.height * 0.15,
+                      height: size.height * 0.13,
                       width: size.width,
                       decoration: BoxDecoration(
                         
@@ -58,7 +58,7 @@ class _HomeState extends State<Home> {
                                   ),
                                 ),
                               ),
-                              SizedBox(width: 20),
+                              SizedBox(width: 10),
                               Text("Kenya Space Agency",style: GoogleFonts.redressed(fontSize:25,color: Colors.indigo)),
                               Padding(
                                 padding: const EdgeInsets.only(left:20,bottom:8,top: 8),
