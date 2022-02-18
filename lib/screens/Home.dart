@@ -134,6 +134,103 @@ class _HomeState extends State<Home> {
               width: size.width * 0.5,
               fit: BoxFit.fill,
             ),
-            ]))));
+             Stack(
+                        children: [
+                          Material(
+                            elevation: 10,
+                            borderRadius: BorderRadius.circular(20),
+                            child: Container(
+                              //  color: Colors.grey,
+                              child: Center(
+                                child: image != null
+                                    ? ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Image.file(
+                                          image!,
+                                          width: size.width,
+                                          height: size.height * 0.32,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      )
+                                    : Text("Select Image"),
+                              ),
+                              height: size.height * 0.3,
+                              width: size.width,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20), color: Colors.white),
+                            // image: image
+                          ),
+                        ),
+                        Positioned(
+                            top: 5,
+                            right: 5,
+                            child: IconButton(
+                                onPressed: () {
+                                  // takePhoto(ImageSource.camera);
+                                  setState(() {
+                                    showDialog<String>(
+                                      context: context,
+                                      builder: (BuildContext context) => Container(
+                                        width: size.width,
+                                        height: size.height * 0.2,
+                                        decoration: BoxDecoration(
+                                          //border: Border.all(color: Color.fromARGB(255, 182, 36, 116),width:1 ),
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: AlertDialog(
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(20)),
+                                          contentPadding: EdgeInsets.all(5),
+                                          title: const Text('choose image from: '),
+                                          content: SingleChildScrollView(
+                                            child: ListBody(children: [
+                                              ListTile(
+                                                selectedColor: Colors.grey,
+                                                onTap: () {
+                                                  takePhoto(ImageSource.camera);
+                                                  Navigator.pop(context);
+                                                },
+                                                leading: Icon(Icons.camera,
+                                                    color: Colors.blueGrey[900]),
+                                                title: Text("Camera"),
+                                              ),
+                                              ListTile(
+                                                selectedColor: Colors.grey,
+                                                onTap: () {
+                                                  setState(() {
+                                                    takePhoto(ImageSource.gallery);
+                                                    Navigator.pop(context);
+                                                  });
+                                                },
+                                                leading: Icon(Icons.layers,
+                                                    color: Colors.blueGrey[900]),
+                                                title: GestureDetector(
+                                                    onTap: () {
+                                                      setState(() {
+                                                        takePhoto(ImageSource.gallery);
+                                                        Navigator.pop(context);
+                                                      });
+                                                    },
+                                                    child: Text("Gallery")),
+                                              ),
+                                            ]),
+                                          ),
+                                        ),
+                                      ),
+                                    );
+                                  });
+                                },
+                                icon: Icon(
+                                  Icons.add_a_photo,
+                                  size: 30,
+                                  color: image !=  null ? Colors.white : Colors.black
+                                )))
+                      ],
+                    ),
+            ]
+          )
+        )
+      )
+    );
   }
 }
