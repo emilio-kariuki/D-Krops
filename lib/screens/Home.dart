@@ -16,6 +16,31 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  List<String> items = [
+    'Emilio',
+    "Kariuki",
+    "Gichuru",
+    "Jane",
+    "Rosie",
+    "Joy",
+    "Kennedy",
+    "Peter",
+    "Rachel"
+  ];
+  List<String> itemz = [
+    'Emilio',
+    "Kariuki",
+    "Gichuru",
+    "Jane",
+    "Rosie",
+    "Joy",
+    "Kennedy",
+    "Peter",
+    "Rachel"
+  ];
+
+  String ?selectedType;
+  String ?selectedVariety;
   File? image;
   ImagePicker picker = ImagePicker();
 
@@ -229,11 +254,7 @@ class _HomeState extends State<Home> {
                    )
                 ],
               ),
-              Row(
-                children: [
-                  
-                ],
-              ),
+              
             ]
           )
         )
