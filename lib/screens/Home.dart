@@ -275,7 +275,7 @@ class _HomeState extends State<Home> {
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.only(top: 10,left: 20,bottom: 4),
-                                    child: Text("Variety",
+                                    child: Text("Type of crop",
                                         style: GoogleFonts.redressed(
                                             fontSize: 22, color: Colors.indigo)),
                                   ),
@@ -365,7 +365,7 @@ class _HomeState extends State<Home> {
                                   ),
                                 ),
                 ),
-                //the second dropdown menu to be added to the app for selecting the ty
+                //the code to add the map
             ]
           )
         )
