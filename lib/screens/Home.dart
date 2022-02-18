@@ -224,9 +224,16 @@ class _HomeState extends State<Home> {
                                   Icons.add_a_photo,
                                   size: 30,
                                   color: image !=  null ? Colors.white : Colors.black
-                                )))
-                      ],
-                    ),
+                            )
+                       )
+                   )
+                ],
+              ),
+              Row(
+                children: [
+                  
+                ],
+              ),
             ]
           )
         )
