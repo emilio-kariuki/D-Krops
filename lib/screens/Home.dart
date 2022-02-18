@@ -110,8 +110,8 @@ class _HomeState extends State<Home> {
               Lottie.asset(
               "assets/lottie/calendar_date.json",
               animate: true,
-              height: size.height * 0.37,
-              width: size.width,
+              height: size.height * 0.17,
+              width: size.width * 0.5,
               fit: BoxFit.fill,
             ),
             ]))));
