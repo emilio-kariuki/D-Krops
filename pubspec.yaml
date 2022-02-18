@@ -41,6 +41,8 @@ dependencies:
   animated_text_kit: ^4.2.1
   image_picker: ^0.8.4+9
   dropdown_button2: ^1.1.1
+  google_maps_flutter: ^2.1.1
+  geolocator: ^8.2.0
 
 dev_dependencies:
   flutter_test:
