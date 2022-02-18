@@ -15,8 +15,8 @@ class BuildBox extends StatelessWidget {
       child: AnimatedContainer(
         duration: Duration(milliseconds: 500),
         padding: const EdgeInsets.all(5),
-        height: size.height * 0.07,
-        width:  size.width * 0.17,
+        height: size.height * 0.05,
+        width:  size.width * 0.15,
         decoration: BoxDecoration(
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.circular(10),
