@@ -256,6 +256,8 @@ class _HomeState extends State<Home> {
                    )
                 ],
               ),
+
+              //the code to add the dropdown menu in the app
               Padding(
                   padding: const EdgeInsets.only(left:8,right:8,top:5),
                   child: Material(
@@ -363,6 +365,7 @@ class _HomeState extends State<Home> {
                                   ),
                                 ),
                 ),
+                //the second dropdown menu to be added to the app for selecting the ty
             ]
           )
         )
