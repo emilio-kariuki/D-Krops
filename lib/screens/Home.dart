@@ -107,6 +107,13 @@ class _HomeState extends State<Home> {
                       height: 200.1, width: 100.1, animate: true),
                 ),
               ]),
+              Lottie.asset(
+              "assets/lottie/welcome.json",
+              animate: true,
+              height: size.height * 0.37,
+              width: size.width,
+              fit: BoxFit.fill,
+            ),
             ]))));
   }
 }
