@@ -1,7 +1,9 @@
 import 'dart:io';
 
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:finalspace/build/build_appBar.dart';
+import 'package:finalspace/build/lottie_contain.dart';
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -254,7 +256,113 @@ class _HomeState extends State<Home> {
                    )
                 ],
               ),
-              
+              Padding(
+                  padding: const EdgeInsets.only(left:8,right:8,top:5),
+                  child: Material(
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20)
+                      ),
+                      child: Column(
+                        children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left:5),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 10,left: 20,bottom: 4),
+                                    child: Text("Variety",
+                                        style: GoogleFonts.redressed(
+                                            fontSize: 22, color: Colors.indigo)),
+                                  ),
+                                ],
+                              ),
+                            ),
+                             Row(
+                                  children: [
+                                    Expanded(
+                                      child: Container(
+                                          margin: const EdgeInsets.only(
+                                              left: 20.0, right: 20.0),
+                                          child: Divider(
+                                            color: Color.fromARGB(255, 0, 0, 0),
+                                            height: 5,
+                                            thickness: 0.4,
+                                          )),
+                                    ),
+                                  ],
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 20, bottom: 8, top: 5),
+                                  child: Row(
+                                    children: [
+                                      LottieContain(lottieUrl: "assets/lottie/select.json"),
+                                      SizedBox(width: size.width * 0.06),
+                                      DropdownButton2(
+                                        value: selectedVariety,
+                                        onChanged: (value) {
+                                          setState(() {
+                                            selectedVariety = value as String;
+                                            print(selectedType);
+                                          });
+                                        },
+                                        icon: const Icon(
+                                          Icons.arrow_forward_ios_outlined,
+                                        ),
+                                        iconSize: 18,
+                                        iconEnabledColor: Colors.indigo,
+                                        iconDisabledColor: Color.fromARGB(255, 255, 255, 255),
+                                        buttonHeight: size.height * 0.06,
+                                        buttonWidth: size.width * 0.65,
+                                        items: items
+                                            .map((item) => DropdownMenuItem<String>(
+                                                      value: item,
+                                                      child: Text(
+                                                        item,
+                                                        style: GoogleFonts.notoSerif(
+                                                            fontSize: 18,
+                                                            color: Colors.indigo,
+                                                            fontWeight: FontWeight.w600),
+                                                        overflow: TextOverflow.ellipsis,
+                                                      ),
+                                                    ))
+                                            .toList(),
+                                        buttonPadding: const EdgeInsets.only(left: 14, right: 14),
+                                        buttonDecoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                          border: Border.all(
+                                            width: 1,
+                                            color: Color.fromARGB(255, 180, 182, 184),
+                                          ),
+                                          color: Color.fromARGB(255, 255, 255, 255),
+                                        ),
+                                        buttonElevation: 5,
+                                        
+                                        itemHeight: 40,
+                                        itemPadding: const EdgeInsets.only(left: 14, right: 14),
+                                        dropdownMaxHeight: 200,
+                                        dropdownWidth: 200,
+                                        dropdownPadding: EdgeInsets.only(top:3),
+                                        dropdownDecoration: BoxDecoration(
+                                          color: Color.fromARGB(255, 238, 235, 235),
+                                        ),
+                                        dropdownElevation: 5,
+                                        scrollbarRadius: const Radius.circular(20),
+                                        scrollbarThickness: 10,
+                                        scrollbarAlwaysShow: true,
+                                         offset: const Offset(18, -50),
+                                      ),
+                                                  ],
+                                                ),
+                                ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                ),
             ]
           )
         )

@@ -40,6 +40,7 @@ dependencies:
   intl: ^0.17.0
   animated_text_kit: ^4.2.1
   image_picker: ^0.8.4+9
+  dropdown_button2: ^1.1.1
 
 dev_dependencies:
   flutter_test:
