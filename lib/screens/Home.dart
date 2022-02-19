@@ -11,7 +11,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:lottie/lottie.dart';
-
+// import 'package:permission_handler/permission_handler.dart';
+import 'package:location_permissions/location_permissions.dart';
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -20,11 +21,13 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  
   GoogleMapController? newGoogleMapController;
   double? latitude;
   double? longitude;
   // LatLng ltPosition = LatLng(latitude!, longitude!);
   getPermission() async {
+    PermissionStatus permission = await LocationPermissions().requestPermissions();
     var locate = await Geolocator.getCurrentPosition(
       desiredAccuracy: LocationAccuracy.best,
     );
