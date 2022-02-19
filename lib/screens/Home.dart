@@ -209,9 +209,9 @@ class _HomeState extends State<Home> {
               width: size.width,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
-                  colors: [Color.fromARGB(255, 63, 202, 202), Color.fromARGB(255, 38, 191, 211),Color.fromARGB(255, 133, 132, 132)]),
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [Color.fromARGB(255, 146, 252, 252), Color.fromARGB(255, 1, 170, 192)]),
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))
               ),
               child: Column(
