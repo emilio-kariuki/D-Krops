@@ -101,6 +101,7 @@ class _HomeState extends State<Home> {
         backgroundColor: Color.fromARGB(255, 36, 47, 53),
         body: SafeArea(
             child: SingleChildScrollView(
+              physics: BouncingScrollPhysics(),
                 child: Column(children: [
           Stack(children: [
             Material(
