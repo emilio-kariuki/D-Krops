@@ -212,11 +212,11 @@ class _HomeState extends State<Home> {
               ),
               child: Column(children: [
                 
-                Stack(
+                Padding(
+                  padding: const EdgeInsets.all(25.0),
+                  child: Stack(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(30.0),
-                child: Material(
+              Material(
                   elevation: 10,
                   borderRadius: BorderRadius.circular(20),
                   child: Container(
@@ -241,72 +241,72 @@ class _HomeState extends State<Home> {
                         color: Colors.white),
                     // image: image
                   ),
-                ),
               ),
               Positioned(
-                  top: 5,
-                  right: 5,
-                  child: IconButton(
-                      onPressed: () {
-                        // takePhoto(ImageSource.camera);
-                        setState(() {
-                          showDialog<String>(
-                            context: context,
-                            builder: (BuildContext context) => Container(
-                              width: size.width,
-                              height: size.height * 0.2,
-                              decoration: BoxDecoration(
-                                //border: Border.all(color: Color.fromARGB(255, 182, 36, 116),width:1 ),
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: AlertDialog(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20)),
-                                contentPadding: EdgeInsets.all(5),
-                                title: const Text('choose image from: '),
-                                content: SingleChildScrollView(
-                                  child: ListBody(children: [
-                                    ListTile(
-                                      selectedColor: Colors.grey,
-                                      onTap: () {
-                                        takePhoto(ImageSource.camera);
-                                        Navigator.pop(context);
-                                      },
-                                      leading: Icon(Icons.camera,
-                                          color: Colors.blueGrey[900]),
-                                      title: Text("Camera"),
-                                    ),
-                                    ListTile(
-                                      selectedColor: Colors.grey,
-                                      onTap: () {
-                                        setState(() {
-                                          takePhoto(ImageSource.gallery);
+                    top: 5,
+                    right: 5,
+                    child: IconButton(
+                        onPressed: () {
+                          // takePhoto(ImageSource.camera);
+                          setState(() {
+                            showDialog<String>(
+                              context: context,
+                              builder: (BuildContext context) => Container(
+                                width: size.width,
+                                height: size.height * 0.2,
+                                decoration: BoxDecoration(
+                                  //border: Border.all(color: Color.fromARGB(255, 182, 36, 116),width:1 ),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: AlertDialog(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(20)),
+                                  contentPadding: EdgeInsets.all(5),
+                                  title: const Text('choose image from: '),
+                                  content: SingleChildScrollView(
+                                    child: ListBody(children: [
+                                      ListTile(
+                                        selectedColor: Colors.grey,
+                                        onTap: () {
+                                          takePhoto(ImageSource.camera);
                                           Navigator.pop(context);
-                                        });
-                                      },
-                                      leading: Icon(Icons.layers,
-                                          color: Colors.blueGrey[900]),
-                                      title: GestureDetector(
-                                          onTap: () {
-                                            setState(() {
-                                              takePhoto(ImageSource.gallery);
-                                              Navigator.pop(context);
-                                            });
-                                          },
-                                          child: Text("Gallery")),
-                                    ),
-                                  ]),
+                                        },
+                                        leading: Icon(Icons.camera,
+                                            color: Colors.blueGrey[900]),
+                                        title: Text("Camera"),
+                                      ),
+                                      ListTile(
+                                        selectedColor: Colors.grey,
+                                        onTap: () {
+                                          setState(() {
+                                            takePhoto(ImageSource.gallery);
+                                            Navigator.pop(context);
+                                          });
+                                        },
+                                        leading: Icon(Icons.layers,
+                                            color: Colors.blueGrey[900]),
+                                        title: GestureDetector(
+                                            onTap: () {
+                                              setState(() {
+                                                takePhoto(ImageSource.gallery);
+                                                Navigator.pop(context);
+                                              });
+                                            },
+                                            child: Text("Gallery")),
+                                      ),
+                                    ]),
+                                  ),
                                 ),
                               ),
-                            ),
-                          );
-                        });
-                      },
-                      icon: Icon(Icons.add_a_photo,
-                          size: 30,
-                          color: image != null ? Colors.white : Colors.black)))
+                            );
+                          });
+                        },
+                        icon: Icon(Icons.add_a_photo,
+                            size: 30,
+                            color: image != null ? Colors.white : Colors.black)))
             ],
           ),
+                ),
 
           //the code to add the dropdown menu in the app
           Padding(
