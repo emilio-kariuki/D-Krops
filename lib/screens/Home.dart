@@ -215,11 +215,10 @@ class _HomeState extends State<Home> {
               ),
               child: Column(
                 children: [
-                
                 Padding(
                   padding: const EdgeInsets.all(25.0),
                   child: Stack(
-            children: [
+                        children: [
               Material(
                   elevation: 10,
                   borderRadius: BorderRadius.circular(20),
@@ -308,14 +307,14 @@ class _HomeState extends State<Home> {
                         icon: Icon(Icons.add_a_photo,
                             size: 30,
                             color: image != null ? Colors.white : Colors.black)))
-            ],
-          ),
+                        ],
+                      ),
                 ),
-
-          //the code to add the dropdown menu in the app
-          Padding(
-            padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
-            child: Material(
+              
+                      //the code to add the dropdown menu in the app
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
+                        child: Material(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20)),
               child: Container(
@@ -421,12 +420,12 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
-            ),
-          ),
-          //the code to add the map\
-          Padding(
-            padding: const EdgeInsets.all(7.0),
-            child: Material(
+                        ),
+                      ),
+                      //the code to add the map\
+                      Padding(
+                        padding: const EdgeInsets.all(7.0),
+                        child: Material(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20)),
               child: Column(
@@ -487,8 +486,8 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
-            ),
-          ),
+                        ),
+                      ),
               ],)
             ),
           ),
