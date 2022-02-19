@@ -489,6 +489,25 @@ class _HomeState extends State<Home> {
               ),
               ),
               ),
+              SizedBox(height: size.height * 0.02),
+              TextButton(
+              child: Text(
+                "Add to cart".toUpperCase(),
+                style: TextStyle(fontSize: 14)
+              ),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(15)),
+                foregroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                    // side: BorderSide(color: Colors.red)
+                  )
+                )
+              ),
+              onPressed: () => null
+            ),
               ],
               )
             ),
