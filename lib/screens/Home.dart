@@ -489,22 +489,26 @@ class _HomeState extends State<Home> {
               ),
               ),
               ),
-              SizedBox(height: size.height * 0.02),
-              ElevatedButton(
-                  style: ButtonStyle(
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
-                              side: BorderSide(
-                                  color: Colors.teal, 
-                                  width: 2.0,
-                              ),
+              SizedBox(height: size.height * 0.03),
+              SizedBox(
+                height: size.height * 0.06,
+                width: size.width* 0.5,
+                child: ElevatedButton(
+                    style: ButtonStyle(
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30.0),
+                                side: BorderSide(
+                                    color: Color.fromARGB(255, 1, 160, 160), 
+                                    width: 2.0,
+                                ),
+                            ),
+                        ),
+                    ),
+                    child: Text('Submit'),
+                    onPressed: () {},
                           ),
-                      ),
-                  ),
-                  child: Text('Submit'),
-                  onPressed: () {},
-            ),
+              ),
               ],
               )
             ),
