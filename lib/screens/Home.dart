@@ -111,7 +111,7 @@ class _HomeState extends State<Home> {
                         bottomLeft: Radius.circular(40),
                         bottomRight: Radius.circular(40))),
                 child: Container(
-                  height: size.height * 0.15,
+                  height: size.height * 0.13,
                   width: size.width,
                   decoration: BoxDecoration(
                     // border: Border(bottom: BorderSide(color: Colors.blueGrey![800])),
@@ -145,16 +145,14 @@ class _HomeState extends State<Home> {
                             Text("Kenya Space Agency",
                                 style: GoogleFonts.redressed(
                                     fontSize: 25, color: Colors.indigo)),
-                            Flexible(
-                              child: Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 20, bottom: 8, top: 8),
-                                child: BuildBar(
-                                  iconUrl: "assets/lottie/seetings.json",
-                                  func: () {
-                                    Navigator.pop(context);
-                                  },
-                                ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 20, bottom: 8, top: 8),
+                              child: BuildBar(
+                                iconUrl: "assets/lottie/seetings.json",
+                                func: () {
+                                  Navigator.pop(context);
+                                },
                               ),
                             ),
                           ],
@@ -195,118 +193,115 @@ class _HomeState extends State<Home> {
                   height: 200.1, width: 100.1, animate: true),
             ),
           ]),
-          // Lottie.asset(
-          //   "assets/lottie/calendar_date.json",
-          //   animate: true,
-          //   height: size.height * 0.17,
-          //   width: size.width * 0.5,
-          //   fit: BoxFit.fill,
-          // ),
-          Padding(
-            padding: const EdgeInsets.only(top: 5),
-            child: Stack(
-              children: [
-                Material(
-                  elevation: 10,
-                  // borderRadius: BorderRadius.circular(20),
-                  child: Container(
-                    //  color: Colors.grey,
-                    child: Center(
-                      child: image != null
-                          ? ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: Image.file(
-                                image!,
-                                width: size.width,
-                                height: size.height * 0.32,
-                                fit: BoxFit.cover,
-                              ),
-                            )
-                          : Text("Select Image"),
-                    ),
-                    height: size.height * 0.3,
-                    width: size.width,
-                    // decoration: BoxDecoration(
-                    //     borderRadius: BorderRadius.circular(20),
-                    //     color: Colors.white),
-                    // image: image
+          Lottie.asset(
+            "assets/lottie/calendar_date.json",
+            animate: true,
+            height: size.height * 0.17,
+            width: size.width * 0.5,
+            fit: BoxFit.fill,
+          ),
+          Stack(
+            children: [
+              Material(
+                elevation: 10,
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  //  color: Colors.grey,
+                  child: Center(
+                    child: image != null
+                        ? ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Image.file(
+                              image!,
+                              width: size.width,
+                              height: size.height * 0.32,
+                              fit: BoxFit.cover,
+                            ),
+                          )
+                        : Text("Select Image"),
                   ),
+                  height: size.height * 0.3,
+                  width: size.width,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white),
+                  // image: image
                 ),
-                Positioned(
-                    top: 5,
-                    right: 5,
-                    child: IconButton(
-                        onPressed: () {
-                          // takePhoto(ImageSource.camera);
-                          setState(() {
-                            showDialog<String>(
-                              context: context,
-                              builder: (BuildContext context) => Container(
-                                width: size.width,
-                                height: size.height * 0.2,
-                                // decoration: BoxDecoration(
-                                //   //border: Border.all(color: Color.fromARGB(255, 182, 36, 116),width:1 ),
-                                //   borderRadius: BorderRadius.circular(10),
-                                // ),
-                                child: AlertDialog(
-                                  // shape: RoundedRectangleBorder(
-                                  //     borderRadius: BorderRadius.circular(20)),
-                                  contentPadding: EdgeInsets.all(5),
-                                  title: const Text('choose image from: '),
-                                  content: SingleChildScrollView(
-                                    child: ListBody(children: [
-                                      ListTile(
-                                        selectedColor: Colors.grey,
-                                        onTap: () {
-                                          takePhoto(ImageSource.camera);
+              ),
+              Positioned(
+                  top: 5,
+                  right: 5,
+                  child: IconButton(
+                      onPressed: () {
+                        // takePhoto(ImageSource.camera);
+                        setState(() {
+                          showDialog<String>(
+                            context: context,
+                            builder: (BuildContext context) => Container(
+                              width: size.width,
+                              height: size.height * 0.2,
+                              decoration: BoxDecoration(
+                                //border: Border.all(color: Color.fromARGB(255, 182, 36, 116),width:1 ),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: AlertDialog(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20)),
+                                contentPadding: EdgeInsets.all(5),
+                                title: const Text('choose image from: '),
+                                content: SingleChildScrollView(
+                                  child: ListBody(children: [
+                                    ListTile(
+                                      selectedColor: Colors.grey,
+                                      onTap: () {
+                                        takePhoto(ImageSource.camera);
+                                        Navigator.pop(context);
+                                      },
+                                      leading: Icon(Icons.camera,
+                                          color: Colors.blueGrey[900]),
+                                      title: Text("Camera"),
+                                    ),
+                                    ListTile(
+                                      selectedColor: Colors.grey,
+                                      onTap: () {
+                                        setState(() {
+                                          takePhoto(ImageSource.gallery);
                                           Navigator.pop(context);
-                                        },
-                                        leading: Icon(Icons.camera,
-                                            color: Colors.blueGrey[900]),
-                                        title: Text("Camera"),
-                                      ),
-                                      ListTile(
-                                        selectedColor: Colors.grey,
-                                        onTap: () {
-                                          setState(() {
-                                            takePhoto(ImageSource.gallery);
-                                            Navigator.pop(context);
-                                          });
-                                        },
-                                        leading: Icon(Icons.layers,
-                                            color: Colors.blueGrey[900]),
-                                        title: GestureDetector(
-                                            onTap: () {
-                                              setState(() {
-                                                takePhoto(ImageSource.gallery);
-                                                Navigator.pop(context);
-                                              });
-                                            },
-                                            child: Text("Gallery")),
-                                      ),
-                                    ]),
-                                  ),
+                                        });
+                                      },
+                                      leading: Icon(Icons.layers,
+                                          color: Colors.blueGrey[900]),
+                                      title: GestureDetector(
+                                          onTap: () {
+                                            setState(() {
+                                              takePhoto(ImageSource.gallery);
+                                              Navigator.pop(context);
+                                            });
+                                          },
+                                          child: Text("Gallery")),
+                                    ),
+                                  ]),
                                 ),
                               ),
-                            );
-                          });
-                        },
-                        icon: Icon(Icons.add_a_photo,
-                            size: 30,
-                            color: image != null ? Colors.white : Colors.black)))
-              ],
-            ),
+                            ),
+                          );
+                        });
+                      },
+                      icon: Icon(Icons.add_a_photo,
+                          size: 30,
+                          color: image != null ? Colors.white : Colors.black)))
+            ],
           ),
 
           //the code to add the dropdown menu in the app
           Padding(
-            padding: const EdgeInsets.only(top: 5),
+            padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
             child: Material(
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(0)),
+                  borderRadius: BorderRadius.circular(20)),
               child: Container(
                 decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(0)),
+                    BoxDecoration(borderRadius: BorderRadius.circular(20)),
                 child: Column(
                   children: [
                     Padding(
@@ -411,10 +406,10 @@ class _HomeState extends State<Home> {
           ),
           //the code to add the map\
           Padding(
-            padding: const EdgeInsets.only(top: 5),
+            padding: const EdgeInsets.all(7.0),
             child: Material(
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(0)),
+                  borderRadius: BorderRadius.circular(20)),
               child: Column(
                 children: [
                   Row(
