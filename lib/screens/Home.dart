@@ -211,7 +211,7 @@ class _HomeState extends State<Home> {
                 gradient: LinearGradient(
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
-                  colors: [Color.fromARGB(255, 112, 114, 114), Color.fromARGB(255, 154, 167, 168),Colors.white]),
+                  colors: [Color.fromARGB(255, 63, 202, 202), Color.fromARGB(255, 119, 219, 226),Colors.white]),
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))
               ),
               child: Column(
