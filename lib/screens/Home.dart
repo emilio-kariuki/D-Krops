@@ -6,7 +6,7 @@ import 'package:finalspace/build/build_appBar.dart';
 import 'package:finalspace/build/lottie_contain.dart';
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
-import 'package:geolocator/geolocator.dart';
+import 'package:geolocator/geolocator.dart' hide ServiceStatus;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:image_picker/image_picker.dart';
@@ -28,6 +28,9 @@ class _HomeState extends State<Home> {
   // LatLng ltPosition = LatLng(latitude!, longitude!);
   getPermission() async {
     PermissionStatus permission = await LocationPermissions().requestPermissions();
+    ServiceStatus serviceStatus = await LocationPermissions().checkServiceStatus();
+    bool isOpened = await LocationPermissions().openAppSettings();
+    bool isShown = await LocationPermissions().shouldShowRequestPermissionRationale();
     var locate = await Geolocator.getCurrentPosition(
       desiredAccuracy: LocationAccuracy.best,
     );
