@@ -425,7 +425,7 @@ class _HomeState extends State<Home> {
                       ),
                       //the code to add the map\
                       Padding(
-                        padding: const EdgeInsets.all(7.0),
+                        padding: const EdgeInsets.only(left:8,right:8,top:5),
                         child: Material(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20)),
