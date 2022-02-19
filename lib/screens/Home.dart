@@ -149,7 +149,7 @@ class _HomeState extends State<Home> {
                             SizedBox(width:size.width * 0.08),
                             Padding(
                               padding: const EdgeInsets.only(
-                                  bottom: 8, top: 8),
+                                  bottom: 7, top: 8),
                               child: BuildBar(
                                 iconUrl: "assets/lottie/seetings.json",
                                 func: () {
