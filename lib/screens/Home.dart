@@ -112,7 +112,7 @@ class _HomeState extends State<Home> {
                         bottomLeft: Radius.circular(40),
                         bottomRight: Radius.circular(40))),
                 child: Container(
-                  height: size.height * 0.13,
+                  height: size.height * 0.14,
                   width: size.width,
                   decoration: BoxDecoration(
                     // border: Border(bottom: BorderSide(color: Colors.blueGrey![800])),
@@ -211,7 +211,7 @@ class _HomeState extends State<Home> {
                 gradient: LinearGradient(
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
-                  colors: [Color.fromARGB(255, 160, 237, 243), Color.fromARGB(255, 136, 247, 255),Color.fromARGB(255, 255, 222, 174),Colors.white]),
+                  colors: [Color.fromARGB(255, 112, 114, 114), Color.fromARGB(255, 154, 167, 168),Colors.white]),
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))
               ),
               child: Column(
