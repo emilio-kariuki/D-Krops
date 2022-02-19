@@ -207,7 +207,10 @@ class _HomeState extends State<Home> {
               height: size.height ,
               width: size.width,
               decoration: BoxDecoration(
-                color: Colors.white,
+                gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: [Color.fromARGB(255, 130, 116, 133), Colors.blue]),
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))
               ),
               child: Column(children: [
