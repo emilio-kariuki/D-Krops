@@ -145,14 +145,16 @@ class _HomeState extends State<Home> {
                             Text("Kenya Space Agency",
                                 style: GoogleFonts.redressed(
                                     fontSize: 25, color: Colors.indigo)),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 20, bottom: 8, top: 8),
-                              child: BuildBar(
-                                iconUrl: "assets/lottie/seetings.json",
-                                func: () {
-                                  Navigator.pop(context);
-                                },
+                            Flexible(
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 20, bottom: 8, top: 8),
+                                child: BuildBar(
+                                  iconUrl: "assets/lottie/seetings.json",
+                                  func: () {
+                                    Navigator.pop(context);
+                                  },
+                                ),
                               ),
                             ),
                           ],
