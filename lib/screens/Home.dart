@@ -297,13 +297,13 @@ class _HomeState extends State<Home> {
 
           //the code to add the dropdown menu in the app
           Padding(
-            padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
+            padding: const EdgeInsets.only(top: 5),
             child: Material(
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
+                  borderRadius: BorderRadius.circular(0)),
               child: Container(
                 decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                    BoxDecoration(borderRadius: BorderRadius.circular(0)),
                 child: Column(
                   children: [
                     Padding(
@@ -408,10 +408,10 @@ class _HomeState extends State<Home> {
           ),
           //the code to add the map\
           Padding(
-            padding: const EdgeInsets.all(7.0),
+            padding: const EdgeInsets.only(top: 5),
             child: Material(
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
+                  borderRadius: BorderRadius.circular(0)),
               child: Column(
                 children: [
                   Row(
