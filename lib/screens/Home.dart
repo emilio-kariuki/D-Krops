@@ -210,10 +210,11 @@ class _HomeState extends State<Home> {
                 gradient: LinearGradient(
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
-                  colors: [Color.fromARGB(255, 130, 116, 133), Colors.blue]),
+                  colors: [Color.fromARGB(255, 160, 237, 243), Color.fromARGB(255, 136, 247, 255),Color.fromARGB(255, 255, 222, 174),Colors.white]),
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))
               ),
-              child: Column(children: [
+              child: Column(
+                children: [
                 
                 Padding(
                   padding: const EdgeInsets.all(25.0),
