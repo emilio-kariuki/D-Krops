@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 import 'dart:async';
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -9,6 +10,7 @@ import 'package:flutter/services.dart';
 import 'package:geolocator/geolocator.dart' hide ServiceStatus;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:http/http.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:lottie/lottie.dart';
 // import 'package:permission_handler/permission_handler.dart';
@@ -526,5 +528,25 @@ class _HomeState extends State<Home> {
         )
         )
         );
+  }
+   _makeGetRequest() async {
+    final url = Uri.parse(_localhost());
+    Response response = await post(url,
+    headers: {"content-type":"application/json"},
+    body: jsonEncode({
+          "id":24,
+          "first_name": "Jane",
+          "second_name": "Wanjiru",
+          "age": 28
+})
+    );
+    
+  }
+
+  String _localhost() {
+    if (Platform.isAndroid)
+      return 'http://10.0.2.2:5000/';
+    else // for iOS simulator
+      return 'http://localhost:5000/';
   }
 }
