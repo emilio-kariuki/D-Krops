@@ -160,7 +160,7 @@ class _HomeState extends State<Home> {
                                 ),
                               ),
                             ),
-                            SizedBox(width: size.width * 0.06),
+                            SizedBox(width: 10),
                             Column(
                               children: [
                                 SizedBox(height: size.height * 0.06),
@@ -170,7 +170,7 @@ class _HomeState extends State<Home> {
                                         color: Colors.indigo)),
                               ],
                             ),
-                            SizedBox(width: size.width * 0.06),
+                            SizedBox(width: 10),
                             Padding(
                               padding: const EdgeInsets.only(bottom: 7, top: 8,right:10),
                               child: BuildBar(
