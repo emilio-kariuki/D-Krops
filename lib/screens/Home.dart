@@ -139,9 +139,14 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         SizedBox(width:size.width * 0.06),
-                        Text("Kenya Space Agency",
-                            style: GoogleFonts.redressed(
-                                fontSize: size.width* 0.054, color: Colors.indigo)),
+                        Column(
+                          children: [
+                            SizedBox(height:size.width * 0.08),
+                            Text("Kenya Space Agency",
+                                style: GoogleFonts.redressed(
+                                    fontSize: size.width* 0.054, color: Colors.indigo)),
+                          ],
+                        ),
                         SizedBox(width:size.width * 0.06),
                         Padding(
                           padding: const EdgeInsets.only(
