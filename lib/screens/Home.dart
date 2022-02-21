@@ -191,7 +191,7 @@ class _HomeState extends State<Home> {
                 decoration: BoxDecoration(
                   borderRadius:  BorderRadius.circular(30),
                 ),
-                height:size.height * 0.18,
+                height:size.height * 0.1,
                 width: size.width,
                 child: Lottie.asset(
                   "assets/lottie/calendar_date.json",
