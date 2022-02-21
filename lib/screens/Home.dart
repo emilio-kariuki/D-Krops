@@ -236,18 +236,18 @@ class _HomeState extends State<Home> {
                 height: size.height * 0.5,
                 width: size.width,
                 decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: [
-                          Color.fromARGB(255, 224, 149, 243),
-                          Color.fromARGB(255, 255, 58, 255)
-                        ]),
+                    // gradient: LinearGradient(
+                    //     begin: Alignment.topLeft,
+                    //     end: Alignment.bottomRight,
+                    //     colors: [
+                    //       Color.fromARGB(255, 224, 149, 243),
+                    //       Color.fromARGB(255, 255, 58, 255)
+                    //     ]),
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30),
                         topRight: Radius.circular(30))),
                 child: Scaffold(
-                    backgroundColor: Color.fromARGB(255, 177, 176, 176),
+                    backgroundColor: Color.fromARGB(255, 73, 168, 206),
                     body: SingleChildScrollView(
                       child: Column(
                         children: [
