@@ -79,6 +79,8 @@ class _HomeState extends State<Home> {
     'Tomatoes',
     "potatoes",
     'capcicum',
+    'coriander',
+    ''
   ];
 
   String? selectedType;
