@@ -145,7 +145,7 @@ class _HomeState extends State<Home> {
                       children: [
                         SizedBox(height: size.height * 0.01),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(
