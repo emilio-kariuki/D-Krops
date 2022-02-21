@@ -401,12 +401,14 @@ class _HomeState extends State<Home> {
                               padding: const EdgeInsets.only(
                                   left: 8, right: 8, top: 5),
                               child: Material(
+                                
                                 elevation: 20,
                                 // shadowColor: Color.fromARGB(255, 34, 43, 48),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20)),
                                 child: Container(
                                   decoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 36, 47, 53),
                                       borderRadius: BorderRadius.circular(20)),
                                   child: Column(
                                     children: [
@@ -422,7 +424,7 @@ class _HomeState extends State<Home> {
                                               child: Text("Type of crop",
                                                   style: GoogleFonts.redressed(
                                                       fontSize: 22,
-                                                      color: Colors.indigo)),
+                                                      color: Colors.white)),
                                             ),
                                           ],
                                         ),
@@ -537,7 +539,7 @@ class _HomeState extends State<Home> {
                             padding: const EdgeInsets.only(
                                 left: 8, right: 8, top: 5),
                             child: Material(
-                                color: Colors.blueGrey[800],
+                                color: Color.fromARGB(255, 36, 47, 53),
                                 elevation: 20,
                                 shadowColor: Color.fromARGB(255, 163, 165, 165),
                                 shape: RoundedRectangleBorder(
@@ -557,7 +559,7 @@ class _HomeState extends State<Home> {
                                               child: Text("Choose Location",
                                                   style: GoogleFonts.redressed(
                                                       fontSize: 22,
-                                                      color: Colors.indigo)),
+                                                      color: Colors.white)),
                                             ),
                                           ],
                                         ),
