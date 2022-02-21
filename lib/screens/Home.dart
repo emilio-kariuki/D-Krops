@@ -518,6 +518,7 @@ class _HomeState extends State<Home> {
                   onPressed: () {},
                         ),
                 ),
+                SizedBox(height: size.height * 0.02),
                 ],
                 ),
               )
