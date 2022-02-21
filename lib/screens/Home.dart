@@ -80,6 +80,7 @@ class _HomeState extends State<Home> {
     "potatoes",
     'capcicum',
     'coriander',
+    'pumpkins',
     ''
   ];
 
