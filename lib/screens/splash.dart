@@ -12,6 +12,14 @@ class Splash extends StatefulWidget {
 }
 
 class _SplashState extends State<Splash> {
+  Route _createRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => const Home(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      return child;
+    },
+  );
+}
   @override
   void initState() {
     super.initState();
@@ -19,8 +27,9 @@ class _SplashState extends State<Splash> {
         const Duration(seconds: 5),
         () => Navigator.pushReplacement(
               context,
-              MaterialPageRoute(builder: (context) => Home()),
+              _createRoute(),
             ));
+            
   }
 
   @override
