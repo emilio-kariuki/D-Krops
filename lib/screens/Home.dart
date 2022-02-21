@@ -209,6 +209,7 @@ class _HomeState extends State<Home> {
                       topRight: Radius.circular(30))),
               child: Container(
                 decoration: BoxDecoration(
+                  color: Colors.blueGrey[800],
                   borderRadius: BorderRadius.circular(30),
                 ),
                 height: size.height * 0.1,
@@ -245,7 +246,7 @@ class _HomeState extends State<Home> {
                         topLeft: Radius.circular(30),
                         topRight: Radius.circular(30))),
                 child: Scaffold(
-                    backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                    backgroundColor: Color.fromARGB(255, 122, 121, 121),
                     body: SingleChildScrollView(
                       child: Column(
                         children: [
