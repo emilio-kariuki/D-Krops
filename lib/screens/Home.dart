@@ -543,8 +543,8 @@ class _HomeState extends State<Home> {
                 ],
                 ),
                 Positioned(
-                    top: 3,
-                    right: 25,
+                    top: 10,
+                    right: 35,
                     child: Lottie.asset("assets/lottie/celebration.json",
                     height: 200.1, width: 100.1, animate: true),
                   ),
