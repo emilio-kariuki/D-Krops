@@ -70,7 +70,7 @@ class _HomeState extends State<Home> {
     "spinach",
     "kales",
     "beans",
-    "Rosie",
+    "cabbage",
     "Joy",
     "Kennedy",
     "Peter",
