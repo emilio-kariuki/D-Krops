@@ -259,6 +259,7 @@ class _HomeState extends State<Home> {
                                   borderRadius: BorderRadius.circular(20),
                                   child: Container(
                                     //  color: Colors.grey,
+                                    color: Color.fromARGB(255, 36, 47, 53),
                                     child: Center(
                                       child: image != null
                                           ? ClipRRect(
@@ -271,7 +272,7 @@ class _HomeState extends State<Home> {
                                                 fit: BoxFit.cover,
                                               ),
                                             )
-                                          : Text("Select Image"),
+                                          : Text("Select Image",style: GoogleFonts.roboto(color: Colors.white)),
                                     ),
                                     height: size.height * 0.3,
                                     width: size.width,
