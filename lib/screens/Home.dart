@@ -583,18 +583,14 @@ class _HomeState extends State<Home> {
     body: jsonEncode({
           "type": selectedType,
           "x_coordinate": latitude,
-          "second_name": longitude,
-          
-})
+          "y_coordinate": longitude
+   })
     );
-    
   }
-
   String _localhost() {
     if (Platform.isAndroid)
       return 'http://10.0.2.2:5000/';
     else // for iOS simulator
       return 'http://localhost:5000/';
   }
-   
 }
