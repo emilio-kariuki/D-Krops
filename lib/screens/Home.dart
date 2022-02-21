@@ -209,13 +209,13 @@ class _HomeState extends State<Home> {
               decoration: BoxDecoration(
                 borderRadius:  BorderRadius.circular(30),
               ),
-              height:size.height * 0.3,
+              height:size.height * 0.18,
               width: size.width,
               child: Lottie.asset(
                 "assets/lottie/calendar_date.json",
                 animate: true,
-                height: size.height * 0.28,
-                width: size.width * 0.9,
+                height: size.height * 0.18,
+                width: size.width * 0.6,
                 fit: BoxFit.fill,
               ),
             ),
@@ -235,13 +235,13 @@ class _HomeState extends State<Home> {
             borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))
               ),
               child: Scaffold(
-                backgroundColor: Color.fromARGB(255, 31, 191, 202),              
+                backgroundColor: Color.fromARGB(255, 174, 175, 174),              
                 body: Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
-                  colors: [Color.fromARGB(255, 174, 175, 174), Color.fromARGB(255, 18, 19, 19)]),
+                  colors: [Color.fromARGB(255, 255, 255, 255), Color.fromARGB(255, 117, 117, 117)]),
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))
               ),
                   child: SingleChildScrollView(
