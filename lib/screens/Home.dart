@@ -222,8 +222,8 @@ class _HomeState extends State<Home> {
             borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))
               ),
               child: Column(
-            children: [
-            Padding(
+                        children: [
+              Padding(
               padding: const EdgeInsets.only(left:8,right: 8,top: 20),
               child: Stack(
                     children: [
@@ -317,7 +317,7 @@ class _HomeState extends State<Home> {
                         color: image != null ? Colors.white : Colors.black)))
                     ],
                   ),
-            ),
+                        ),
               
                   //the code to add the dropdown menu in the app
                   Padding(
@@ -326,9 +326,9 @@ class _HomeState extends State<Home> {
               shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20)),
               child: Container(
-            decoration:
+                        decoration:
                 BoxDecoration(borderRadius: BorderRadius.circular(20)),
-            child: Column(
+                        child: Column(
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 5),
@@ -426,7 +426,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ],
-            ),
+                        ),
               ),
                     ),
                   ),
@@ -437,7 +437,7 @@ class _HomeState extends State<Home> {
               shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20)),
               child: Column(
-            children: [
+                        children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -492,15 +492,15 @@ class _HomeState extends State<Home> {
                   // image: image
                 ),
               ),
-            ],
+                        ],
               ),
               ),
               ),
               SizedBox(height: size.height * 0.03),
               SizedBox(
-            height: size.height * 0.06,
-            width: size.width* 0.5,
-            child: ElevatedButton(
+                        height: size.height * 0.06,
+                        width: size.width* 0.5,
+                        child: ElevatedButton(
                 style: ButtonStyle(
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
