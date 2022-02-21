@@ -350,13 +350,22 @@ class _HomeState extends State<Home> {
                       padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
                       child: Material(
                         elevation:20,
-                        shadowColor: Color.fromARGB(255, 34, 43, 48),
+                        // shadowColor: Color.fromARGB(255, 34, 43, 48),
                         shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
                         child: Container(
                                   decoration:
-                          BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                                  child: Column(
+                          BoxDecoration(
+                            boxShadow: [
+                          BoxShadow(
+                            color: Color.fromARGB(255, 27, 35, 39).withOpacity(0.6),
+                            spreadRadius: 5,
+                            blurRadius: 7,
+                            offset: Offset(0, 3), // changes position of shadow
+                          ),
+                        ],
+                            borderRadius: BorderRadius.circular(20)),
+                            child: Column(
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 5),
