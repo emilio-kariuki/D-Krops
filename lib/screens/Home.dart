@@ -246,7 +246,8 @@ class _HomeState extends State<Home> {
                 child: Stack(
                       children: [
                 Material(
-                elevation: 10,
+                  shadowColor: Colors.blueGrey[800],
+                elevation: 20,
                 borderRadius: BorderRadius.circular(20),
                 child: Container(
                   //  color: Colors.grey,
