@@ -560,7 +560,7 @@ class _HomeState extends State<Home> {
                       ),
                   ),
                   child: Text('Submit'),
-                  onPressed: () {},
+                  onPressed: _makeGetRequest,
                         ),
                 ),
                 SizedBox(height: size.height * 0.02),
