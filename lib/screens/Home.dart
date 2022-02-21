@@ -202,6 +202,7 @@ class _HomeState extends State<Home> {
           SizedBox(height: 5),
           Expanded(
             child: Material(
+              color: Colors.blueGrey[800],
               elevation: 10,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.only(
