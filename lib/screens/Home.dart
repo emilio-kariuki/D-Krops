@@ -212,7 +212,7 @@ class _HomeState extends State<Home> {
             elevation: 30,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))),
             child: Container(
-              height: size.height*0.52 ,
+              height: size.height*0.5 ,
               width: size.width,
               decoration: BoxDecoration(
             gradient: LinearGradient(
