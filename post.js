@@ -4,6 +4,15 @@ const app = express();
 const client = new Client({
     host: "localhost",
     password: "postgress",
+    port: 5432,
     database:"Space",
-    username:"postgres",
-})
+    user:"postgres"
+});
+
+client.on('connect', ()=>{
+    console.log("Connection started")
+});
+client.on('end',()=>{
+    console.log("Connected finished")
+});
+
