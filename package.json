@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/emilio-kariuki/finalspace/issues"
   },
-  "homepage": "https://github.com/emilio-kariuki/finalspace#readme"
+  "homepage": "https://github.com/emilio-kariuki/finalspace#readme",
+  "dependencies": {
+    "pg": "^8.7.3"
+  }
 }
