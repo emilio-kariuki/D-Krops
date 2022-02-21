@@ -202,21 +202,23 @@ class _HomeState extends State<Home> {
             ),
           ]),
           SizedBox(height: 5),
-          Material(
-            elevation: 10,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight:Radius.circular(30))),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius:  BorderRadius.circular(30),
-              ),
-              height:size.height * 0.18,
-              width: size.width,
-              child: Lottie.asset(
-                "assets/lottie/calendar_date.json",
-                animate: true,
-                height: size.height * 0.18,
-                width: size.width * 0.6,
-                fit: BoxFit.fill,
+          SliverFillRemaining(
+            child: Material(
+              elevation: 10,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight:Radius.circular(30))),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius:  BorderRadius.circular(30),
+                ),
+                height:size.height * 0.18,
+                width: size.width,
+                child: Lottie.asset(
+                  "assets/lottie/calendar_date.json",
+                  animate: true,
+                  height: size.height * 0.18,
+                  width: size.width * 0.6,
+                  fit: BoxFit.fill,
+                ),
               ),
             ),
           ),
