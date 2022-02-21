@@ -222,7 +222,8 @@ class _HomeState extends State<Home> {
             borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))
               ),
               child: Scaffold(
-              body: SingleChildScrollView(
+                backgroundColor: Colors.blueGrey[800],              
+                body: SingleChildScrollView(
                 child: Column(
                           children: [
                 Padding(
