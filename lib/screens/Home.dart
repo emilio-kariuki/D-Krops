@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
         await LocationPermissions().requestPermissions();
     ServiceStatus serviceStatus =
         await LocationPermissions().checkServiceStatus();
-    bool isOpened = await LocationPermissions().openAppSettings();
+    // bool isOpened = await LocationPermissions().openAppSettings();
     bool isShown =
         await LocationPermissions().shouldShowRequestPermissionRationale();
     var locate = await Geolocator.getCurrentPosition(
