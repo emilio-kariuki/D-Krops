@@ -138,7 +138,7 @@ class _HomeState extends State<Home> {
                             ),
                           ),
                         ),
-                        SizedBox(width:size.width * 0.08),
+                        SizedBox(width:size.width * 0.06),
                         Text("Kenya Space Agency",
                             style: GoogleFonts.redressed(
                                 fontSize: 25, color: Colors.indigo)),
