@@ -166,13 +166,13 @@ class _HomeState extends State<Home> {
                                 SizedBox(height: size.height * 0.06),
                                 Text("Kenya Space Agency",
                                     style: GoogleFonts.redressed(
-                                      fontSize: textScale * 16,
+                                      fontSize: 25,
                                         color: Colors.indigo)),
                               ],
                             ),
                             SizedBox(width: size.width * 0.06),
                             Padding(
-                              padding: const EdgeInsets.only(bottom: 7, top: 8),
+                              padding: const EdgeInsets.only(bottom: 7, top: 8,right:10),
                               child: BuildBar(
                                 iconUrl: "assets/lottie/seetings.json",
                                 func: () {
