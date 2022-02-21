@@ -231,11 +231,11 @@ class _HomeState extends State<Home> {
             gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [Color.fromARGB(255, 148, 226, 236), Color.fromARGB(255, 31, 40, 44)]),
+              colors: [Color.fromARGB(255, 224, 149, 243), Color.fromARGB(255, 162, 249, 255)]),
             borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))
               ),
               child: Scaffold(
-                backgroundColor: Color.fromARGB(255, 255, 255, 255),              
+                backgroundColor: Color.fromARGB(255, 31, 191, 202),              
                 body: Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
