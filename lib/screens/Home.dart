@@ -255,11 +255,12 @@ class _HomeState extends State<Home> {
                             child: Stack(
                               children: [
                                 Material(
+                                  color: Color.fromARGB(255, 36, 47, 53),
                                   elevation: 20,
                                   borderRadius: BorderRadius.circular(20),
                                   child: Container(
                                     //  color: Colors.grey,
-                                    color: Color.fromARGB(255, 36, 47, 53),
+                                    // color: Color.fromARGB(255, 36, 47, 53),
                                     child: Center(
                                       child: image != null
                                           ? ClipRRect(
@@ -277,6 +278,7 @@ class _HomeState extends State<Home> {
                                     height: size.height * 0.3,
                                     width: size.width,
                                     decoration: BoxDecoration(
+                                      color: Color.fromARGB(255, 36, 47, 53),
                                         boxShadow: [
                                           BoxShadow(
                                             color: Color.fromARGB(
