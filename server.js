@@ -15,3 +15,7 @@ app.post('/',(req,res) =>{
         console.log(err.message)
     }
 });
+
+app.listen(port,hostname, ()=>{
+    console.log('Server Running...')
+})
