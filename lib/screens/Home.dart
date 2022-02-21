@@ -201,13 +201,26 @@ class _HomeState extends State<Home> {
               height: 200.1, width: 100.1, animate: true),
             ),
           ]),
-          Lottie.asset(
-            "assets/lottie/calendar_date.json",
-            animate: true,
-            height: size.height * 0.3,
-            width: size.width * 0.9,
-            fit: BoxFit.fill,
+          SizedBox(height: 5),
+          Material(
+            elevation: 10,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight:Radius.circular(30))),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius:  BorderRadius.circular(30),
+              ),
+              height:size.height * 0.3,
+              width: size.width,
+              child: Lottie.asset(
+                "assets/lottie/calendar_date.json",
+                animate: true,
+                height: size.height * 0.28,
+                width: size.width * 0.9,
+                fit: BoxFit.fill,
+              ),
+            ),
           ),
+          SizedBox(height: 5),
           Material(
             elevation: 30,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))),
