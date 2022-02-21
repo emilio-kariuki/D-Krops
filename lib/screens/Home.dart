@@ -155,25 +155,7 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: AnimatedTextKit(
-                        animatedTexts: [
-                          WavyAnimatedText(
-                            'Date',
-                            textStyle: GoogleFonts.redressed(
-                                fontSize: 29,
-                                color: Colors.indigo,
-                                fontWeight: FontWeight.w600),
-                            speed: const Duration(milliseconds: 400),
-                          ),
-                        ],
-                        totalRepeatCount: 100,
-                        pause: const Duration(milliseconds: 1000),
-                        displayFullTextOnTap: true,
-                        stopPauseOnTap: true,
-                      ),
-                    ),
+                    
                   ],
                 ),
               ),
