@@ -71,17 +71,7 @@ class _HomeState extends State<Home> {
     "Peter",
     "Rachel"
   ];
-  List<String> itemz = [
-    'Emilio',
-    "Kariuki",
-    "Gichuru",
-    "Jane",
-    "Rosie",
-    "Joy",
-    "Kennedy",
-    "Peter",
-    "Rachel"
-  ];
+  
 
   String? selectedType;
   String? selectedVariety;
