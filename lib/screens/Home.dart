@@ -246,7 +246,7 @@ class _HomeState extends State<Home> {
                 child: Stack(
                       children: [
                 Material(
-                  shadowColor: Colors.blueGrey[800],
+                  shadowColor: Color.fromARGB(255, 38, 49, 54),
                 elevation: 20,
                 borderRadius: BorderRadius.circular(20),
                 child: Container(
@@ -342,28 +342,30 @@ class _HomeState extends State<Home> {
                     Padding(
                       padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
                       child: Material(
-                shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20)),
-                child: Container(
-                          decoration:
-                  BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                          child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              top: 10, left: 20, bottom: 4),
-                          child: Text("Type of crop",
-                              style: GoogleFonts.redressed(
-                                  fontSize: 22, color: Colors.indigo)),
+                        elevation:20,
+                        shadowColor: Color.fromARGB(255, 34, 43, 48),
+                        shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                        child: Container(
+                                  decoration:
+                          BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                                  child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 10, left: 20, bottom: 4),
+                                  child: Text("Type of crop",
+                                      style: GoogleFonts.redressed(
+                                      fontSize: 22, color: Colors.indigo)),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                  ),
+                      ),
                   Row(
                     children: [
                       Expanded(
