@@ -202,7 +202,7 @@ class _HomeState extends State<Home> {
             ),
           ]),
           SizedBox(height: 5),
-          SliverFillRemaining(
+          Expanded(
             child: Material(
               elevation: 10,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight:Radius.circular(30))),
