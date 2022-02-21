@@ -478,7 +478,7 @@ class _HomeState extends State<Home> {
                       padding: const EdgeInsets.only(left:8,right:8,top:5),
                       child: Material(
                         elevation: 20,
-                        shadowColor: Color.fromARGB(255, 24, 32, 36),
+                        shadowColor: Color.fromARGB(255, 163, 165, 165),
                 shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20)),
                 child: Column(
