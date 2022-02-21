@@ -498,7 +498,7 @@ class _HomeState extends State<Home> {
                 ),
                 ),
                 ),
-                SizedBox(height: size.height * 0.03),
+                SizedBox(height: size.height * 0.02),
                 SizedBox(
                           height: size.height * 0.06,
                           width: size.width* 0.5,
