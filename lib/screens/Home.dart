@@ -241,7 +241,7 @@ class _HomeState extends State<Home> {
                   gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
-                  colors: [Color.fromARGB(255, 125, 126, 124), Color.fromARGB(255, 30, 253, 179)]),
+                  colors: [Color.fromARGB(255, 174, 175, 174), Color.fromARGB(255, 18, 19, 19)]),
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))
               ),
                   child: SingleChildScrollView(
