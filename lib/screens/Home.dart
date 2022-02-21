@@ -289,7 +289,7 @@ class _HomeState extends State<Home> {
                                           ),
                                         ],
                                         borderRadius: BorderRadius.circular(20),
-                                        color: Colors.white),
+                                        ),
                                     // image: image
                                   ),
                                 ),
