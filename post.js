@@ -1,5 +1,5 @@
 const { Client } = require('pg');
-const app = express();
+
 
 const client = new Client({
     host: "localhost",
