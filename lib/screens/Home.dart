@@ -139,51 +139,48 @@ class _HomeState extends State<Home> {
                     color: Colors.white,
                     shape: BoxShape.rectangle,
                   ),
-                  child: Expanded(
-                    flex: 1,
-                    child: Column(
-                      children: [
-                        SizedBox(height: size.height * 0.01),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 18, bottom: 8, top: 8),
-                              child: GestureDetector(
-                                onTap: () => Navigator.pop(context),
-                                child: BuildBar(
-                                  iconUrl: "assets/lottie/backward.json",
-                                  func: () {
-                                    Navigator.pop(context);
-                                  },
-                                ),
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            Column(
-                              children: [
-                                SizedBox(height: size.height * 0.06),
-                                Text("Kenya Space Agency",
-                                    style: GoogleFonts.redressed(
-                                      fontSize: 25,
-                                        color: Colors.indigo)),
-                              ],
-                            ),
-                            SizedBox(width: 10),
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 7, top: 8,right:10),
+                  child: Column(
+                    children: [
+                      SizedBox(height: size.height * 0.01),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                left: 18, bottom: 8, top: 8),
+                            child: GestureDetector(
+                              onTap: () => Navigator.pop(context),
                               child: BuildBar(
-                                iconUrl: "assets/lottie/seetings.json",
+                                iconUrl: "assets/lottie/backward.json",
                                 func: () {
                                   Navigator.pop(context);
                                 },
                               ),
                             ),
-                          ],
-                        ),
-                      ],
-                    ),
+                          ),
+                          SizedBox(width: 10),
+                          Column(
+                            children: [
+                              SizedBox(height: size.height * 0.06),
+                              Text("Kenya Space Agency",
+                                  style: GoogleFonts.redressed(
+                                    fontSize: 25,
+                                      color: Colors.indigo)),
+                            ],
+                          ),
+                          SizedBox(width: 10),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 7, top: 8,right:10),
+                            child: BuildBar(
+                              iconUrl: "assets/lottie/seetings.json",
+                              func: () {
+                                Navigator.pop(context);
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 )),
             Positioned(
