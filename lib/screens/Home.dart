@@ -268,7 +268,7 @@ class _HomeState extends State<Home> {
                   decoration: BoxDecoration(
                       boxShadow: [
                           BoxShadow(
-                            color: Color.fromARGB(255, 27, 35, 39).withOpacity(0.6),
+                            color: Color.fromARGB(255, 163, 165, 165).withOpacity(0.6),
                             spreadRadius: 5,
                             blurRadius: 7,
                             offset: Offset(0, 3), // changes position of shadow
@@ -350,7 +350,7 @@ class _HomeState extends State<Home> {
                       decoration: BoxDecoration(
                          boxShadow: [
                           BoxShadow(
-                            color: Color.fromARGB(255, 27, 35, 39).withOpacity(0.4),
+                            color: Color.fromARGB(255, 163, 165, 165).withOpacity(0.4),
                             spreadRadius: 5,
                             blurRadius: 7,
                             offset: Offset(0, 3), // changes position of shadow
