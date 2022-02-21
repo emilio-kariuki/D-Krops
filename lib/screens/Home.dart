@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'dart:convert';
 import 'dart:io';
 import 'dart:async';
@@ -31,7 +33,7 @@ class _HomeState extends State<Home> {
   getPermission() async {
     PermissionStatus permission = await LocationPermissions().requestPermissions();
     ServiceStatus serviceStatus = await LocationPermissions().checkServiceStatus();
-     bool isOpened = await LocationPermissions().openAppSettings();
+    bool isOpened = await LocationPermissions().openAppSettings();
     bool isShown = await LocationPermissions().shouldShowRequestPermissionRationale();
     var locate = await Geolocator.getCurrentPosition(
       desiredAccuracy: LocationAccuracy.best,
