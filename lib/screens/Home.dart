@@ -199,7 +199,7 @@ class _HomeState extends State<Home> {
                   height: 200.1, width: 100.1, animate: true),
             ),
           ]),
-          SizedBox(height: 5),
+          SizedBox(height: 10),
           Expanded(
             child: Material(
               color: Colors.blueGrey[800],
