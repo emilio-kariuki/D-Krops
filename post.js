@@ -1,4 +1,4 @@
-const express = require('pg');
+const { Client } = require('pg');
 const app = express();
 
 const client = new Client({
@@ -16,3 +16,4 @@ client.on('end',()=>{
     console.log("Connected finished")
 });
 
+module.exports = client;
