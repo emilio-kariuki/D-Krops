@@ -142,7 +142,7 @@ class _HomeState extends State<Home> {
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(
-                                  left: 17, bottom: 8, top: 8),
+                                  left: 18, bottom: 8, top: 8),
                               child: GestureDetector(
                                 onTap: () => Navigator.pop(context),
                                 child: BuildBar(
