@@ -74,7 +74,7 @@ class _HomeState extends State<Home> {
   
 
   String? selectedType;
-  String? selectedVariety;
+  // String? selectedVariety;
   File? image;
   ImagePicker picker = ImagePicker();
 
@@ -400,10 +400,10 @@ class _HomeState extends State<Home> {
                           LottieContain(lottieUrl: "assets/lottie/select.json"),
                           SizedBox(width: size.width * 0.06),
                           DropdownButton2(
-                            value: selectedVariety,
+                            value: selectedType,
                             onChanged: (value) {
                               setState(() {
-                                selectedVariety = value as String;
+                                selectedType = value as String;
                                 print(selectedType);
                               });
                             },
@@ -575,6 +575,26 @@ class _HomeState extends State<Home> {
         )
         )
         );
+  }
+  _makeGetRequest() async {
+    final url = Uri.parse(_localhost());
+    Response response = await post(url,
+    headers: {"content-type":"application/json"},
+    body: jsonEncode({
+          "type": selectedType,
+          "x_coordinate": latitude,
+          "second_name": longitude,
+          
+})
+    );
+    
+  }
+
+  String _localhost() {
+    if (Platform.isAndroid)
+      return 'http://10.0.2.2:5000/';
+    else // for iOS simulator
+      return 'http://localhost:5000/';
   }
    
 }
