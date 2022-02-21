@@ -108,6 +108,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final textScale = MediaQuery.of(context).textScaleFactor;
     return Scaffold(
         backgroundColor: Color.fromARGB(255, 36, 47, 53),
         body: SafeArea(
@@ -158,6 +159,7 @@ class _HomeState extends State<Home> {
                                 SizedBox(height: size.height * 0.06),
                                 Text("Kenya Space Agency",
                                     style: GoogleFonts.redressed(
+                                      fontSize: textScale * 16,
                                         color: Colors.indigo)),
                               ],
                             ),
