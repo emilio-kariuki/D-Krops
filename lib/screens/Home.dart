@@ -412,7 +412,7 @@ class _HomeState extends State<Home> {
                                     borderRadius: BorderRadius.circular(20)),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                    color: Color.fromARGB(255, 36, 47, 53),
+                                    color: Colors.blueGrey[800],
                                       borderRadius: BorderRadius.circular(20)),
                                   child: Column(
                                     children: [
@@ -543,7 +543,7 @@ class _HomeState extends State<Home> {
                             padding: const EdgeInsets.only(
                                 left: 8, right: 8, top: 5),
                             child: Material(
-                                color: Color.fromARGB(255, 36, 47, 53),
+                                color: Colors.blueGrey[800],
                                 elevation: 20,
                                 shadowColor: Color.fromARGB(255, 163, 165, 165),
                                 shape: RoundedRectangleBorder(
