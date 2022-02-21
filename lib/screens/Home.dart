@@ -200,7 +200,8 @@ class _HomeState extends State<Home> {
               child: Lottie.asset("assets/lottie/celebration.json",
               height: 200.1, width: 100.1, animate: true),
             ),
-          ]),
+          ]
+          ),
           SizedBox(height: 5),
           Expanded(
             child: Material(
@@ -481,7 +482,9 @@ class _HomeState extends State<Home> {
                         shadowColor: Color.fromARGB(255, 163, 165, 165),
                 shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20)),
-                child: Column(
+                child: Stack(
+                children: [
+                  Column(
                           children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -537,8 +540,11 @@ class _HomeState extends State<Home> {
                     // image: image
                   ),
                 ),
-                          ],
+                ],
                 ),
+                ],
+                
+                )
                 ),
                 ),
                 SizedBox(height: size.height * 0.02),
