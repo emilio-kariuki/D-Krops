@@ -529,24 +529,5 @@ class _HomeState extends State<Home> {
         )
         );
   }
-   _makeGetRequest() async {
-    final url = Uri.parse(_localhost());
-    Response response = await post(url,
-    headers: {"content-type":"application/json"},
-    body: jsonEncode({
-          "id":24,
-          "first_name": "Jane",
-          "second_name": "Wanjiru",
-          "age": 28
-})
-    );
-    
-  }
-
-  String _localhost() {
-    if (Platform.isAndroid)
-      return 'http://10.0.2.2:5000/';
-    else // for iOS simulator
-      return 'http://localhost:5000/';
-  }
+   
 }
