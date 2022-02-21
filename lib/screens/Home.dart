@@ -640,7 +640,7 @@ class _HomeState extends State<Home> {
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(30.0),
                                     side: BorderSide(
-                                      color: Color.fromARGB(255, 1, 160, 160),
+                                      color: Color.fromARGB(255, 36, 47, 53),
                                       width: 2.0,
                                     ),
                                   ),
