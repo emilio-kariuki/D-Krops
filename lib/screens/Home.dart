@@ -66,10 +66,10 @@ class _HomeState extends State<Home> {
     zoom: 14.4746,
   );
   List<String> items = [
-    'Emilio',
-    "Kariuki",
-    "Gichuru",
-    "Jane",
+    'maize',
+    "spinach",
+    "kales",
+    "beans",
     "Rosie",
     "Joy",
     "Kennedy",
