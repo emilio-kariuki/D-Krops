@@ -4,5 +4,6 @@ const app = express();
 const client = new Client({
     host: "localhost",
     password: "postgress",
-    database:"space"
+    database:"Space",
+    username:"postgres",
 })
