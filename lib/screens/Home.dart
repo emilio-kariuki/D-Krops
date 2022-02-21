@@ -490,7 +490,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     SizedBox(width: 20),
-                    LottieContain(lottieUrl: "assets/lottie/map.json"),
+                    
                     Padding(
                       padding: const EdgeInsets.only(top: 10),
                       child: Text("Choose Location",
