@@ -279,7 +279,7 @@ class _HomeState extends State<Home> {
                                     height: size.height * 0.3,
                                     width: size.width,
                                     decoration: BoxDecoration(
-                                      color: Color.fromARGB(255, 36, 47, 53),
+                                      color: Colors.blueGrey[800],
                                         boxShadow: [
                                           BoxShadow(
                                             color: Color.fromARGB(
