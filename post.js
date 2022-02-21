@@ -15,5 +15,6 @@ client.on('connect', ()=>{
 client.on('end',()=>{
     console.log("Connected finished")
 });
+client.connect();
 
 module.exports = client;
