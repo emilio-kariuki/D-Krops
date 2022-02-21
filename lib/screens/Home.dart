@@ -635,6 +635,7 @@ class _HomeState extends State<Home> {
                             width: size.width * 0.5,
                             child: ElevatedButton(
                               style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(Color.fromARGB(255, 36, 47, 53)),
                                 // MaterialStateProperty<Color?>?
                                 shape: MaterialStateProperty.all<
                                     RoundedRectangleBorder>(
@@ -647,7 +648,7 @@ class _HomeState extends State<Home> {
                                   ),
                                 ),
                               ),
-                              child: Text('Submit'),
+                              child: Text('Submit',style: GoogleFonts.roboto(fontSize: 20)),
                               onPressed: _makeGetRequest,
                             ),
                           ),
