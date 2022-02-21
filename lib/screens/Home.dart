@@ -122,6 +122,7 @@ class _HomeState extends State<Home> {
                 flex: 1,
                 child: Column(
                   children: [
+                    SizedBox(height:size.height* 0.01),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -141,7 +142,7 @@ class _HomeState extends State<Home> {
                         SizedBox(width:size.width * 0.06),
                         Column(
                           children: [
-                            SizedBox(height:size.width * 0.08),
+                            SizedBox(height:size.height * 0.06),
                             Text("Kenya Space Agency",
                                 style: GoogleFonts.redressed(
                                     fontSize: size.width* 0.054, color: Colors.indigo)),
