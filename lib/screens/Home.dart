@@ -247,7 +247,7 @@ class _HomeState extends State<Home> {
                         topLeft: Radius.circular(30),
                         topRight: Radius.circular(30))),
                 child: Scaffold(
-                    backgroundColor: Color.fromARGB(255, 122, 121, 121),
+                    backgroundColor: Color.fromARGB(255, 177, 176, 176),
                     body: SingleChildScrollView(
                       child: Column(
                         children: [
