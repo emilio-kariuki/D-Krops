@@ -30,7 +30,7 @@ class _SplashState extends State<Splash> {
       backgroundColor: Color.fromARGB(239, 35, 156, 255),
       extendBodyBehindAppBar: true,
       body: Stack(children: [
-        Lottie.asset("assets/update_splash.json",
+        Lottie.asset("assets/lottie/update_splash.json",
             width: size.width, height: size.height * 2),
         Positioned(
             bottom: size.height * 0.31,
