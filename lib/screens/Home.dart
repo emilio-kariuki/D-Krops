@@ -159,14 +159,16 @@ class _HomeState extends State<Home> {
                           //   ),
                           // ),
                           SizedBox(width: 50),
-                          Column(
-                            children: [
-                              SizedBox(height: size.height * 0.06),
-                              Text("Small-Scale Mapping",
-                                  style: GoogleFonts.redressed(
-                                    fontSize: 25,
-                                      color: Colors.indigo)),
-                            ],
+                          Center(
+                            child: Column(
+                              children: [
+                                SizedBox(height: size.height * 0.06),
+                                Text("Small-Scale Mapping",
+                                    style: GoogleFonts.redressed(
+                                      fontSize: 25,
+                                        color: Colors.indigo)),
+                              ],
+                            ),
                           ),
                           SizedBox(width: 10),
                           Padding(
