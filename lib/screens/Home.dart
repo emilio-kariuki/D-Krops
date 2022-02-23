@@ -141,9 +141,9 @@ class _HomeState extends State<Home> {
                   ),
                   child: Column(
                     children: [
-                      SizedBox(height: size.height * 0.01),
+                      // SizedBox(height: size.height * 0.01),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           // Padding(
                           //   padding: const EdgeInsets.only(
@@ -158,28 +158,28 @@ class _HomeState extends State<Home> {
                           //     ),
                           //   ),
                           // ),
-                          SizedBox(width: 50),
+                          
                           Center(
                             child: Column(
                               children: [
                                 SizedBox(height: size.height * 0.06),
                                 Text("Small-Scale Mapping",
                                     style: GoogleFonts.redressed(
-                                      fontSize: 25,
+                                      fontSize: 28,
                                         color: Colors.indigo)),
                               ],
                             ),
                           ),
                           SizedBox(width: 10),
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 7, top: 8,right:10),
-                            child: BuildBar(
-                              iconUrl: "assets/lottie/seetings.json",
-                              func: () {
-                                Navigator.pop(context);
-                              },
-                            ),
-                          ),
+                          // Padding(
+                          //   padding: const EdgeInsets.only(bottom: 7, top: 8,right:10),
+                          //   child: BuildBar(
+                          //     iconUrl: "assets/lottie/seetings.json",
+                          //     func: () {
+                          //       Navigator.pop(context);
+                          //     },
+                          //   ),
+                          // ),
                         ],
                       ),
                     ],
