@@ -145,24 +145,24 @@ class _HomeState extends State<Home> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                left: 18, bottom: 8, top: 8),
-                            child: GestureDetector(
-                              onTap: () => Navigator.pop(context),
-                              child: BuildBar(
-                                iconUrl: "assets/lottie/backward.json",
-                                func: () {
-                                  Navigator.pop(context);
-                                },
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 10),
+                          // Padding(
+                          //   padding: const EdgeInsets.only(
+                          //       left: 18, bottom: 8, top: 8),
+                          //   child: GestureDetector(
+                          //     onTap: () => Navigator.pop(context),
+                          //     child: BuildBar(
+                          //       iconUrl: "assets/lottie/backward.json",
+                          //       func: () {
+                          //         Navigator.pop(context);
+                          //       },
+                          //     ),
+                          //   ),
+                          // ),
+                          SizedBox(width: 50),
                           Column(
                             children: [
                               SizedBox(height: size.height * 0.06),
-                              Text("Kenya Space Agency",
+                              Text("Small-Scale Mapping",
                                   style: GoogleFonts.redressed(
                                     fontSize: 25,
                                       color: Colors.indigo)),
