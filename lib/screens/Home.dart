@@ -682,7 +682,7 @@ class _HomeState extends State<Home> {
 
   String _localhost() {
     if (Platform.isAndroid)
-      return 'http://192.168.137.150:5000/';
+      return 'http://192.168.137.150:44574/';
     else // for iOS simulator
       return 'http://localhost:5000/';
   }
