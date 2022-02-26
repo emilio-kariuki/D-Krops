@@ -673,16 +673,19 @@ class _HomeState extends State<Home> {
     Response response = await post(url,
         headers: {"content-type": "application/json"},
         body: jsonEncode({
-          // "type": selectedType,
+           "type": selectedType,
           "x_coordinate": latitude,
           "y_coordinate": longitude,
+          "lat":lat,
+          "long":long,
+          "pic_path": image?.path,
           
         }));
   }
 
   String _localhost() {
     if (Platform.isAndroid)
-      return 'http://192.168.137.150:44574/';
+      return 'http://10.0.2.2:5000/';
     else // for iOS simulator
       return 'http://localhost:5000/';
   }
