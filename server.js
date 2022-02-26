@@ -10,7 +10,7 @@ app.post('/',(req,res) =>{
     try{
         const {x_coordinate,y_coordinate,lat,long} = req.body;
         const dbt = client.query("INSERT INTO upload(x_coordinate,y_coordinate,geom)VALUES($1,$2,$3,$4)",
-        [x_coordinate,y_coordinate,format('ST_SetSRID(ST_MakePoint(${lat}, $long), 4326)')]);
+        [x_coordinate,y_coordinate,format('ST_SetSRID(ST_MakePoint($${lat}, $long), 4326)')]);
         res.json(dbt);
 
     }catch(err){
