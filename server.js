@@ -9,7 +9,7 @@ app.post('/',(req,res) =>{
     try{
         const {type,x_coordinate,y_coordinate,pic_path,lat,long,} = req.body;
         const dbt = client.query("INSERT INTO upload(x_coordinate,y_coordinate,picture,geom,type)VALUES($1,$2,$3,$4,$5)",
-        [x_coordinate,y_coordinate,pg_read_file(pic_path), ]);
+        [x_coordinate,y_coordinate,pg_read_file(pic_path),ST_SetSRID(ST_MakePoint(long, lat), 4326),type ]);
         res.json(dbt);
 
     }catch(err){
