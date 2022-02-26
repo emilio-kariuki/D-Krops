@@ -9,7 +9,7 @@ app.post('/',(req,res) =>{
     try{
         const {type,x_coordinate,y_coordinate,pic,lat,long,} = req.body;
         const dbt = client.query("INSERT INTO upload(x_coordinate,y_coordinate,picture,geom,type)VALUES($1,$2,$3,$4,$5)",
-        [type,x_coordinate,y_coordinate]);
+        [x_coordinate,y_coordinate,]);
         res.json(dbt);
 
     }catch(err){
