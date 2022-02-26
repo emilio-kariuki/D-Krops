@@ -29,6 +29,9 @@ class _HomeState extends State<Home> {
   GoogleMapController? newGoogleMapController;
   double? latitude;
   double? longitude;
+  double? lat;
+  double? long;
+
   // LatLng ltPosition = LatLng(latitude!, longitude!);
   getPermission() async {
     PermissionStatus permission =
@@ -44,6 +47,8 @@ class _HomeState extends State<Home> {
     // print(locate.longitude);
     latitude = locate.latitude;
     longitude = locate.longitude;
+    lat = locate.latitude;
+    long = locate.longitude;
   }
 
   getLocation() {
@@ -158,15 +163,14 @@ class _HomeState extends State<Home> {
                           //     ),
                           //   ),
                           // ),
-                          
+
                           Center(
                             child: Column(
                               children: [
                                 SizedBox(height: size.height * 0.06),
                                 Text("Small-Scale Mapping",
                                     style: GoogleFonts.redressed(
-                                      fontSize: 28,
-                                        color: Colors.indigo)),
+                                        fontSize: 28, color: Colors.indigo)),
                               ],
                             ),
                           ),
@@ -274,25 +278,27 @@ class _HomeState extends State<Home> {
                                                 fit: BoxFit.cover,
                                               ),
                                             )
-                                          : Text("Select Image",style: GoogleFonts.roboto(color: Colors.white)),
+                                          : Text("Select Image",
+                                              style: GoogleFonts.roboto(
+                                                  color: Colors.white)),
                                     ),
                                     height: size.height * 0.3,
                                     width: size.width,
                                     decoration: BoxDecoration(
                                       color: Colors.blueGrey[800],
-                                        boxShadow: [
-                                          BoxShadow(
-                                            color: Color.fromARGB(
-                                                    255, 163, 165, 165)
-                                                .withOpacity(0.6),
-                                            spreadRadius: 5,
-                                            blurRadius: 7,
-                                            offset: Offset(0,
-                                                3), // changes position of shadow
-                                          ),
-                                        ],
-                                        borderRadius: BorderRadius.circular(20),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color:
+                                              Color.fromARGB(255, 163, 165, 165)
+                                                  .withOpacity(0.6),
+                                          spreadRadius: 5,
+                                          blurRadius: 7,
+                                          offset: Offset(0,
+                                              3), // changes position of shadow
                                         ),
+                                      ],
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
                                     // image: image
                                   ),
                                 ),
@@ -405,14 +411,13 @@ class _HomeState extends State<Home> {
                               padding: const EdgeInsets.only(
                                   left: 8, right: 8, top: 5),
                               child: Material(
-                                
                                 elevation: 20,
                                 // shadowColor: Color.fromARGB(255, 34, 43, 48),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20)),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                    color: Colors.blueGrey[800],
+                                      color: Colors.blueGrey[800],
                                       borderRadius: BorderRadius.circular(20)),
                                   child: Column(
                                     children: [
@@ -636,7 +641,8 @@ class _HomeState extends State<Home> {
                             width: size.width * 0.5,
                             child: ElevatedButton(
                               style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(Color.fromARGB(255, 36, 47, 53)),
+                                backgroundColor: MaterialStateProperty.all(
+                                    Color.fromARGB(255, 36, 47, 53)),
                                 // MaterialStateProperty<Color?>?
                                 shape: MaterialStateProperty.all<
                                     RoundedRectangleBorder>(
@@ -649,7 +655,8 @@ class _HomeState extends State<Home> {
                                   ),
                                 ),
                               ),
-                              child: Text('Submit',style: GoogleFonts.roboto(fontSize: 20)),
+                              child: Text('Submit',
+                                  style: GoogleFonts.roboto(fontSize: 20)),
                               onPressed: _makeGetRequest,
                             ),
                           ),
