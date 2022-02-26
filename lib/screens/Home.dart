@@ -678,7 +678,7 @@ class _HomeState extends State<Home> {
           "y_coordinate": longitude,
           "lat":lat,
           "long":long,
-          "pic_path": image?.path,
+          "pic_path": image
           
         }));
   }
