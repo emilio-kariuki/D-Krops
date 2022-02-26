@@ -673,10 +673,9 @@ class _HomeState extends State<Home> {
     Response response = await post(url,
         headers: {"content-type": "application/json"},
         body: jsonEncode({
-          "type": selectedType,
+          // "type": selectedType,
           "x_coordinate": latitude,
           "y_coordinate": longitude,
-          "pic_path": image?.path,
           "lat":lat,
           "long":long
         }));
