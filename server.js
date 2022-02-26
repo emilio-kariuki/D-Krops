@@ -8,9 +8,9 @@ const client = require('./post');
 
 app.post('/',(req,res) =>{
     try{
-        const {x_coordinate,y_coordinate,pic_path} = req.body;
-        const dbt = client.query("INSERT INTO trer(x_coordinate,y_coordinate,geom,picture)VALUES($1,$2)",
-        [x_coordinate,y_coordinate]);
+        const {x_coordinate,y_coordinate,pic_path,lat,long,type} = req.body;
+        const dbt = client.query("INSERT INTO trer(x_coordinate,y_coordinate,geom,picture,type)VALUES($1,$2,$3,$4,$5)",
+        [x_coordinate,y_coordinate,bytea(pic_path),type]);
         res.json(dbt);
 
     }catch(err){
