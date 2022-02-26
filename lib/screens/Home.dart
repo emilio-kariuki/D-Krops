@@ -675,7 +675,10 @@ class _HomeState extends State<Home> {
         body: jsonEncode({
           "type": selectedType,
           "x_coordinate": latitude,
-          "y_coordinate": longitude
+          "y_coordinate": longitude,
+          "pic_path": image?.path,
+          "lat":lat,
+          "long":long
         }));
   }
 
