@@ -52,6 +52,7 @@ dependencies:
   permission_handler: ^9.1.0
   location_permissions: ^4.0.1
   http: ^0.13.4
+  auto_size_text: ^3.0.0
 
 dev_dependencies:
   flutter_test:
