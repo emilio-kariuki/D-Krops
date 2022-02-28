@@ -664,9 +664,13 @@ class _HomeState extends State<Home> {
                             shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.all(Radius.circular(20.0))),
                             title: Text(""),
-                            content: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Lottie.asset("assets/lottie/success.json",height:size.height * 0.17),
+                            content: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment:MainAxisAlignment.center,
+                              children: [
+                                Lottie.asset("assets/lottie/successful.json",height:size.height * 0.21),
+                                Text('Successful', style: GoogleFonts.roboto(fontSize: 20)),
+                              ],
                             ),
                           );
                           });
