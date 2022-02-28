@@ -128,7 +128,7 @@ class _HomeState extends State<Home> {
           Stack(children: [
             Material(
                 elevation: 20,
-                shadowColor: Color.fromARGB(255, 97, 94, 94),
+                shadowColor: Color.fromARGB(255, 255, 255, 255),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(40),
@@ -141,7 +141,7 @@ class _HomeState extends State<Home> {
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(40),
                         bottomRight: Radius.circular(40)),
-                    color: Colors.white,
+                    color: Color.fromARGB(255, 14, 14, 20),
                     shape: BoxShape.rectangle,
                   ),
                   child: Column(
