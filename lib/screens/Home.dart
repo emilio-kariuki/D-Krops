@@ -608,30 +608,8 @@ class _HomeState extends State<Home> {
                       Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                  height: size.height * 0.06,
-                  width: size.width * 0.36,
-                  child: ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          Color.fromARGB(255, 14, 14, 20)),
-                      // MaterialStateProperty<Color?>?
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                          side: BorderSide(
-                            color: Color.fromARGB(255, 14, 14, 20),
-                            width: 2.0,
-                          ),
-                        ),
-                      ),
-                    ),
-                    child:
-                        Text('Submit', style: GoogleFonts.roboto(fontSize: 20)),
-                    onPressed: _makeGetRequest,
-                  ),
-                ),
-                SizedBox(width: size.width * 0.08),
+                
+                
                 SizedBox(
                   height: size.height * 0.06,
                   width: size.width * 0.36,
@@ -654,6 +632,30 @@ class _HomeState extends State<Home> {
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
+                  ),
+                ),
+                SizedBox(width: size.width * 0.08),
+                SizedBox(
+                  height: size.height * 0.06,
+                  width: size.width * 0.36,
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          Color.fromARGB(255, 14, 14, 20)),
+                      // MaterialStateProperty<Color?>?
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                          side: BorderSide(
+                            color: Color.fromARGB(255, 14, 14, 20),
+                            width: 2.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                    child:
+                        Text('Submit', style: GoogleFonts.roboto(fontSize: 20)),
+                    onPressed: _makeGetRequest,
                   ),
                 ),
               ],
