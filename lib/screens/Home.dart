@@ -140,7 +140,7 @@ class _HomeState extends State<Home> {
     final textScale = MediaQuery.of(context).textScaleFactor;
     return Scaffold(
       
-        // backgroundColor: Color.fromARGB(239, 35, 156, 255),
+        // backgroundColor: Color.fromARGB(255, 255, 255, 255),
         body: SafeArea(
             child: SingleChildScrollView(
       child: Column(children: [
@@ -160,7 +160,7 @@ class _HomeState extends State<Home> {
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(40),
                       bottomRight: Radius.circular(40)),
-                  color: Color.fromARGB(239, 35, 156, 255),
+                  color: Color.fromARGB(255, 14, 14, 20),
                   shape: BoxShape.rectangle,
                 ),
                 child: Column(
