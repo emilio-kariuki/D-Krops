@@ -167,7 +167,7 @@ class _HomeState extends State<Home> {
                           Center(
                             child: Column(
                               children: [
-                                SizedBox(height: size.height * 0.03),
+                                SizedBox(height: size.height * 0.032),
                                 Text("Small-Scale Mapping",
                                     style: GoogleFonts.redressed(
                                         fontSize: 28, color: Color.fromARGB(255, 224, 225, 228))),
