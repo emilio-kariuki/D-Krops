@@ -659,11 +659,12 @@ class _HomeState extends State<Home> {
                         Text('Submit', style: GoogleFonts.roboto(fontSize: 20)),
                     onPressed: () {
                       setState(() {
-                        // _makeGetRequest;
-                        CupertinoAlertDialog(
-                          title: Text("Success"),
-                          content: Text("Saved successfully"),
-                        );
+                        showDialog(context: context, builder: (BuildContext context){
+                          return CupertinoAlertDialog(
+                            title: Text("Success"),
+                            content: Text("Saved successfully"),
+                          );
+                          });
                       });
                     },
                   ),
