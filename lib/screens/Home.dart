@@ -122,13 +122,13 @@ class _HomeState extends State<Home> {
     final size = MediaQuery.of(context).size;
     final textScale = MediaQuery.of(context).textScaleFactor;
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        // backgroundColor: Color.fromARGB(255, 255, 255, 255),
         body: SafeArea(
             child: Column(children: [
           Stack(children: [
             Material(
                 elevation: 20,
-                shadowColor: Color.fromARGB(255, 255, 255, 255),
+                // shadowColor: Color.fromARGB(255, 255, 255, 255),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(40),
