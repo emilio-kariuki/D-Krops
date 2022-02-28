@@ -653,7 +653,14 @@ class _HomeState extends State<Home> {
                     ),
                     child:
                         Text('Submit', style: GoogleFonts.roboto(fontSize: 20)),
-                    onPressed: _makeGetRequest,
+                    onPressed: (){
+                      setState(()async{
+                        _makeGetRequest;
+                        await alertDialog(
+                          context,
+                          );
+                      });
+                    },
                   ),
                 ),
               ],
