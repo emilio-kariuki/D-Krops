@@ -28,24 +28,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  Future alertDialog( BuildContext context) {
-  return showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text('Done'),
-          content: Text('Add Success'),
-          actions: <Widget>[
-            FlatButton(
-              child: Text('Ok'),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        );
-      });
-}
   GoogleMapController? newGoogleMapController;
   double? latitude;
   double? longitude;
@@ -671,14 +653,7 @@ class _HomeState extends State<Home> {
                     ),
                     child:
                         Text('Submit', style: GoogleFonts.roboto(fontSize: 20)),
-                    onPressed: (){
-                      setState(()async{
-                        _makeGetRequest;
-                        await alertDialog(
-                          context,
-                          );
-                      });
-                    },
+                    onPressed: _makeGetRequest,
                   ),
                 ),
               ],
