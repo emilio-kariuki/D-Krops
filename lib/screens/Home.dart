@@ -660,7 +660,7 @@ class _HomeState extends State<Home> {
                     onPressed: () {
                       setState(() {
                         showDialog(context: context, builder: (BuildContext context){
-                          return CupertinoAlertDialog(
+                          return AlertDialog(
                             title: Text("Success"),
                             content: Lottie.asset("assets/lottie/success.json",height:50),
                           );
