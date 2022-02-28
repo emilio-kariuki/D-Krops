@@ -302,6 +302,7 @@ class _HomeState extends State<Home> {
                                       //   ),
                                       // ],
                                       borderRadius: BorderRadius.circular(20),
+                                      border: Border.all(color: Color.fromARGB(255, 14, 14, 20),width:1),
                                     ),
                                     // image: image
                                   ),
@@ -320,6 +321,7 @@ class _HomeState extends State<Home> {
                                                 width: size.width,
                                                 height: size.height * 0.2,
                                                 decoration: BoxDecoration(
+                                                  border: Border.all(color: Color.fromARGB(255, 14, 14, 20),width:1),
                                                   //border: Border.all(color: Color.fromARGB(255, 182, 36, 116),width:1 ),
                                                   borderRadius:
                                                       BorderRadius.circular(10),
