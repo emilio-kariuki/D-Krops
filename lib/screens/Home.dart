@@ -229,30 +229,33 @@ class _HomeState extends State<Home> {
           //   ),
           // ),
           // SizedBox(height: 5),
-          Material(
-            elevation: 30,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30))),
-            child: Container(
-                height: size.height * 0.5,
-                width: size.width,
-                decoration: BoxDecoration(
-                    // gradient: LinearGradient(
-                    //     begin: Alignment.topLeft,
-                    //     end: Alignment.bottomRight,
-                    //     colors: [
-                    //       Color.fromARGB(255, 224, 149, 243),
-                    //       Color.fromARGB(255, 255, 58, 255)
-                    //     ]),
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(30),
-                        topRight: Radius.circular(30))),
-                child: Scaffold(
-                    backgroundColor: Color.fromARGB(255, 206, 206, 206),
-                    body: SingleChildScrollView(
-                      child: Column(
+          // Material(
+          //   elevation: 30,
+          //   shape: RoundedRectangleBorder(
+          //       borderRadius: BorderRadius.only(
+          //           topLeft: Radius.circular(30),
+          //           topRight: Radius.circular(30))),
+          //   child: Container(
+          //       height: size.height * 0.5,
+          //       width: size.width,
+          //       decoration: BoxDecoration(
+          //           // gradient: LinearGradient(
+          //           //     begin: Alignment.topLeft,
+          //           //     end: Alignment.bottomRight,
+          //           //     colors: [
+          //           //       Color.fromARGB(255, 224, 149, 243),
+          //           //       Color.fromARGB(255, 255, 58, 255)
+          //           //     ]),
+          //           borderRadius: BorderRadius.only(
+          //               topLeft: Radius.circular(30),
+          //               topRight: Radius.circular(30))),
+          //       child: Scaffold(
+          //           backgroundColor: Color.fromARGB(255, 206, 206, 206),
+          //           body: SingleChildScrollView(
+          //             child: 
+          //           ))),
+          // ),
+          Column(
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(
@@ -663,8 +666,6 @@ class _HomeState extends State<Home> {
                           SizedBox(height: size.height * 0.02),
                         ],
                       ),
-                    ))),
-          ),
         ])));
   }
 
