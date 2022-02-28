@@ -661,10 +661,12 @@ class _HomeState extends State<Home> {
                       setState(() {
                         showDialog(context: context, builder: (BuildContext context){
                           return AlertDialog(
+                            shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(20.0))),
                             title: Text(""),
                             content: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Lottie.asset("assets/lottie/success.json",height:size.height * 0.2),
+                              child: Lottie.asset("assets/lottie/success.json",height:size.height * 0.17),
                             ),
                           );
                           });
