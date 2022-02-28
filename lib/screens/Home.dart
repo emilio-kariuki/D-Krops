@@ -203,31 +203,31 @@ class _HomeState extends State<Home> {
             ),
           ]),
           SizedBox(height: 10),
-          Expanded(
-            child: Material(
-              color: Colors.blueGrey[800],
-              elevation: 10,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30),
-                      topRight: Radius.circular(30))),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.blueGrey[800],
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                height: size.height * 0.1,
-                width: size.width,
-                child: Lottie.asset(
-                  "assets/lottie/calendar_date.json",
-                  animate: true,
-                  height: size.height * 0.02,
-                  width: size.width * 0.4,
-                  fit: BoxFit.fill,
-                ),
-              ),
-            ),
-          ),
+          // Expanded(
+          //   child: Material(
+          //     color: Colors.blueGrey[800],
+          //     elevation: 10,
+          //     shape: RoundedRectangleBorder(
+          //         borderRadius: BorderRadius.only(
+          //             topLeft: Radius.circular(30),
+          //             topRight: Radius.circular(30))),
+          //     child: Container(
+          //       decoration: BoxDecoration(
+          //         color: Colors.blueGrey[800],
+          //         borderRadius: BorderRadius.circular(30),
+          //       ),
+          //       height: size.height * 0.1,
+          //       width: size.width,
+          //       child: Lottie.asset(
+          //         "assets/lottie/calendar_date.json",
+          //         animate: true,
+          //         height: size.height * 0.02,
+          //         width: size.width * 0.4,
+          //         fit: BoxFit.fill,
+          //       ),
+          //     ),
+          //   ),
+          // ),
           SizedBox(height: 5),
           Material(
             elevation: 30,
