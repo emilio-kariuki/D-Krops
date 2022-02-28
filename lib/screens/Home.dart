@@ -1,4 +1,4 @@
-// ignore_for_file: unused_local_variable, curly_braces_in_flow_control_structures
+// ignore_for_file: unused_local_variable, curly_braces_in_flow_control_structures, avoid_print, duplicate_ignore
 
 import 'dart:convert';
 import 'dart:io';
