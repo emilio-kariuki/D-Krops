@@ -134,7 +134,7 @@ class _HomeState extends State<Home> {
                         bottomLeft: Radius.circular(40),
                         bottomRight: Radius.circular(40))),
                 child: Container(
-                  height: size.height * 0.1,
+                  height: size.height * 0.11,
                   width: size.width,
                   decoration: BoxDecoration(
                     // border: Border(bottom: BorderSide(color: Colors.blueGrey![800])),
@@ -170,7 +170,9 @@ class _HomeState extends State<Home> {
                                 SizedBox(height: size.height * 0.03),
                                 Text("Small-Scale Mapping",
                                     style: GoogleFonts.redressed(
-                                        fontSize: 28, color: Color.fromARGB(255, 224, 225, 228))),
+                                        fontSize: 28,
+                                        color: Color.fromARGB(
+                                            255, 224, 225, 228))),
                               ],
                             ),
                           ),
@@ -252,450 +254,396 @@ class _HomeState extends State<Home> {
           //       child: Scaffold(
           //           backgroundColor: Color.fromARGB(255, 206, 206, 206),
           //           body: SingleChildScrollView(
-          //             child: 
+          //             child:
           //           ))),
           // ),
           Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 8, right: 8, top: 20),
+                child: Stack(
+                  children: [
+                    Material(
+                      color: Color.fromARGB(255, 36, 47, 53),
+                      elevation: 20,
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        //  color: Colors.grey,
+                        // color: Color.fromARGB(255, 36, 47, 53),
+                        child: Center(
+                          child: image != null
+                              ? ClipRRect(
+                                  borderRadius: BorderRadius.circular(20),
+                                  child: Image.file(
+                                    image!,
+                                    width: size.width,
+                                    height: size.height * 0.32,
+                                    fit: BoxFit.cover,
+                                  ),
+                                )
+                              : Text("Select Image",
+                                  style:
+                                      GoogleFonts.roboto(color: Colors.white)),
+                        ),
+                        height: size.height * 0.3,
+                        width: size.width,
+                        decoration: BoxDecoration(
+                          color: Colors.blueGrey[800],
+                          // boxShadow: [
+                          //   BoxShadow(
+                          //     color:
+                          //         Color.fromARGB(255, 255, 255, 255)
+                          //             .withOpacity(0.6),
+                          //     spreadRadius: 5,
+                          //     blurRadius: 7,
+                          //     offset: Offset(0,
+                          //         3), // changes position of shadow
+                          //   ),
+                          // ],
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        // image: image
+                      ),
+                    ),
+                    Positioned(
+                        top: 5,
+                        right: 5,
+                        child: IconButton(
+                            onPressed: () {
+                              // takePhoto(ImageSource.camera);
+                              setState(() {
+                                showDialog<String>(
+                                  context: context,
+                                  builder: (BuildContext context) => Container(
+                                    width: size.width,
+                                    height: size.height * 0.2,
+                                    decoration: BoxDecoration(
+                                      //border: Border.all(color: Color.fromARGB(255, 182, 36, 116),width:1 ),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: AlertDialog(
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(20)),
+                                      contentPadding: EdgeInsets.all(5),
+                                      title: const Text('choose image from: '),
+                                      content: SingleChildScrollView(
+                                        child: ListBody(children: [
+                                          ListTile(
+                                            selectedColor: Colors.grey,
+                                            onTap: () {
+                                              takePhoto(ImageSource.camera);
+                                              Navigator.pop(context);
+                                            },
+                                            leading: Icon(Icons.camera,
+                                                color: Colors.blueGrey[900]),
+                                            title: Text("Camera"),
+                                          ),
+                                          ListTile(
+                                            selectedColor: Colors.grey,
+                                            onTap: () {
+                                              setState(() {
+                                                takePhoto(ImageSource.gallery);
+                                                Navigator.pop(context);
+                                              });
+                                            },
+                                            leading: Icon(Icons.layers,
+                                                color: Colors.blueGrey[900]),
+                                            title: GestureDetector(
+                                                onTap: () {
+                                                  setState(() {
+                                                    takePhoto(
+                                                        ImageSource.gallery);
+                                                    Navigator.pop(context);
+                                                  });
+                                                },
+                                                child: Text("Gallery")),
+                                          ),
+                                        ]),
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              });
+                            },
+                            icon: Icon(Icons.add_a_photo,
+                                size: 30,
+                                color: image != null
+                                    ? Colors.white
+                                    : Colors.black)))
+                  ],
+                ),
+              ),
+
+              //the code to add the dropdown menu in the app
+              Container(
+                decoration: BoxDecoration(
+                  // boxShadow: [
+                  //   BoxShadow(
+                  //     color: Color.fromARGB(255, 255, 255, 255)
+                  //         .withOpacity(0.4),
+                  //     spreadRadius: 5,
+                  //     blurRadius: 7,
+                  //     offset: Offset(
+                  //         0, 3), // changes position of shadow
+                  //   ),
+                  // ],
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
+                  child: Material(
+                    elevation: 20,
+                    // shadowColor: Color.fromARGB(255, 34, 43, 48),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.blueGrey[800],
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(
-                                left: 8, right: 8, top: 20),
-                            child: Stack(
+                            padding: const EdgeInsets.only(left: 5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Material(
-                                  color: Color.fromARGB(255, 36, 47, 53),
-                                  elevation: 20,
-                                  borderRadius: BorderRadius.circular(20),
-                                  child: Container(
-                                    //  color: Colors.grey,
-                                    // color: Color.fromARGB(255, 36, 47, 53),
-                                    child: Center(
-                                      child: image != null
-                                          ? ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(20),
-                                              child: Image.file(
-                                                image!,
-                                                width: size.width,
-                                                height: size.height * 0.32,
-                                                fit: BoxFit.cover,
-                                              ),
-                                            )
-                                          : Text("Select Image",
-                                              style: GoogleFonts.roboto(
-                                                  color: Colors.white)),
-                                    ),
-                                    height: size.height * 0.3,
-                                    width: size.width,
-                                    decoration: BoxDecoration(
-                                      color: Colors.blueGrey[800],
-                                      // boxShadow: [
-                                      //   BoxShadow(
-                                      //     color:
-                                      //         Color.fromARGB(255, 255, 255, 255)
-                                      //             .withOpacity(0.6),
-                                      //     spreadRadius: 5,
-                                      //     blurRadius: 7,
-                                      //     offset: Offset(0,
-                                      //         3), // changes position of shadow
-                                      //   ),
-                                      // ],
-                                      borderRadius: BorderRadius.circular(20),
-                                    ),
-                                    // image: image
-                                  ),
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 10, left: 20, bottom: 4),
+                                  child: Text("Type of crop",
+                                      style: GoogleFonts.redressed(
+                                          fontSize: 22, color: Colors.white)),
                                 ),
-                                Positioned(
-                                    top: 5,
-                                    right: 5,
-                                    child: IconButton(
-                                        onPressed: () {
-                                          // takePhoto(ImageSource.camera);
-                                          setState(() {
-                                            showDialog<String>(
-                                              context: context,
-                                              builder: (BuildContext context) =>
-                                                  Container(
-                                                width: size.width,
-                                                height: size.height * 0.2,
-                                                decoration: BoxDecoration(
-                                                  //border: Border.all(color: Color.fromARGB(255, 182, 36, 116),width:1 ),
-                                                  borderRadius:
-                                                      BorderRadius.circular(10),
-                                                ),
-                                                child: AlertDialog(
-                                                  shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              20)),
-                                                  contentPadding:
-                                                      EdgeInsets.all(5),
-                                                  title: const Text(
-                                                      'choose image from: '),
-                                                  content:
-                                                      SingleChildScrollView(
-                                                    child: ListBody(children: [
-                                                      ListTile(
-                                                        selectedColor:
-                                                            Colors.grey,
-                                                        onTap: () {
-                                                          takePhoto(ImageSource
-                                                              .camera);
-                                                          Navigator.pop(
-                                                              context);
-                                                        },
-                                                        leading: Icon(
-                                                            Icons.camera,
-                                                            color: Colors
-                                                                .blueGrey[900]),
-                                                        title: Text("Camera"),
-                                                      ),
-                                                      ListTile(
-                                                        selectedColor:
-                                                            Colors.grey,
-                                                        onTap: () {
-                                                          setState(() {
-                                                            takePhoto(
-                                                                ImageSource
-                                                                    .gallery);
-                                                            Navigator.pop(
-                                                                context);
-                                                          });
-                                                        },
-                                                        leading: Icon(
-                                                            Icons.layers,
-                                                            color: Colors
-                                                                .blueGrey[900]),
-                                                        title: GestureDetector(
-                                                            onTap: () {
-                                                              setState(() {
-                                                                takePhoto(
-                                                                    ImageSource
-                                                                        .gallery);
-                                                                Navigator.pop(
-                                                                    context);
-                                                              });
-                                                            },
-                                                            child: Text(
-                                                                "Gallery")),
-                                                      ),
-                                                    ]),
-                                                  ),
-                                                ),
-                                              ),
-                                            );
-                                          });
-                                        },
-                                        icon: Icon(Icons.add_a_photo,
-                                            size: 30,
-                                            color: image != null
-                                                ? Colors.white
-                                                : Colors.black)))
                               ],
                             ),
                           ),
-
-                          //the code to add the dropdown menu in the app
-                          Container(
-                            decoration: BoxDecoration(
-                              // boxShadow: [
-                              //   BoxShadow(
-                              //     color: Color.fromARGB(255, 255, 255, 255)
-                              //         .withOpacity(0.4),
-                              //     spreadRadius: 5,
-                              //     blurRadius: 7,
-                              //     offset: Offset(
-                              //         0, 3), // changes position of shadow
-                              //   ),
-                              // ],
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 8, right: 8, top: 5),
-                              child: Material(
-                                elevation: 20,
-                                // shadowColor: Color.fromARGB(255, 34, 43, 48),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20)),
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.blueGrey[800],
-                                      borderRadius: BorderRadius.circular(20)),
-                                  child: Column(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 5),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          children: [
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                  top: 10, left: 20, bottom: 4),
-                                              child: Text("Type of crop",
-                                                  style: GoogleFonts.redressed(
-                                                      fontSize: 22,
-                                                      color: Colors.white)),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      Row(
-                                        children: [
-                                          Expanded(
-                                            child: Container(
-                                                margin: const EdgeInsets.only(
-                                                    left: 20.0, right: 20.0),
-                                                child: Divider(
-                                                  color: Color.fromARGB(
-                                                      255, 0, 0, 0),
-                                                  height: 5,
-                                                  thickness: 0.4,
-                                                )),
-                                          ),
-                                        ],
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 20, bottom: 8, top: 5),
-                                        child: Row(
-                                          children: [
-                                            LottieContain(
-                                                lottieUrl:
-                                                    "assets/lottie/select.json"),
-                                            SizedBox(width: size.width * 0.06),
-                                            DropdownButton2(
-                                              value: selectedType,
-                                              onChanged: (value) {
-                                                setState(() {
-                                                  selectedType =
-                                                      value as String;
-                                                  print(selectedType);
-                                                });
-                                              },
-                                              icon: const Icon(
-                                                Icons
-                                                    .arrow_forward_ios_outlined,
-                                              ),
-                                              iconSize: 18,
-                                              iconEnabledColor: Colors.indigo,
-                                              iconDisabledColor: Color.fromARGB(
-                                                  255, 255, 255, 255),
-                                              buttonHeight: size.height * 0.06,
-                                              buttonWidth: size.width * 0.65,
-                                              items: items
-                                                  .map((item) =>
-                                                      DropdownMenuItem<String>(
-                                                        value: item,
-                                                        child: Text(
-                                                          item,
-                                                          style: GoogleFonts
-                                                              .notoSerif(
-                                                                  fontSize: 18,
-                                                                  color: Colors
-                                                                      .indigo,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w600),
-                                                          overflow: TextOverflow
-                                                              .ellipsis,
-                                                        ),
-                                                      ))
-                                                  .toList(),
-                                              buttonPadding:
-                                                  const EdgeInsets.only(
-                                                      left: 14, right: 14),
-                                              buttonDecoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(10),
-                                                border: Border.all(
-                                                  width: 1,
-                                                  color: Color.fromARGB(
-                                                      255, 180, 182, 184),
-                                                ),
-                                                color: Color.fromARGB(
-                                                    255, 255, 255, 255),
-                                              ),
-                                              buttonElevation: 5,
-                                              itemHeight: 40,
-                                              itemPadding:
-                                                  const EdgeInsets.only(
-                                                      left: 14, right: 14),
-                                              dropdownMaxHeight: 200,
-                                              dropdownWidth: 200,
-                                              dropdownPadding:
-                                                  EdgeInsets.only(top: 3),
-                                              dropdownDecoration: BoxDecoration(
-                                                color: Color.fromARGB(
-                                                    255, 238, 235, 235),
-                                              ),
-                                              dropdownElevation: 5,
-                                              scrollbarRadius:
-                                                  const Radius.circular(20),
-                                              scrollbarThickness: 10,
-                                              scrollbarAlwaysShow: true,
-                                              offset: const Offset(18, -50),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          //the code to add the map\
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                left: 8, right: 8, top: 5),
-                            child: Material(
-                                color: Colors.blueGrey[800],
-                                elevation: 20,
-                                // shadowColor: Color.fromARGB(255, 255, 255, 255),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20)),
-                                child: Stack(
-                                  children: [
-                                    Column(
-                                      children: [
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          children: [
-                                            SizedBox(width: 20),
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                  top: 10),
-                                              child: Text("Choose Location",
-                                                  style: GoogleFonts.redressed(
-                                                      fontSize: 22,
-                                                      color: Colors.white)),
-                                            ),
-                                          ],
-                                        ),
-                                        Row(
-                                          children: [
-                                            Expanded(
-                                              child: Container(
-                                                  margin: const EdgeInsets.only(
-                                                      left: 20.0, right: 20.0),
-                                                  child: Divider(
-                                                    color: Color.fromARGB(
-                                                        255, 0, 0, 0),
-                                                    height: 5,
-                                                    thickness: 0.4,
-                                                  )),
-                                            ),
-                                          ],
-                                        ),
-                                        SizedBox(height: 10),
-                                        Material(
-                                          elevation: 10,
-                                          borderRadius:
-                                              BorderRadius.circular(30),
-                                          child: Container(
-                                            //  color: Colors.grey,
-                                            child: Center(
-                                                child: Scaffold(
-                                              body: GoogleMap(
-                                                mapType: MapType.hybrid,
-                                                myLocationEnabled: true,
-                                                zoomControlsEnabled: false,
-                                                zoomGesturesEnabled: true,
-                                                initialCameraPosition:
-                                                    _kGooglePlex,
-                                                onMapCreated:
-                                                    (GoogleMapController
-                                                        controller) {
-                                                  _controller
-                                                      .complete(controller);
-                                                  getLocation();
-                                                },
-                                              ),
-                                            )),
-                                            height: size.height * 0.21,
-                                            width: size.width,
-                                            decoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(30),
-                                                color: Colors.white),
-                                            // image: image
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Positioned(
-                                      top: 5,
-                                      left: 15,
-                                      child: Lottie.asset(
-                                          "assets/lottie/celebration.json",
-                                          height: 200.1,
-                                          width: 100.1,
-                                          animate: true),
-                                    ),
-                                  ],
-                                )),
-                          ),
-                          SizedBox(height: size.height * 0.02),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              SizedBox(
-                                height: size.height * 0.06,
-                                width: size.width * 0.36,
-                                child: ElevatedButton(
-                                  style: ButtonStyle(
-                                    backgroundColor: MaterialStateProperty.all(
-                                        Color.fromARGB(255, 36, 47, 53)),
-                                    // MaterialStateProperty<Color?>?
-                                    shape: MaterialStateProperty.all<
-                                        RoundedRectangleBorder>(
-                                      RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(30.0),
-                                        side: BorderSide(
-                                          color: Color.fromARGB(255, 36, 47, 53),
-                                          width: 2.0,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  child: Text('Submit',
-                                      style: GoogleFonts.roboto(fontSize: 20)),
-                                  onPressed: _makeGetRequest,
-                                ),
-                              ),
-                              SizedBox(width:size.width* 0.08),
-                              SizedBox(
-                                height: size.height * 0.06,
-                                width: size.width * 0.36,
-                                child: ElevatedButton(
-                                  style: ButtonStyle(
-                                    backgroundColor: MaterialStateProperty.all(
-                                        Color.fromARGB(255, 36, 47, 53)),
-                                    // MaterialStateProperty<Color?>?
-                                    shape: MaterialStateProperty.all<
-                                        RoundedRectangleBorder>(
-                                      RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(30.0),
-                                        side: BorderSide(
-                                          color: Color.fromARGB(255, 36, 47, 53),
-                                          width: 2.0,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  child: Text('Submit',
-                                      style: GoogleFonts.roboto(fontSize: 20)),
-                                  onPressed: _makeGetRequest,
-                                ),
+                              Expanded(
+                                child: Container(
+                                    margin: const EdgeInsets.only(
+                                        left: 20.0, right: 20.0),
+                                    child: Divider(
+                                      color: Color.fromARGB(255, 0, 0, 0),
+                                      height: 5,
+                                      thickness: 0.4,
+                                    )),
                               ),
                             ],
                           ),
-                          SizedBox(height: size.height * 0.02),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                left: 20, bottom: 8, top: 5),
+                            child: Row(
+                              children: [
+                                LottieContain(
+                                    lottieUrl: "assets/lottie/select.json"),
+                                SizedBox(width: size.width * 0.06),
+                                DropdownButton2(
+                                  value: selectedType,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      selectedType = value as String;
+                                      print(selectedType);
+                                    });
+                                  },
+                                  icon: const Icon(
+                                    Icons.arrow_forward_ios_outlined,
+                                  ),
+                                  iconSize: 18,
+                                  iconEnabledColor: Colors.indigo,
+                                  iconDisabledColor:
+                                      Color.fromARGB(255, 255, 255, 255),
+                                  buttonHeight: size.height * 0.06,
+                                  buttonWidth: size.width * 0.65,
+                                  items: items
+                                      .map((item) => DropdownMenuItem<String>(
+                                            value: item,
+                                            child: Text(
+                                              item,
+                                              style: GoogleFonts.notoSerif(
+                                                  fontSize: 18,
+                                                  color: Colors.indigo,
+                                                  fontWeight: FontWeight.w600),
+                                              overflow: TextOverflow.ellipsis,
+                                            ),
+                                          ))
+                                      .toList(),
+                                  buttonPadding: const EdgeInsets.only(
+                                      left: 14, right: 14),
+                                  buttonDecoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    border: Border.all(
+                                      width: 1,
+                                      color: Color.fromARGB(255, 180, 182, 184),
+                                    ),
+                                    color: Color.fromARGB(255, 255, 255, 255),
+                                  ),
+                                  buttonElevation: 5,
+                                  itemHeight: 40,
+                                  itemPadding: const EdgeInsets.only(
+                                      left: 14, right: 14),
+                                  dropdownMaxHeight: 200,
+                                  dropdownWidth: 200,
+                                  dropdownPadding: EdgeInsets.only(top: 3),
+                                  dropdownDecoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 238, 235, 235),
+                                  ),
+                                  dropdownElevation: 5,
+                                  scrollbarRadius: const Radius.circular(20),
+                                  scrollbarThickness: 10,
+                                  scrollbarAlwaysShow: true,
+                                  offset: const Offset(18, -50),
+                                ),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
+                    ),
+                  ),
+                ),
+              ),
+              //the code to add the map\
+              Padding(
+                padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
+                child: Material(
+                    color: Colors.blueGrey[800],
+                    elevation: 20,
+                    // shadowColor: Color.fromARGB(255, 255, 255, 255),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Stack(
+                      children: [
+                        Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                SizedBox(width: 20),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 10),
+                                  child: Text("Choose Location",
+                                      style: GoogleFonts.redressed(
+                                          fontSize: 22, color: Colors.white)),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                      margin: const EdgeInsets.only(
+                                          left: 20.0, right: 20.0),
+                                      child: Divider(
+                                        color: Color.fromARGB(255, 0, 0, 0),
+                                        height: 5,
+                                        thickness: 0.4,
+                                      )),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 10),
+                            Material(
+                              elevation: 10,
+                              borderRadius: BorderRadius.circular(30),
+                              child: Container(
+                                //  color: Colors.grey,
+                                child: Center(
+                                    child: Scaffold(
+                                  body: GoogleMap(
+                                    mapType: MapType.hybrid,
+                                    myLocationEnabled: true,
+                                    zoomControlsEnabled: false,
+                                    zoomGesturesEnabled: true,
+                                    initialCameraPosition: _kGooglePlex,
+                                    onMapCreated:
+                                        (GoogleMapController controller) {
+                                      _controller.complete(controller);
+                                      getLocation();
+                                    },
+                                  ),
+                                )),
+                                height: size.height * 0.21,
+                                width: size.width,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(30),
+                                    color: Colors.white),
+                                // image: image
+                              ),
+                            ),
+                          ],
+                        ),
+                        Positioned(
+                          top: 5,
+                          left: 15,
+                          child: Lottie.asset("assets/lottie/celebration.json",
+                              height: 200.1, width: 100.1, animate: true),
+                        ),
+                      ],
+                    )),
+              ),
+              SizedBox(height: size.height * 0.02),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    height: size.height * 0.06,
+                    width: size.width * 0.36,
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 36, 47, 53)),
+                        // MaterialStateProperty<Color?>?
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                            side: BorderSide(
+                              color: Color.fromARGB(255, 36, 47, 53),
+                              width: 2.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                      child: Text('Submit',
+                          style: GoogleFonts.roboto(fontSize: 20)),
+                      onPressed: _makeGetRequest,
+                    ),
+                  ),
+                  SizedBox(width: size.width * 0.08),
+                  SizedBox(
+                    height: size.height * 0.06,
+                    width: size.width * 0.36,
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 36, 47, 53)),
+                        // MaterialStateProperty<Color?>?
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                            side: BorderSide(
+                              color: Color.fromARGB(255, 36, 47, 53),
+                              width: 2.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                      child: Text('Close',
+                          style: GoogleFonts.roboto(fontSize: 20)),
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: size.height * 0.02),
+            ],
+          ),
         ])));
   }
 
@@ -704,13 +652,12 @@ class _HomeState extends State<Home> {
     Response response = await post(url,
         headers: {"content-type": "application/json"},
         body: jsonEncode({
-           "type": selectedType,
+          "type": selectedType,
           "x_coordinate": latitude,
           "y_coordinate": longitude,
-          "lat":lat,
-          "long":long,
+          "lat": lat,
+          "long": long,
           "pic_path": image
-          
         }));
   }
 
