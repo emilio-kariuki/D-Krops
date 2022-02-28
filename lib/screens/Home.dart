@@ -1,4 +1,4 @@
-// ignore_for_file: unused_local_variable, curly_braces_in_flow_control_structures, avoid_print, duplicate_ignore, unused_import
+// ignore_for_file: unused_local_variable, curly_braces_in_flow_control_structures, avoid_print, duplicate_ignore, unused_import, deprecated_member_use
 
 import 'dart:convert';
 import 'dart:io';
@@ -685,4 +685,22 @@ class _HomeState extends State<Home> {
     else // for iOS simulator
       return 'http://localhost:5000/';
   }
+  Future alertDialog( BuildContext context) {
+  return showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Done'),
+          content: Text('Add Success'),
+          actions: <Widget>[
+            FlatButton(
+              child: Text('Ok'),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        );
+      });
+}
 }
