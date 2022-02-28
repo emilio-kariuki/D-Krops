@@ -141,9 +141,9 @@ class _HomeState extends State<Home> {
         // backgroundColor: Color.fromARGB(255, 255, 255, 255),
         body: SafeArea(
             child: SingleChildScrollView(
-              child: Column(children: [
-                  Stack(children: [
-                    Material(
+      child: Column(children: [
+        Stack(children: [
+          Material(
               elevation: 20,
               // shadowColor: Color.fromARGB(255, 255, 255, 255),
               shape: RoundedRectangleBorder(
@@ -180,7 +180,7 @@ class _HomeState extends State<Home> {
                         //     ),
                         //   ),
                         // ),
-            
+
                         Center(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -189,7 +189,8 @@ class _HomeState extends State<Home> {
                               Text("Small-Scale Mapping",
                                   style: GoogleFonts.redressed(
                                       fontSize: 29,
-                                      color: Color.fromARGB(255, 224, 225, 228))),
+                                      color:
+                                          Color.fromARGB(255, 224, 225, 228))),
                             ],
                           ),
                         ),
@@ -208,76 +209,76 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               )),
-                    Positioned(
-                      top: 3,
-                      right: 25,
-                      child: Lottie.asset("assets/lottie/celebration.json",
+          Positioned(
+            top: 3,
+            right: 25,
+            child: Lottie.asset("assets/lottie/celebration.json",
                 height: 200.1, width: 100.1, animate: true),
-                    ),
-                    Positioned(
-                      top: 3,
-                      left: 25,
-                      child: Lottie.asset("assets/lottie/celebration.json",
+          ),
+          Positioned(
+            top: 3,
+            left: 25,
+            child: Lottie.asset("assets/lottie/celebration.json",
                 height: 200.1, width: 100.1, animate: true),
-                    ),
-                  ]),
-                  SizedBox(height: 10),
-                  // Expanded(
-                  //   child: Material(
-                  //     color: Colors.blueGrey[800],
-                  //     elevation: 10,
-                  //     shape: RoundedRectangleBorder(
-                  //         borderRadius: BorderRadius.only(
-                  //             topLeft: Radius.circular(30),
-                  //             topRight: Radius.circular(30))),
-                  //     child: Container(
-                  //       decoration: BoxDecoration(
-                  //         color: Colors.blueGrey[800],
-                  //         borderRadius: BorderRadius.circular(30),
-                  //       ),
-                  //       height: size.height * 0.1,
-                  //       width: size.width,
-                  //       child: Lottie.asset(
-                  //         "assets/lottie/calendar_date.json",
-                  //         animate: true,
-                  //         height: size.height * 0.02,
-                  //         width: size.width * 0.4,
-                  //         fit: BoxFit.fill,
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
-                  // SizedBox(height: 5),
-                  // Material(
-                  //   elevation: 30,
-                  //   shape: RoundedRectangleBorder(
-                  //       borderRadius: BorderRadius.only(
-                  //           topLeft: Radius.circular(30),
-                  //           topRight: Radius.circular(30))),
-                  //   child: Container(
-                  //       height: size.height * 0.5,
-                  //       width: size.width,
-                  //       decoration: BoxDecoration(
-                  //           // gradient: LinearGradient(
-                  //           //     begin: Alignment.topLeft,
-                  //           //     end: Alignment.bottomRight,
-                  //           //     colors: [
-                  //           //       Color.fromARGB(255, 224, 149, 243),
-                  //           //       Color.fromARGB(255, 255, 58, 255)
-                  //           //     ]),
-                  //           borderRadius: BorderRadius.only(
-                  //               topLeft: Radius.circular(30),
-                  //               topRight: Radius.circular(30))),
-                  //       child: Scaffold(
-                  //           backgroundColor: Color.fromARGB(255, 206, 206, 206),
-                  //           body: SingleChildScrollView(
-                  //             child:
-                  //           ))),
-                  // ),
-                  //Lottie.asset('assets/lottie/line.json',height:10,width:size.width),
-                  Column(
-                    children: [
-                      Padding(
+          ),
+        ]),
+        SizedBox(height: 10),
+        // Expanded(
+        //   child: Material(
+        //     color: Colors.blueGrey[800],
+        //     elevation: 10,
+        //     shape: RoundedRectangleBorder(
+        //         borderRadius: BorderRadius.only(
+        //             topLeft: Radius.circular(30),
+        //             topRight: Radius.circular(30))),
+        //     child: Container(
+        //       decoration: BoxDecoration(
+        //         color: Colors.blueGrey[800],
+        //         borderRadius: BorderRadius.circular(30),
+        //       ),
+        //       height: size.height * 0.1,
+        //       width: size.width,
+        //       child: Lottie.asset(
+        //         "assets/lottie/calendar_date.json",
+        //         animate: true,
+        //         height: size.height * 0.02,
+        //         width: size.width * 0.4,
+        //         fit: BoxFit.fill,
+        //       ),
+        //     ),
+        //   ),
+        // ),
+        // SizedBox(height: 5),
+        // Material(
+        //   elevation: 30,
+        //   shape: RoundedRectangleBorder(
+        //       borderRadius: BorderRadius.only(
+        //           topLeft: Radius.circular(30),
+        //           topRight: Radius.circular(30))),
+        //   child: Container(
+        //       height: size.height * 0.5,
+        //       width: size.width,
+        //       decoration: BoxDecoration(
+        //           // gradient: LinearGradient(
+        //           //     begin: Alignment.topLeft,
+        //           //     end: Alignment.bottomRight,
+        //           //     colors: [
+        //           //       Color.fromARGB(255, 224, 149, 243),
+        //           //       Color.fromARGB(255, 255, 58, 255)
+        //           //     ]),
+        //           borderRadius: BorderRadius.only(
+        //               topLeft: Radius.circular(30),
+        //               topRight: Radius.circular(30))),
+        //       child: Scaffold(
+        //           backgroundColor: Color.fromARGB(255, 206, 206, 206),
+        //           body: SingleChildScrollView(
+        //             child:
+        //           ))),
+        // ),
+        //Lottie.asset('assets/lottie/line.json',height:10,width:size.width),
+        Column(
+          children: [
+            Padding(
               padding: const EdgeInsets.only(left: 8, right: 8, top: 6),
               child: Stack(
                 children: [
@@ -345,7 +346,8 @@ class _HomeState extends State<Home> {
                                   ),
                                   child: AlertDialog(
                                     shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(20)),
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
                                     contentPadding: EdgeInsets.all(5),
                                     title: const Text('choose image from: '),
                                     content: SingleChildScrollView(
@@ -373,7 +375,8 @@ class _HomeState extends State<Home> {
                                           title: GestureDetector(
                                               onTap: () {
                                                 setState(() {
-                                                  takePhoto(ImageSource.gallery);
+                                                  takePhoto(
+                                                      ImageSource.gallery);
                                                   Navigator.pop(context);
                                                 });
                                               },
@@ -392,10 +395,10 @@ class _HomeState extends State<Home> {
                                   image != null ? Colors.white : Colors.black)))
                 ],
               ),
-                      ),
-            
-                      //the code to add the dropdown menu in the app
-                      Container(
+            ),
+
+            //the code to add the dropdown menu in the app
+            Container(
               decoration: BoxDecoration(
                 // boxShadow: [
                 //   BoxShadow(
@@ -454,8 +457,8 @@ class _HomeState extends State<Home> {
                           ],
                         ),
                         Padding(
-                          padding:
-                              const EdgeInsets.only(left: 20, bottom: 8, top: 5),
+                          padding: const EdgeInsets.only(
+                              left: 20, bottom: 8, top: 5),
                           child: Row(
                             children: [
                               LottieContain(
@@ -525,9 +528,9 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-                      ),
-                      //the code to add the map\
-                      Padding(
+            ),
+            //the code to add the map\
+            Padding(
               padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
               child: Material(
                   color: Colors.blueGrey[800],
@@ -579,7 +582,8 @@ class _HomeState extends State<Home> {
                                   zoomControlsEnabled: false,
                                   zoomGesturesEnabled: true,
                                   initialCameraPosition: _kGooglePlex,
-                                  onMapCreated: (GoogleMapController controller) {
+                                  onMapCreated:
+                                      (GoogleMapController controller) {
                                     _controller.complete(controller);
                                     getLocation();
                                   },
@@ -603,13 +607,11 @@ class _HomeState extends State<Home> {
                       ),
                     ],
                   )),
-                      ),
-                      SizedBox(height: size.height * 0.02),
-                      Row(
+            ),
+            SizedBox(height: size.height * 0.02),
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                
-                
                 SizedBox(
                   height: size.height * 0.06,
                   width: size.width * 0.36,
@@ -628,8 +630,9 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                     ),
-                    child: Text('Close', style: GoogleFonts.roboto(fontSize: 20)),
-                    onPressed: ()=> exit(0),
+                    child:
+                        Text('Close', style: GoogleFonts.roboto(fontSize: 20)),
+                    onPressed: () => exit(0),
                   ),
                 ),
                 SizedBox(width: size.width * 0.08),
@@ -653,16 +656,21 @@ class _HomeState extends State<Home> {
                     ),
                     child:
                         Text('Submit', style: GoogleFonts.roboto(fontSize: 20)),
-                    onPressed: _makeGetRequest,
+                    onPressed: () {
+                      setState(() {
+                        _makeGetRequest;
+                        
+                      });
+                    },
                   ),
                 ),
               ],
-                      ),
-                      SizedBox(height: size.height * 0.02),
-                    ],
-                  ),
-                ]),
-            )));
+            ),
+            SizedBox(height: size.height * 0.02),
+          ],
+        ),
+      ]),
+    )));
   }
 
   _makeGetRequest() async {
@@ -685,5 +693,4 @@ class _HomeState extends State<Home> {
     else // for iOS simulator
       return 'http://localhost:5000/';
   }
-  
 }
