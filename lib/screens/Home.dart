@@ -260,7 +260,7 @@ class _HomeState extends State<Home> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(
-                                left: 8, right: 8, top: 20),
+                                left: 8, right: 8, top: 15),
                             child: Stack(
                               children: [
                                 Material(
