@@ -256,6 +256,7 @@ class _HomeState extends State<Home> {
           //             child: 
           //           ))),
           // ),
+          Lottie.asset('assets/lottie/line.json'),
           Column(
                         children: [
                           Padding(
