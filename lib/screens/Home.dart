@@ -669,7 +669,7 @@ class _HomeState extends State<Home> {
                               mainAxisAlignment:MainAxisAlignment.center,
                               children: [
                                 Lottie.asset("assets/lottie/successful.json",height:size.height * 0.21),
-                                Text('Successful', style: GoogleFonts.roboto(fontSize: 20)),
+                                Text('Successful', style: GoogleFonts.roboto(fontSize: 27,color: Colors.black)),
                               ],
                             ),
                           );
