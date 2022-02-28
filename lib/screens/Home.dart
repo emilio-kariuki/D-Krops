@@ -166,6 +166,7 @@ class _HomeState extends State<Home> {
 
                           Center(
                             child: Column(
+                              
                               children: [
                                 SizedBox(height: size.height * 0.032),
                                 Text("Small-Scale Mapping",
@@ -648,14 +649,14 @@ class _HomeState extends State<Home> {
                                 child: ElevatedButton(
                                   style: ButtonStyle(
                                     backgroundColor: MaterialStateProperty.all(
-                                        Color.fromARGB(255, 36, 47, 53)),
+                                        Color.fromARGB(255, 14, 14, 20)),
                                     // MaterialStateProperty<Color?>?
                                     shape: MaterialStateProperty.all<
                                         RoundedRectangleBorder>(
                                       RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(30.0),
                                         side: BorderSide(
-                                          color: Color.fromARGB(255, 36, 47, 53),
+                                          color: Color.fromARGB(255, 14, 14, 20),
                                           width: 2.0,
                                         ),
                                       ),
