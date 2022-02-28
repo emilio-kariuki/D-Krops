@@ -292,7 +292,7 @@ class _HomeState extends State<Home> {
                                       boxShadow: [
                                         BoxShadow(
                                           color:
-                                              Color.fromARGB(255, 163, 165, 165)
+                                              Color.fromARGB(255, 255, 255, 255)
                                                   .withOpacity(0.6),
                                           spreadRadius: 5,
                                           blurRadius: 7,
@@ -398,16 +398,16 @@ class _HomeState extends State<Home> {
                           //the code to add the dropdown menu in the app
                           Container(
                             decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Color.fromARGB(255, 163, 165, 165)
-                                      .withOpacity(0.4),
-                                  spreadRadius: 5,
-                                  blurRadius: 7,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
+                              // boxShadow: [
+                              //   BoxShadow(
+                              //     color: Color.fromARGB(255, 255, 255, 255)
+                              //         .withOpacity(0.4),
+                              //     spreadRadius: 5,
+                              //     blurRadius: 7,
+                              //     offset: Offset(
+                              //         0, 3), // changes position of shadow
+                              //   ),
+                              // ],
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Padding(
@@ -553,7 +553,7 @@ class _HomeState extends State<Home> {
                             child: Material(
                                 color: Colors.blueGrey[800],
                                 elevation: 20,
-                                shadowColor: Color.fromARGB(255, 163, 165, 165),
+                                // shadowColor: Color.fromARGB(255, 255, 255, 255),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20)),
                                 child: Stack(
