@@ -133,8 +133,8 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    setState(() {
-    });
+    // setState(() {
+    // });
     final size = MediaQuery.of(context).size;
     final textScale = MediaQuery.of(context).textScaleFactor;
     return Scaffold(
