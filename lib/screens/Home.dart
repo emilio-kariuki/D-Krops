@@ -139,7 +139,8 @@ class _HomeState extends State<Home> {
     final size = MediaQuery.of(context).size;
     final textScale = MediaQuery.of(context).textScaleFactor;
     return Scaffold(
-        // backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      
+        backgroundColor: Color.fromARGB(239, 35, 156, 255),
         body: SafeArea(
             child: SingleChildScrollView(
       child: Column(children: [
