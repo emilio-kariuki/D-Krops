@@ -289,17 +289,17 @@ class _HomeState extends State<Home> {
                                     width: size.width,
                                     decoration: BoxDecoration(
                                       color: Colors.blueGrey[800],
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color:
-                                              Color.fromARGB(255, 255, 255, 255)
-                                                  .withOpacity(0.6),
-                                          spreadRadius: 5,
-                                          blurRadius: 7,
-                                          offset: Offset(0,
-                                              3), // changes position of shadow
-                                        ),
-                                      ],
+                                      // boxShadow: [
+                                      //   BoxShadow(
+                                      //     color:
+                                      //         Color.fromARGB(255, 255, 255, 255)
+                                      //             .withOpacity(0.6),
+                                      //     spreadRadius: 5,
+                                      //     blurRadius: 7,
+                                      //     offset: Offset(0,
+                                      //         3), // changes position of shadow
+                                      //   ),
+                                      // ],
                                       borderRadius: BorderRadius.circular(20),
                                     ),
                                     // image: image
