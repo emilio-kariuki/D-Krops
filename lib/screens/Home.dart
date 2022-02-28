@@ -661,8 +661,11 @@ class _HomeState extends State<Home> {
                       setState(() {
                         showDialog(context: context, builder: (BuildContext context){
                           return AlertDialog(
-                            title: Text("Success"),
-                            content: Lottie.asset("assets/lottie/success.json",height:50),
+                            title: Text(""),
+                            content: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Lottie.asset("assets/lottie/success.json",height:size.height * 0.2),
+                            ),
                           );
                           });
                       });
