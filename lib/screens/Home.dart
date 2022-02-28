@@ -122,7 +122,7 @@ class _HomeState extends State<Home> {
     final size = MediaQuery.of(context).size;
     final textScale = MediaQuery.of(context).textScaleFactor;
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 36, 47, 53),
+        backgroundColor: Color.fromARGB(255, 255, 255, 255),
         body: SafeArea(
             child: Column(children: [
           Stack(children: [
@@ -639,29 +639,59 @@ class _HomeState extends State<Home> {
                                 )),
                           ),
                           SizedBox(height: size.height * 0.02),
-                          SizedBox(
-                            height: size.height * 0.06,
-                            width: size.width * 0.5,
-                            child: ElevatedButton(
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                    Color.fromARGB(255, 36, 47, 53)),
-                                // MaterialStateProperty<Color?>?
-                                shape: MaterialStateProperty.all<
-                                    RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30.0),
-                                    side: BorderSide(
-                                      color: Color.fromARGB(255, 36, 47, 53),
-                                      width: 2.0,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SizedBox(
+                                height: size.height * 0.06,
+                                width: size.width * 0.36,
+                                child: ElevatedButton(
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all(
+                                        Color.fromARGB(255, 36, 47, 53)),
+                                    // MaterialStateProperty<Color?>?
+                                    shape: MaterialStateProperty.all<
+                                        RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(30.0),
+                                        side: BorderSide(
+                                          color: Color.fromARGB(255, 36, 47, 53),
+                                          width: 2.0,
+                                        ),
+                                      ),
                                     ),
                                   ),
+                                  child: Text('Submit',
+                                      style: GoogleFonts.roboto(fontSize: 20)),
+                                  onPressed: _makeGetRequest,
                                 ),
                               ),
-                              child: Text('Submit',
-                                  style: GoogleFonts.roboto(fontSize: 20)),
-                              onPressed: _makeGetRequest,
-                            ),
+                              SizedBox(width:size.width* 0.08),
+                              SizedBox(
+                                height: size.height * 0.06,
+                                width: size.width * 0.36,
+                                child: ElevatedButton(
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all(
+                                        Color.fromARGB(255, 36, 47, 53)),
+                                    // MaterialStateProperty<Color?>?
+                                    shape: MaterialStateProperty.all<
+                                        RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(30.0),
+                                        side: BorderSide(
+                                          color: Color.fromARGB(255, 36, 47, 53),
+                                          width: 2.0,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  child: Text('Submit',
+                                      style: GoogleFonts.roboto(fontSize: 20)),
+                                  onPressed: _makeGetRequest,
+                                ),
+                              ),
+                            ],
                           ),
                           SizedBox(height: size.height * 0.02),
                         ],
