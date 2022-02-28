@@ -561,6 +561,7 @@ class _HomeState extends State<Home> {
                                     borderRadius: BorderRadius.circular(20)),
                                 child: Container(
                                   decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
                                     border: Border.all(color: Color.fromARGB(255, 14, 14, 20),width:1),
                                   ),
                                   child: Stack(
