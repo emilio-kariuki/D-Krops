@@ -10,7 +10,7 @@ app.post('/',(req,res) =>{
     try{
         const {x_coordinate,y_coordinate,pic_path,lat,long,type} = req.body;
         const dbt = client.query("INSERT INTO trer(x_coordinate,y_coordinate,geom,picture,type)VALUES($1,$2,$3,$4,$5)",
-        [x_coordinate,y_coordinate,bytea(pic_path),type]);
+        [x_coordinate,y_coordinate,'bytea(pic_path)','type,geometry::point(lat,long)']);
         res.json(dbt);
 
     }catch(err){
