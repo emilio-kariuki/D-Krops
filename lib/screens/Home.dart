@@ -629,9 +629,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     child: Text('Close', style: GoogleFonts.roboto(fontSize: 20)),
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
+                    onPressed: ()=> exit(0),
                   ),
                 ),
                 SizedBox(width: size.width * 0.08),
