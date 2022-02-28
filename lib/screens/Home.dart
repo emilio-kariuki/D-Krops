@@ -7,6 +7,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:finalspace/build/build_appBar.dart';
 import 'package:finalspace/build/lottie_contain.dart';
+import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
 import 'package:geolocator/geolocator.dart' hide ServiceStatus;
@@ -658,8 +659,11 @@ class _HomeState extends State<Home> {
                         Text('Submit', style: GoogleFonts.roboto(fontSize: 20)),
                     onPressed: () {
                       setState(() {
-                        _makeGetRequest;
-                        
+                        // _makeGetRequest;
+                        CupertinoAlertDialog(
+                          title: Text("Success"),
+                          content: Text("Saved successfully"),
+                        );
                       });
                     },
                   ),
