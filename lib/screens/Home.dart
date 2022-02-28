@@ -166,7 +166,7 @@ class _HomeState extends State<Home> {
 
                           Center(
                             child: Column(
-                              
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 SizedBox(height: size.height * 0.032),
                                 Text("Small-Scale Mapping",
@@ -175,7 +175,7 @@ class _HomeState extends State<Home> {
                               ],
                             ),
                           ),
-                          SizedBox(width: 10),
+                          // SizedBox(width: 10),
                           // Padding(
                           //   padding: const EdgeInsets.only(bottom: 7, top: 8,right:10),
                           //   child: BuildBar(
