@@ -183,10 +183,10 @@ class _HomeState extends State<Home> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              SizedBox(height: size.height * 0.032),
+                              SizedBox(height: size.height * 0.038),
                               Text("Small-Scale Mapping",
                                   style: GoogleFonts.redressed(
-                                      fontSize: 28,
+                                      fontSize: 29,
                                       color: Color.fromARGB(255, 224, 225, 228))),
                             ],
                           ),
