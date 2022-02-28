@@ -662,7 +662,7 @@ class _HomeState extends State<Home> {
                         showDialog(context: context, builder: (BuildContext context){
                           return CupertinoAlertDialog(
                             title: Text("Success"),
-                            content: Text("Saved successfully"),
+                            content: Lottie.asset("assets/lottie/success.json",height:50),
                           );
                           });
                       });
