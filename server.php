@@ -12,6 +12,7 @@
    }
    if(isset($_POST['save']))
    {	 
+      echo "opening";
        $x_coordinate = $_POST['x_coordinate'];
        $y_coordinate = $_POST['y_coordinate'];
        $lat = $_POST['lat'];
