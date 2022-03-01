@@ -107,10 +107,11 @@ $return["error"] = false;
 
        //if there is no any error then ready for database write
        if($return["error"] == false){
-            $name = mysqli_real_escape_string($link, $name);
-            $address = mysqli_real_escape_string($link, $address);
-            $class = mysqli_real_escape_string($link, $class);
-            $rollno = mysqli_real_escape_string($link, $rollno);
+         $x_coordinate = mysqli_real_escape_string($link, $x_coordinate);
+         $y_coordinate = mysqli_real_escape_string($link, $y_coordinate);
+         $lat = mysqli_real_escape_string($link, $lat);
+         $long = mysqli_real_escape_string($link, $long);
+         $type = mysqli_real_escape_string($link, $type);
             //escape inverted comma query conflict from string
 
             $sql = "INSERT INTO student_list SET
