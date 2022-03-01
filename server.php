@@ -1,5 +1,5 @@
 <?php
-   $host        = "host = 192.168.12.239";
+   $host        = "host = localhost";
    $port        = "port = 5432";
    $dbname      = "dbname = Agent";
    $credentials = "user = postgres password=postgres";
