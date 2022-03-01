@@ -702,16 +702,18 @@ class _HomeState extends State<Home> {
   _makeGetRequest() async {
     final url = Uri.parse(_localhost());
     Response response =
-        await post(Uri.parse('http://192.168.12.206/server.php'),
-            headers: {"content-type": "application/json"},
-            body: jsonEncode({
-              "type": selectedType,
-              "x_coordinate": latitude,
-              "y_coordinate": longitude,
-              "lat": lat,
-              "long": long,
-              // "pic_path": image
-            }));
+        await get(Uri.parse('http://192.168.12.206/server.php'));
+    // headers: {"content-type": "application/json"},
+    // body: jsonEncode({
+    //   "type": selectedType,
+    //   "x_coordinate": latitude,
+    //   "y_coordinate": longitude,
+    //   "lat": lat,
+    //   "long": long,
+    //   // "pic_path": image
+    // }));
+    var data = jsonDecode(response.body);
+    print(data.toString());
   }
 
   String _localhost() {
