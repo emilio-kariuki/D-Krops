@@ -29,7 +29,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  String phpurl = "http://192.168.12.239/test/write.php";
+  String phpurl = "http://192.168.12.239/server.php";
   GoogleMapController? newGoogleMapController;
   double? latitude;
   double? longitude;
@@ -694,7 +694,7 @@ class _HomeState extends State<Home> {
 
   _makeGetRequest() async {
     final url = Uri.parse(_localhost());
-    Response response = await post(url,
+    Response response = await post(Uri.parse('http://192.168.12.239/server.php'),
         headers: {"content-type": "application/json"},
         body: jsonEncode({
           "type": selectedType,
@@ -702,7 +702,7 @@ class _HomeState extends State<Home> {
           "y_coordinate": longitude,
           "lat": lat,
           "long": long,
-          "pic_path": image
+          // "pic_path": image
         }));
   }
 
