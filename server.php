@@ -92,10 +92,11 @@ $return["error"] = false;
   if($val){
        //checking if there is POST data
 
-       $name = $_POST["name"]; //grabing the data from headers
-       $address = $_POST["address"];
-       $class = $_POST["class"];
-       $rollno = $_POST["rollno"];
+       $x_coordinate = $_POST["x_coordinate"]; //grabing the data from headers
+       $y_coordinate = $_POST["y_coordinate"];
+       $lat = $_POST["lat"];
+       $long = $_POST["long"];
+       $type = $_POST["type"];
 
        //validation name if there is no error before
        if($return["error"] == false && strlen($name) < 3){
