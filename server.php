@@ -56,6 +56,7 @@ $val = isset($_POST["x_coordinate"]) && isset($_POST["y_coordinate"])
                  $res = mysqli_query($link, $sql);
                  if($res){
                      //write success
+                     echo "Inserted successfully";
                  }else{
                      $return["error"] = true;
                      $return["message"] = "Database error";
@@ -71,12 +72,12 @@ $val = isset($_POST["x_coordinate"]) && isset($_POST["y_coordinate"])
 
 
 
-$result = pg_query($db, $sql);
-if(!$result){
-  echo pg_last_error($dbconn);
-} else {
-  echo "Inserted successfully";
-}
-pg_close($db); 
+// $result = pg_query($db, $sql);
+// if(!$result){
+//   echo pg_last_error($dbconn);
+// } else {
+//   echo "Inserted successfully";
+// }
+// pg_close($db); 
 
 ?>
