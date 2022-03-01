@@ -1,10 +1,13 @@
 <?php
-   $host        = "host = localhost";
-   $port        = "port = 5432";
-   $dbname      = "dbname = Agent";
-   $credentials = "user = postgres password=postgres";
+   // $host        = "host = localhost";
+   // $port        = "port = 5432";
+   // $dbname      = "dbname = Agent";
+   // $credentials = "user = postgres password=postgres";
 
-   
+  $db = "Agent"; //database name
+  $dbuser = "postgres"; //database username
+  $dbpassword = "postgres"; //database password
+  $dbhost = "localhost"; //database host
 
 //    $db = pg_connect( "$host $port $dbname $credentials"  );
    // if(!$db) {
