@@ -18,6 +18,11 @@
 //   echo "$row[0] $row[1] $row[2]\n";
 // }
 $sql = "insert into upload (x_coordinate, x_coordinate, type)  values(-122.222657, 0.2323223, ST_SetSRID(ST_MakePoint(-122.222657, 0.2323223), 4326),'maize')";
-
+$result = pg_query($db, $sql);
+if(!$result){
+  echo pg_last_error($dbconn);
+} else {
+  echo "Inserted successfully";
+}
 pg_close($db); 
 ?>
