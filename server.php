@@ -17,6 +17,10 @@
 // while ($row = pg_fetch_row($rs)) {
 //   echo "$row[0] $row[1] $row[2]\n";
 // }
+$val = isset($_POST["x_coordinate"]) && isset($_POST["y_coordinate"])
+         && isset($_POST["lat"]) && isset($_POST["long"]) && isset($_POST["type"]);
+
+
 $sql = "insert into upload (x_coordinate, y_coordinate,geom,type)  values(-122.222657, 0.2323223, ST_SetSRID(ST_MakePoint(-122.222657, 0.2323223), 4326),'maize')";
 $result = pg_query($db, $sql);
 if(!$result){
