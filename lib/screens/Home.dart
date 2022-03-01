@@ -29,6 +29,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  String phpurl = "http://192.168.12.239/test/write.php";
   GoogleMapController? newGoogleMapController;
   double? latitude;
   double? longitude;
