@@ -17,7 +17,7 @@
 // while ($row = pg_fetch_row($rs)) {
 //   echo "$row[0] $row[1] $row[2]\n";
 // }
-$sql = "insert into upload (x_coordinate, x_coordinate, Email)  values('postgre', 68687, 'test@gmail.com')";
+$sql = "insert into upload (x_coordinate, x_coordinate, Email)  values('postgre', 68687, ST_SetSRID(ST_MakePoint(x_coordinate, x_coordinate), 4326))";
 
 pg_close($db); 
 ?>
