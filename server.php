@@ -10,13 +10,14 @@
    } else {
       echo "Opened database successfully\n";
    }
-   $query = "SELECT * FROM upload"; 
+   // $query = "SELECT * FROM upload"; 
 
-$rs = pg_query($db, $query) or die("Cannot execute query: $query\n");
+// $rs = pg_query($db, $query) or die("Cannot execute query: $query\n");
 
-while ($row = pg_fetch_row($rs)) {
-  echo "$row[0] $row[1] $row[2]\n";
-}
+// while ($row = pg_fetch_row($rs)) {
+//   echo "$row[0] $row[1] $row[2]\n";
+// }
+$sql = "insert into upload (x, MOBNO, Email)  values('postgre', 68687, 'test@gmail.com')";
 
 pg_close($db); 
 ?>
