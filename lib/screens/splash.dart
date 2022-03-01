@@ -39,7 +39,7 @@ class _SplashState extends State<Splash> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Small Scale Mapping",
+                Text("Small Scale Crop Mapping",
                     style: GoogleFonts.roboto(fontSize: 30, color: Colors.white)),
               ],
             )),
