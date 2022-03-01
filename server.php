@@ -4,6 +4,8 @@
    $dbname      = "dbname = Agent";
    $credentials = "user = postgres password=postgres";
 
+   
+
 //    $db = pg_connect( "$host $port $dbname $credentials"  );
    // if(!$db) {
    //    echo "Error : Unable to open database\n";
@@ -83,7 +85,7 @@
 $return["error"] = false;
   $return["message"] = "";
 
-  $link = mysqli_connect("$host $port $dbname $credentials");
+  $link = mysqli_connect("$host, $port ,$dbname, $credentials");
   if(!$link) {
    echo "Error : Unable to open database\n";
 } else {
