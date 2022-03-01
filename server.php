@@ -86,8 +86,8 @@ $return["error"] = false;
   $link = mysqli_connect($dbhost, $dbuser, $dbpassword, $db);
   //connecting to database server
 
-  $val = isset($_POST["name"]) && isset($_POST["address"])
-         && isset($_POST["class"]) && isset($_POST["rollno"]);
+  $val = isset($_POST["x_coordinate"]) && isset($_POST["y_coordinate"])
+         && isset($_POST["lat"]) && isset($_POST["long"]) && isset($_POST["type"]);
 
   if($val){
        //checking if there is POST data
