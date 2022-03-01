@@ -1,3 +1,7 @@
 {
-    "gitdoc.enabled": true
+    "gitdoc.enabled": true,
+    "cSpell.words": [
+        "finalspace",
+        "Plex"
+    ]
 }
