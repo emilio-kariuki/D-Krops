@@ -17,7 +17,7 @@
 // while ($row = pg_fetch_row($rs)) {
 //   echo "$row[0] $row[1] $row[2]\n";
 // }
-$sql = "insert into upload (x, MOBNO, Email)  values('postgre', 68687, 'test@gmail.com')";
+$sql = "insert into upload (x_coordinate, MOBNO, Email)  values('postgre', 68687, 'test@gmail.com')";
 
 pg_close($db); 
 ?>
