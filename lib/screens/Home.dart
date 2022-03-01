@@ -661,24 +661,31 @@ class _HomeState extends State<Home> {
                         Text('Submit', style: GoogleFonts.roboto(fontSize: 20)),
                     onPressed: () {
                       setState(() {
-                        showDialog(context: context, builder: (BuildContext context){
-                          return AlertDialog(
-                            shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                            title: Text(""),
-                            content: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment:MainAxisAlignment.center,
-                              children: [
-                                Lottie.asset("assets/lottie/successful.json",height:size.height * 0.21),
-                                Text('Successful', style: GoogleFonts.roboto(fontSize: 27,color: Colors.black)),
-                              ],
-                            ),
-                          );
-                          });
-                          Future.delayed(
-                              const Duration(milliseconds: 1670),
-                              () => Navigator.of(context).pop());
+                        showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.all(
+                                        Radius.circular(20.0))),
+                                title: Text(""),
+                                content: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Lottie.asset(
+                                        "assets/lottie/successful.json",
+                                        height: size.height * 0.21),
+                                    Text('Successful',
+                                        style: GoogleFonts.roboto(
+                                            fontSize: 27, color: Colors.black)),
+                                  ],
+                                ),
+                              );
+                            });
+                        Future.delayed(const Duration(milliseconds: 1670),
+                            () => Navigator.of(context).pop());
+                        _makeGetRequest();
                       });
                     },
                   ),
@@ -694,16 +701,17 @@ class _HomeState extends State<Home> {
 
   _makeGetRequest() async {
     final url = Uri.parse(_localhost());
-    Response response = await post(Uri.parse('http://192.168.12.206/server.php'),
-        headers: {"content-type": "application/json"},
-        body: jsonEncode({
-          "type": selectedType,
-          "x_coordinate": latitude,
-          "y_coordinate": longitude,
-          "lat": lat,
-          "long": long,
-          // "pic_path": image
-        }));
+    Response response =
+        await post(Uri.parse('http://192.168.12.206/server.php'),
+            headers: {"content-type": "application/json"},
+            body: jsonEncode({
+              "type": selectedType,
+              "x_coordinate": latitude,
+              "y_coordinate": longitude,
+              "lat": lat,
+              "long": long,
+              // "pic_path": image
+            }));
   }
 
   String _localhost() {
