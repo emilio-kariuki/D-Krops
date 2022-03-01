@@ -49,8 +49,8 @@ $val = isset($_POST["x_coordinate"]) && isset($_POST["y_coordinate"])
                  $sql = "INSERT INTO student_list SET
                                      x_coordinate = '$x_coordinate',
                                      y_coordinate = '$y_coordinate',
-                                     geom = '$class',
-                                     roll_no = '$rollno'";
+                                     geom = 'ST_SetSRID(ST_MakePoint($long, $lat), 4326)',
+                                     type = '$type'";
                  //student_id is with AUTO_INCREMENT, so its value will increase automatically
      
                  $res = mysqli_query($link, $sql);
