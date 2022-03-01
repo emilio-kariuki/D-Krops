@@ -88,7 +88,7 @@
 $return["error"] = false;
   $return["message"] = "";
 
-  $link = mysqli_connect("$host, $port ,$dbname, $credentials");
+  $link = mysqli_connect($dbhost, $dbuser, $dbpassword, $db);
   if(!$link) {
    echo "Error : Unable to open database\n";
 } else {
