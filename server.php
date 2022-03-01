@@ -1,8 +1,8 @@
 <?php
-   $host        = "host = 127.0.0.1";
+   $host        = "host = 192.168.12.239";
    $port        = "port = 5432";
-   $dbname      = "dbname = testdb";
-   $credentials = "user = postgres password=pass123";
+   $dbname      = "dbname = Agent";
+   $credentials = "user = postgres password=postgres";
 
    $db = pg_connect( "$host $port $dbname $credentials"  );
    if(!$db) {
