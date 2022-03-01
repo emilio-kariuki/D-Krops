@@ -1,4 +1,4 @@
-// ignore_for_file: unused_local_variable, curly_braces_in_flow_control_structures, avoid_print, duplicate_ignore, unused_import, deprecated_member_use
+// ignore_for_file: unused_local_variable, curly_braces_in_flow_control_structures, avoid_print, duplicate_ignore, unused_import, deprecated_member_use, prefer_final_fields, unnecessary_import
 
 import 'dart:convert';
 import 'dart:io';
@@ -139,7 +139,6 @@ class _HomeState extends State<Home> {
     final size = MediaQuery.of(context).size;
     final textScale = MediaQuery.of(context).textScaleFactor;
     return Scaffold(
-      
         // backgroundColor: Color.fromARGB(255, 255, 255, 255),
         body: SafeArea(
             child: SingleChildScrollView(
