@@ -12,16 +12,16 @@
    }
    
       echo "opening";
-      //  $x_coordinate = $_POST['x_coordinate'];
-      //  $y_coordinate = $_POST['y_coordinate'];
-      //  $lat = $_POST['lat'];
-      //  $long = $_POST['long'];
-      //  $type = $_POST['type'];
-      $x_coordinate = -122.222657;
-       $y_coordinate = 0.2323223;
-       $lat = -122.222657;
-       $long = 0.2323223;
-       $type = 'beans';
+       $x_coordinate = $_POST['x_coordinate'];
+       $y_coordinate = $_POST['y_coordinate'];
+       $lat = $_POST['lat'];
+       $long = $_POST['long'];
+       $type = $_POST['type'];
+      // $x_coordinate = -122.222657;
+      //  $y_coordinate = 0.2323223;
+      //  $lat = -122.222657;
+      //  $long = 0.2323223;
+      //  $type = 'beans';
        $sql = "insert into upload (x_coordinate, y_coordinate,geom,type)  values($x_coordinate, $y_coordinate, ST_SetSRID(ST_MakePoint($long, $lat), 4326),'$type')";
       //  values ('$first_name','$last_name','$city_name','$email')";
        $result = pg_query($db, $sql);
