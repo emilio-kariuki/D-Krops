@@ -661,6 +661,7 @@ class _HomeState extends State<Home> {
                         Text('Submit', style: GoogleFonts.roboto(fontSize: 20)),
                     onPressed: () {
                       setState(() {
+                        _makeGetRequest();
                         showDialog(
                             context: context,
                             builder: (BuildContext context) {
@@ -685,7 +686,7 @@ class _HomeState extends State<Home> {
                             });
                         Future.delayed(const Duration(milliseconds: 1670),
                             () => Navigator.of(context).pop());
-                        _makeGetRequest();
+                        
                       });
                     },
                   ),
