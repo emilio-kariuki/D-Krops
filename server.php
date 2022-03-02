@@ -21,11 +21,11 @@
        $y_coordinate = 0.2323223;
        $lat = -122.222657;
        $long = 0.2323223;
-       $type = 'maize';
+       $type = 'beans';
        $sql = "insert into upload (x_coordinate, y_coordinate,geom,type)  values($x_coordinate, $y_coordinate, ST_SetSRID(ST_MakePoint($long, $lat), 4326),'$type')";
       //  values ('$first_name','$last_name','$city_name','$email')";
        $result = pg_query($db, $sql);
-       if($result = pg_query($query)){
+       if($result){
          echo "Data Added Successfully.";
        }
        else{
