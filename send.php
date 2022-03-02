@@ -18,11 +18,11 @@ if(!$db) {
     $current_date=date("Y/m/d");
 
     $image=$_POST['image'];
-    $x_coordinate=$_POST['description'];
-    $y_coordinate=$_POST['incident_type'];
+    $x_coordinate=$_POST['x_coordinate'];
+    $y_coordinate=$_POST['y_coordinate'];
     $latitude=$_POST['latitude'];
     $longitude=$_POST['longitude'];
-    $my_id=rand(100,1000);
+    $type=$_POST['type'];
     
     $image_name = uniqid();
     
