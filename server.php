@@ -12,14 +12,7 @@
    }
    
       echo "opening";
-      $db = pg_connect( "$host $port $dbname $credentials"  );
-      if(!$db) {
-         echo "Error : Unable to open database\n";
-      } else {
-         echo "Opened database successfully\n";
-      }
-      
-          // require 'init.php';
+               // require 'init.php';
           
           $current_date=date("Y/m/d");
       
