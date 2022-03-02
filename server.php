@@ -32,7 +32,9 @@
        else{
          echo "Error.";
        }
+       
    }
+   // header('Content-Type: application/json');
 
 
 // $sql = "insert into upload (x_coordinate, y_coordinate,geom,type)  values(-122.222657, 0.2323223, ST_SetSRID(ST_MakePoint(-122.222657, 0.2323223), 4326),'maize')";
