@@ -13,7 +13,7 @@ if(!$db) {
    echo "Opened database successfully\n";
 }
 
-    require 'init.php';
+    // require 'init.php';
     
     $current_date=date("Y/m/d");
 
