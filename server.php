@@ -10,7 +10,7 @@
    } else {
       echo "Opened database successfully\n";
    }
-   if(isset($_POST['save']))
+   if(isset($_POST["x_coordinate"]) && isset($_POST["y_coordinate"]) && isset($_POST["lat"]) && isset($_POST["long"]) && isset($_POST["type"]))
    {	 
       echo "opening";
        $x_coordinate = $_POST['x_coordinate'];
