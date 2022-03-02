@@ -1,4 +1,4 @@
-POST POST http://localhost/server.php HTTP/1.1
+POST POST http://172.16.121.173/server.php HTTP/1.1
 Content-Type: application/json
 
 {
