@@ -33,7 +33,7 @@ if(!$db) {
 
         file_put_contents($upload_path,base64_decode($image));
 
-  $sql_details="INSERT INTO upload (x_coordinate,y_coordinate,geom,type) VALUES ('$x_coordinate','$y_coordinate',ST_SetSRID(ST_MakePoint($longitude, $latitude), 4326),'$type')";
+  $sql_details="INSERT INTO upload (x_coordinate,y_coordinate,geom,type) VALUES ($x_coordinate,$y_coordinate,ST_SetSRID(ST_MakePoint($longitude, $latitude), 4326),$type)";
   $result= pg_query($db,$sql_details);
 // $q=($db,"INSERT INTO sent_information(id, user_id, description, incident_type, latitude, longitude, image_name, date_sent, status)VALUES ('0', '0', 'df', 'jh', 'hg', 'jf', 'gfd', 'fds', 'erd')"); 
  // $result=pg_query($q);
