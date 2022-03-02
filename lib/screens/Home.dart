@@ -702,7 +702,7 @@ class _HomeState extends State<Home> {
   _makeGetRequest() async {
     final url = Uri.parse(_localhost());
     Response response =
-        await post(Uri.parse('http://192.168.12.206/server.php'),
+        await post(Uri.parse('http://10.0.2.2/server.php'),
             headers: {"content-type": "application/json"},
             body: jsonEncode({
               "type": selectedType,
@@ -717,7 +717,7 @@ class _HomeState extends State<Home> {
 
   String _localhost() {
     if (Platform.isAndroid)
-      return 'http://10.0.2.2:5000/';
+      return 'http://10.0.2.2/server.php';
     else // for iOS simulator
       return 'http://localhost:5000/';
   }
