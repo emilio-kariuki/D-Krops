@@ -36,11 +36,17 @@ if(!$db) {
 // //   $sql_details="INSERT INTO upload (x_coordinate,y_coordinate,geom,type) VALUES ($x_coordinate,$y_coordinate,ST_SetSRID(ST_MakePoint($longitude, $latitude), 4326),$type)";
 
  
-       $sql = "SELECT * FROM upload";
-  $result= pg_query($db,$sql);
-  if($result){
-      echo($result);
+//        $sql = "SELECT * FROM upload";
+//   $result= pg_query($db,$sql);
+  $result = pg_query($db, "SELECT * FROM upload");
+  if (!$result) {
+      echo "An error occurred.\n";
+      exit;
   }
+  
+  $arr = pg_fetch_all($result);
+  
+  print_r($arr);
 // $q=($db,"INSERT INTO sent_information(id, user_id, description, incident_type, latitude, longitude, image_name, date_sent, status)VALUES ('0', '0', 'df', 'jh', 'hg', 'jf', 'gfd', 'fds', 'erd')"); 
  // $result=pg_query($q);
 
