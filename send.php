@@ -38,6 +38,9 @@ if(!$db) {
  
        $sql = "SELECT * FROM upload";
   $result= pg_query($db,$sql);
+  if($result){
+      echo($result);
+  }
 // $q=($db,"INSERT INTO sent_information(id, user_id, description, incident_type, latitude, longitude, image_name, date_sent, status)VALUES ('0', '0', 'df', 'jh', 'hg', 'jf', 'gfd', 'fds', 'erd')"); 
  // $result=pg_query($q);
 
