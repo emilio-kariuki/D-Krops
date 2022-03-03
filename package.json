@@ -25,6 +25,7 @@
   "dependencies": {
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "jshint": "^2.13.4",
     "pg": "^8.7.3",
     "pg-format": "^1.0.4",
     "postgres-bytea": "^3.0.0"
