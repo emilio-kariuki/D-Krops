@@ -703,7 +703,7 @@ class _HomeState extends State<Home> {
   _makeGetRequest() async {
     final url = Uri.parse(_localhost());
     Response response =
-        await post(Uri.parse('http://172.16.89.79/send.php'),
+        await post(Uri.parse('http://172.16.89.79/phpApplications/server.php'),
             headers: {"content-type": "application/json"},
             body: jsonEncode({
               "type": selectedType,
