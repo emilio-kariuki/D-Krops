@@ -711,7 +711,7 @@ class _HomeState extends State<Home> {
           "type": selectedType
           // "image": image
         }));
-    print("The following is the response $response");
+    
   }
 
   String _localhost() {
