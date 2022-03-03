@@ -1,4 +1,4 @@
-POST https://edwin-muhoro.ninja HTTP/1.1
+POST https://iggresapps.dkut.ac.ke/crop_mapping.php HTTP/1.1
 Content-Type: application/json
 
 {
@@ -8,5 +8,6 @@ Content-Type: application/json
     "y_coordinate": 0.2323223,
     "latitude": -122.222657,
     "longitude": 0.2323223,
+    "image":"emilio",
     "type": "maize"
 } 
