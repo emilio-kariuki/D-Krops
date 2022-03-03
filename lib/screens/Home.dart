@@ -706,12 +706,13 @@ class _HomeState extends State<Home> {
         await post(Uri.parse('http://172.16.89.79/php/server.php'),
             headers: {"content-type": "application/json"},
             body: jsonEncode({
-              "type": selectedType,
+              
               "x_coordinate": latitude,
               "y_coordinate": longitude,
-              "lat": lat,
-              "long": long,
-              "image": image
+              "latitude": lat,
+              "longitude": long,
+              "type": selectedType
+              // "image": image
             }));
             
   }
