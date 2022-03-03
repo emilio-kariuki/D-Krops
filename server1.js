@@ -9,7 +9,7 @@ const client = require('./post');
 app.post('/',(req,res) =>{
     try{
         const {x_coordinate,y_coordinate,lat,long,type} = req.body;
-        const dbt = client.query("INSERT INTO trer(x_coordinate,y_coordinate,geom,type)VALUES($1,$2, ST_SetSRID(ST_MakePoint($3, $4), 4326),$5)",
+        const dbt = client.query("INSERT INTO upload(x_coordinate,y_coordinate,geom,type)VALUES($1,$2, ST_SetSRID(ST_MakePoint($3, $4), 4326),$5)",
         [x_coordinate,y_coordinate,lat,long,type]);
         res.json(dbt);
 
