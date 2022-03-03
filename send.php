@@ -18,11 +18,11 @@ if(!$db) {
 //     $current_date=date("Y/m/d");
 
 //     $image=$_POST['image'];
-//     $x_coordinate=$_POST['x_coordinate'];
-//     $y_coordinate=$_POST['y_coordinate'];
-//     $latitude=$_POST['latitude'];
-//     $longitude=$_POST['longitude'];
-//     $type=$_POST['type'];
+    $x_coordinate=$_POST['x_coordinate'];
+    $y_coordinate=$_POST['y_coordinate'];
+    $latitude=$_POST['latitude'];
+    $longitude=$_POST['longitude'];
+    $type=$_POST['type'];
     
 //     $image_name = uniqid();
     
