@@ -1,7 +1,7 @@
 <?php
-   $host        = "host = localhost";
+   $host        = "host = https://iggresapps.dkut.ac.ke/crop_mapping.php";
    $port        = "port = 5432";
-   $dbname      = "dbname = Agent";
+   $dbname      = "dbname = crop_mapping";
    $credentials = "user = postgres password=postgres";
 
    $db = pg_connect( "$host $port $dbname $credentials"  );
