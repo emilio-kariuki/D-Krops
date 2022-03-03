@@ -18,11 +18,11 @@ if(!$db) {
 //     $current_date=date("Y/m/d");
 
 //     $image=$_POST['image'];
-    $x_coordinate=$_POST['x_coordinate'];
-    $y_coordinate=$_POST['y_coordinate'];
-    $latitude=$_POST['latitude'];
-    $longitude=$_POST['longitude'];
-    $type=$_POST['type'];
+    $x_coordinate=36.38757163764297;
+    $y_coordinate=0.12213698040289252;
+    $latitude=36.38757163764297;
+    $longitude=0.12213698040289252;
+    $type='spinach';
     
 //     $image_name = uniqid();
     
@@ -38,7 +38,7 @@ if(!$db) {
  
 //        $sql = "SELECT * FROM upload";
 //   $result= pg_query($db,$sql);
-  $result = pg_query($db, "SELECT * FROM upload");
+  $result = pg_query($db, "insert into upload (x_coordinate, y_coordinate,geom,type)  values($x_coordinate, $y_coordinate, ST_SetSRID(ST_MakePoint($longitude, $latitude), 4326),'$type')");
   if (!$result) {
       echo "An error occurred.\n";
       exit;
