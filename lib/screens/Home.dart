@@ -700,22 +700,24 @@ class _HomeState extends State<Home> {
   }
 
   _makeGetRequest() async {
-    final url = Uri.parse('iggresserver.dkut.ac.ke');
+    final url = Uri.parse(_localhost());
     Response response = await post(url,
         headers: {"content-type": "application/json"},
         body: jsonEncode({
           "x_coordinate": latitude,
           "y_coordinate": longitude,
-          "latitude": lat,
-          "longitude": long,
+          "lat": lat,
+          "long": long,
           "type": selectedType,
-          "image": image
-        }
+          // "image": image
+        }));
+    
+  }
 
-        )
-
-        );
-    // Map<String, dynamic> data = jsonDecode(response.body);
-    // print(data);
+  String _localhost() {
+    if (Platform.isAndroid)
+      return 'http://127.0.0.1/server1.php';
+    else // for iOS simulator
+      return 'http://localhost:5000/';
   }
 }
