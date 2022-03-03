@@ -701,15 +701,15 @@ class _HomeState extends State<Home> {
 
   _makeGetRequest() async {
     final url = Uri.parse(_localhost());
-    Response response = await post(Uri.parse('https://edwin-muhoro.ninja'),
+    Response response = await post(Uri.parse('https://iggresapps.dkut.ac.ke/crop_mapping.php'),
         headers: {"content-type": "application/json"},
         body: jsonEncode({
           "x_coordinate": latitude,
           "y_coordinate": longitude,
           "latitude": lat,
           "longitude": long,
-          "type": selectedType
-          // "image": image
+          "type": selectedType,
+          "image": image
         }));
     
   }
