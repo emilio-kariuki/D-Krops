@@ -2,11 +2,11 @@ const { Client } = require('pg');
 
 
 const client = new Client({
-    host: "localhost",
+    host: "iggresserver.dkut.ac.ke",
     port: 5432,
     user: "postgres",
-    password: "postgres",
-    database: "Agent",
+    password: ".Xy!@D3K_3ev3R.2!jL!",
+    database: "crop_mapping",
 });
 
 client.on('connect', ()=>{
