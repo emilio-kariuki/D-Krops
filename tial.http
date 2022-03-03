@@ -3,9 +3,10 @@ Content-Type: application/json
 
 {
    
-    "type": "maize",
+    
     "x_coordinate": -122.222657,
     "y_coordinate": 0.2323223,
-    "lat": -122.222657,
-    "long": 0.2323223,
+    "latitude": -122.222657,
+    "longitude": 0.2323223,
+    "type": "maize"
 } 
