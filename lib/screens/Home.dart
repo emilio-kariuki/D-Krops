@@ -701,21 +701,21 @@ class _HomeState extends State<Home> {
 
   _makeGetRequest() async {
     final url = Uri.parse('https://iggresapps.dkut.ac.ke/crop_mapping.php');
-    Response response = await get(url
-        // headers: {"content-type": "application/json"},
-        // body: jsonEncode({
-        //   "x_coordinate": latitude,
-        //   "y_coordinate": longitude,
-        //   "latitude": lat,
-        //   "longitude": long,
-        //   "type": selectedType,
-        //   "image": image
-        // }
+    Response response = await post(url,
+        headers: {"content-type": "application/json"},
+        body: jsonEncode({
+          "x_coordinate": latitude,
+          "y_coordinate": longitude,
+          "latitude": lat,
+          "longitude": long,
+          "type": selectedType,
+          "image": image
+        }
 
-        // )
+        )
 
         );
-    Map<String, dynamic> data = jsonDecode(response.body);
-    print(data);
+    // Map<String, dynamic> data = jsonDecode(response.body);
+    // print(data);
   }
 }
