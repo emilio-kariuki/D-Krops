@@ -700,8 +700,8 @@ class _HomeState extends State<Home> {
   }
 
   _makeGetRequest() async {
-    final url = Uri.parse(_localhost());
-    Response response = await post(Uri.parse('https://iggresapps.dkut.ac.ke/crop_mapping.php'),
+    final url = Uri.parse('https://iggresapps.dkut.ac.ke/crop_mapping.php');
+    Response response = await post(url,
         headers: {"content-type": "application/json"},
         body: jsonEncode({
           "x_coordinate": latitude,
@@ -714,10 +714,5 @@ class _HomeState extends State<Home> {
     
   }
 
-  String _localhost() {
-    if (Platform.isAndroid)
-      return 'http://10.0.2.2/server.php';
-    else // for iOS simulator
-      return 'http://localhost:5000/';
-  }
+ 
 }
