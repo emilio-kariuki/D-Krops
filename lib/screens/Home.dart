@@ -686,7 +686,6 @@ class _HomeState extends State<Home> {
                             });
                         Future.delayed(const Duration(milliseconds: 1670),
                             () => Navigator.of(context).pop());
-                        
                       });
                     },
                   ),
@@ -702,19 +701,17 @@ class _HomeState extends State<Home> {
 
   _makeGetRequest() async {
     final url = Uri.parse(_localhost());
-    Response response =
-        await post(Uri.parse('https://edwin-muhoro.ninja'),
-            headers: {"content-type": "application/json"},
-            body: jsonEncode({
-              
-              "x_coordinate": latitude,
-              "y_coordinate": longitude,
-              "latitude": lat,
-              "longitude": long,
-              "type": selectedType
-              // "image": image
-            }));
-            
+    Response response = await post(Uri.parse('https://edwin-muhoro.ninja'),
+        headers: {"content-type": "application/json"},
+        body: jsonEncode({
+          "x_coordinate": latitude,
+          "y_coordinate": longitude,
+          "latitude": lat,
+          "longitude": long,
+          "type": selectedType
+          // "image": image
+        }));
+    print("The following is the response $response");
   }
 
   String _localhost() {
