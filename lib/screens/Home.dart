@@ -703,7 +703,7 @@ class _HomeState extends State<Home> {
   _makeGetRequest() async {
     final url = Uri.parse(_localhost());
     Response response =
-        await post(Uri.parse('https://edwin-muhoro.ninja/public_html/server.php'),
+        await post(Uri.parse('https://edwin-muhoro.ninja'),
             headers: {"content-type": "application/json"},
             body: jsonEncode({
               
