@@ -16,12 +16,12 @@
           
          //  $current_date=date("Y/m/d");
       
-          $image=$_POST['image'];
-          $x_coordinate=$_POST['x_coordinate'];
-          $y_coordinate=$_POST['y_coordinate'];
-          $latitude=$_POST['latitude'];
-          $longitude=$_POST['longitude'];
-          $type=$_POST['type'];
+          $image="crop";
+          $x_coordinate=36.95956492910736;
+          $y_coordinate=-0.44064109650801686 ;
+          $latitude=36.95956492910736;
+          $longitude=-0.44064109650801686;
+          $type='coffee';
           
           $image_name = uniqid();
           
