@@ -3,7 +3,7 @@ const bytea = require('postgres-bytea');
 const app = express();
 app.use(express.json({extended: false}));
 const port = 5432;
-const hostname = "iggresserver.dkut.ac.ke";
+const hostname = "http://iggresserver.dkut.ac.ke";
 const client = require('./post');
 
 app.post('/',(req,res) =>{
