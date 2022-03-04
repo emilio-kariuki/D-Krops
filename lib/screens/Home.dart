@@ -71,18 +71,18 @@ class _HomeState extends State<Home> {
     }
   }
 
-  getLocation() {
-    getPermission().then((locate) {
-      print(longitude);
-      print(latitude);
-      LatLng ltPosition = LatLng(latitude!, longitude!);
-      CameraPosition cameraPosition =
-          CameraPosition(target: ltPosition, zoom: 10);
-      // ignore: unused_local_variable
-      newGoogleMapController
-          ?.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
-    });
-  }
+  // getLocation() {
+  //   getPermission().then((locate) {
+  //     print(longitude);
+  //     print(latitude);
+  //     LatLng ltPosition = LatLng(latitude!, longitude!);
+  //     CameraPosition cameraPosition =
+  //         CameraPosition(target: ltPosition, zoom: 10);
+  //     // ignore: unused_local_variable
+  //     newGoogleMapController
+  //         ?.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
+  //   });
+  // }
 
   Completer<GoogleMapController> _controller = Completer();
 
@@ -592,7 +592,7 @@ class _HomeState extends State<Home> {
                                   onMapCreated:
                                       (GoogleMapController controller) {
                                     _controller.complete(controller);
-                                    getLocation();
+                                    // getLocation();
                                   },
                                 ),
                               )),
