@@ -703,10 +703,7 @@ class _HomeState extends State<Home> {
   }
 
   _makeGetRequest() async {
-    // var dio = Dio();
-    var response = await http
-        .post(Uri.parse('iggresapps.dkut.ac.ke/crop_mapping.php'), body: {
-          
+    var formData = FormData.fromMap({
       "x_coordinate": latitude,
       "y_coordinate": longitude,
       "latitude": latitude,
@@ -714,6 +711,10 @@ class _HomeState extends State<Home> {
       "image": image,
       "type": selectedType
     });
+    var dio = Dio();
+    var response = await http.post(
+        Uri.parse('iggresapps.dkut.ac.ke/crop_mapping.php'),
+        body: formData);
     loading = true;
     print('the respose is $response');
   }
