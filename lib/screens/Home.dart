@@ -21,6 +21,7 @@ import 'package:lottie/lottie.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:location_permissions/location_permissions.dart'
     hide PermissionStatus;
+import 'package:restart_app/restart_app.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -31,7 +32,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   bool loading = false;
-  String phpurl = "http://192.168.12.239/server.php";
   GoogleMapController? newGoogleMapController;
   // double latitude = -122.085749655962;
   // double longitude = 37.42796133580664;
