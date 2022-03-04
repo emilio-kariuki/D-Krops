@@ -706,8 +706,8 @@ class _HomeState extends State<Home> {
         body: jsonEncode({
           "x_coordinate": latitude,
           "y_coordinate": longitude,
-          "lat": lat,
-          "long": long,
+          "latitude": lat,
+          "longitude": long,
           "type": selectedType,
            "image": image
         }));
