@@ -714,6 +714,6 @@ class _HomeState extends State<Home> {
       "type": selectedType
     });
     loading = true;
-    print(response);
+    print('the respose is $response');
   }
 }
