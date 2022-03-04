@@ -20,7 +20,7 @@
     $name='Emilio';
     
 
-  $sql="INSERT INTO table(name) VALUES ($name)";
+  $sql="insert into table(name) VALUES ($name)";
   $result= pg_query($db,$sql);
 // $q=($db,"INSERT INTO sent_information(id, user_id, description, incident_type, latitude, longitude, image_name, date_sent, status)VALUES ('0', '0', 'df', 'jh', 'hg', 'jf', 'gfd', 'fds', 'erd')"); 
  // $result=pg_query($q);
