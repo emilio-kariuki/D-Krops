@@ -708,15 +708,9 @@ class _HomeState extends State<Home> {
       "y_coordinate": 28.9,
       "latitude": 0.2324423,
       "longitude": 120.24232323,
-      "image": "crops",
+      "picture": "crops",
       "type": "Maize"
       });
   }
 
-  String _localhost() {
-    if (Platform.isAndroid)
-      return 'http://10.0.2.2/';
-    else // for iOS simulator
-      return 'http://localhost:5000/';
-  }
 }
