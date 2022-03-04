@@ -662,7 +662,6 @@ class _HomeState extends State<Home> {
                     child:
                         Text('Submit', style: GoogleFonts.roboto(fontSize: 20)),
                     onPressed: () {
-                      setState(() {
                         _makeGetRequest();
                         loading
                             ? CircularProgressIndicator()
@@ -692,7 +691,7 @@ class _HomeState extends State<Home> {
                                 });
                         Future.delayed(const Duration(milliseconds: 1670),
                             () => Navigator.of(context).pop());
-                      });
+                      
                     },
                   ),
                 ),
