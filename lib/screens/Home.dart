@@ -712,7 +712,7 @@ class _HomeState extends State<Home> {
       "y_coordinate": 28.9,
       "latitude": 0.2324423,
       "longitude": 120.24232323,
-      "picture": "crops",
+      "image": "crops",
       "type": "Maize"
     });
     loading = true;
