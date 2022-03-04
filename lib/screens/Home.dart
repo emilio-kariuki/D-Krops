@@ -709,7 +709,7 @@ class _HomeState extends State<Home> {
           "latitude": lat,
           "longitude": long,
           "type": selectedType,
-           "image": image
+          "image": image
         }));
     
   }
