@@ -16,7 +16,7 @@
     echo "opening";
 
     
-    $name = "test";
+    $name = "done";
     
     
 
