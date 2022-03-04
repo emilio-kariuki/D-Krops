@@ -44,49 +44,59 @@ class _HomeState extends State<Home> {
   Location location = Location();
 
   // LatLng ltPosition = LatLng(latitude!, longitude!);
-  getPermission() async {
-    bool _serviceEnabled;
-    PermissionStatus _permissionGranted;
-
-    _serviceEnabled = await location.serviceEnabled();
-    if (!_serviceEnabled) {
-      _serviceEnabled = await location.requestService();
-      if (!_serviceEnabled) {
-        return;
+  getLocation() async {
+    bool serviceEnabled;
+    LocationPermission permission;
+    // Test if location services are enabled.
+    serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    if (!serviceEnabled) {
+      // Location services are not enabled don't continue
+      // accessing the position and request users of the
+      // App to enable the location services.
+      await Geolocator.openLocationSettings();
+      return Future.error('Location services are disabled.');
+    }
+    permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+      if (permission == LocationPermission.denied) {
+      
+        return Future.error('Location permissions are denied');
       }
     }
-
-    _permissionGranted = await location.hasPermission();
-    if (_permissionGranted == PermissionStatus.denied) {
-      _permissionGranted = await location.requestPermission();
-      if (_permissionGranted != PermissionStatus.granted) {
-        return;
-      }
-      var locate = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.best,
-      );
+    if (permission == LocationPermission.deniedForever) {
+      // Permissions are denied forever, handle appropriately.
+      return Future.error(
+          'Location permissions are permanently denied, we cannot request permissions.');
+    }
+    // When we reach here, permissions are granted and we can
+    // continue accessing the position of the device.
+    var locate = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+      // var locate = await Geolocator.getCurrentPosition(
+      //   desiredAccuracy: LocationAccuracy.best,
+      // );
       // print(locate.longitude);
       latitude = locate.latitude;
       longitude = locate.longitude;
-      print(latitude);
-      print(longitude);
       lat = locate.latitude;
       long = locate.longitude;
-    }
-  }
-
-  getLocation() {
-    getPermission().then((locate) {
-      print(longitude);
       print(latitude);
-      LatLng ltPosition = LatLng(latitude!, longitude!);
-      CameraPosition cameraPosition =
-          CameraPosition(target: ltPosition, zoom: 10);
-      // ignore: unused_local_variable
-      newGoogleMapController
-          ?.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
-    });
-  }
+      print(longitude);
+    }
+  
+
+  // getLocation() {
+  //   getPermission().then((locate) {
+  //     print(longitude);
+  //     print(latitude);
+  //     LatLng ltPosition = LatLng(latitude!, longitude!);
+  //     CameraPosition cameraPosition =
+  //         CameraPosition(target: ltPosition, zoom: 10);
+  //     // ignore: unused_local_variable
+  //     newGoogleMapController
+  //         ?.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
+  //   });
+  // }
 
   Completer<GoogleMapController> _controller = Completer();
 
