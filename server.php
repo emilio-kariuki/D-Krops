@@ -17,7 +17,7 @@
           
          //  $current_date=date("Y/m/d");
       
-         //  $image="crop";
+          $image="ecoville";
           $x_coordinate=36.95956492910736;
           $y_coordinate=-0.44064109650801686 ;
           $latitude=36.95956492910736;
