@@ -30,6 +30,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  bool loading = false;
   String phpurl = "http://192.168.12.239/server.php";
   GoogleMapController? newGoogleMapController;
   double? latitude;
@@ -663,28 +664,32 @@ class _HomeState extends State<Home> {
                     onPressed: () {
                       setState(() {
                         _makeGetRequest();
-                        showDialog(
-                            context: context,
-                            builder: (BuildContext context) {
-                              return AlertDialog(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.all(
-                                        Radius.circular(20.0))),
-                                title: Text(""),
-                                content: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Lottie.asset(
-                                        "assets/lottie/successful.json",
-                                        height: size.height * 0.21),
-                                    Text('Successful',
-                                        style: GoogleFonts.roboto(
-                                            fontSize: 27, color: Colors.black)),
-                                  ],
-                                ),
-                              );
-                            });
+                        loading
+                            ? CircularProgressIndicator()
+                            : showDialog(
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return AlertDialog(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(20.0))),
+                                    title: Text(""),
+                                    content: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Lottie.asset(
+                                            "assets/lottie/successful.json",
+                                            height: size.height * 0.21),
+                                        Text('Successful',
+                                            style: GoogleFonts.roboto(
+                                                fontSize: 27,
+                                                color: Colors.black)),
+                                      ],
+                                    ),
+                                  );
+                                });
                         Future.delayed(const Duration(milliseconds: 1670),
                             () => Navigator.of(context).pop());
                       });
@@ -701,16 +706,16 @@ class _HomeState extends State<Home> {
   }
 
   _makeGetRequest() async {
-    
     // var dio = Dio();
-    var response = await http.post(Uri.parse('iggresapps.dkut.ac.ke/crop_mapping.php'), body: {
+    var response = await http
+        .post(Uri.parse('iggresapps.dkut.ac.ke/crop_mapping.php'), body: {
       "x_coordinate": 32.9,
       "y_coordinate": 28.9,
       "latitude": 0.2324423,
       "longitude": 120.24232323,
       "picture": "crops",
       "type": "Maize"
-      });
+    });
+    loading = true;
   }
-
 }
