@@ -703,7 +703,7 @@ class _HomeState extends State<Home> {
   _makeGetRequest() async {
     
     var dio = Dio();
-    var response = await dio.post('/test', data: {
+    var response = await dio.post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: {
       "x_coordinate": 32.9,
       "y_coordinate": 28.9,
       "latitude": 0.2324423,
