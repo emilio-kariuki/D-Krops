@@ -714,6 +714,6 @@ class _HomeState extends State<Home> {
     });
     var response = await dio.post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: formData);
     loading = true;
-    // print(The response);
+    print(response);
   }
 }
