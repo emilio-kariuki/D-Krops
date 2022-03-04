@@ -30,7 +30,7 @@
       
          if($upload_path){
       
-            //   file_put_contents($upload_path,base64_decode($image));
+              file_put_contents($upload_path,base64_decode($image));
       
       //   $sql_details="INSERT INTO upload (x_coordinate,y_coordinate,geom,type) VALUES ($x_coordinate,$y_coordinate,ST_SetSRID(ST_MakePoint($longitude, $latitude), 4326),$type)";
       
