@@ -2,9 +2,10 @@
    $host        = "host = iggresserver.dkut.ac.ke ";
    $port        = "port = 5432";
    $dbname      = "dbname = crop_mapping";
-   $credentials = "user = postgres password=.Xy!@D3K_3ev3R.2!jL!";
+   $user = "user = postgres ";
+   $password = 'password=.Xy!@D3K_3ev3R.2!jL!';
 
-   $db = pg_connect( "$host $port $dbname $credentials"  );
+   $db = pg_connect( "$host $port $dbname $user $password"  );
    if(!$db) {
       echo "Error : Unable to open database\n";
    } else {
