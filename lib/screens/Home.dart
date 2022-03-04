@@ -33,10 +33,10 @@ class _HomeState extends State<Home> {
   bool loading = false;
   String phpurl = "http://192.168.12.239/server.php";
   GoogleMapController? newGoogleMapController;
-  double? latitude;
-  double? longitude;
-  double? lat;
-  double? long;
+  double latitude = -122.085749655962;
+  double longitude = 37.42796133580664;
+  double lat = -122.085749655962;
+  double long = 37.42796133580664;
   Location location = Location();
 
   // LatLng ltPosition = LatLng(latitude!, longitude!);
@@ -75,7 +75,7 @@ class _HomeState extends State<Home> {
     getPermission().then((locate) {
       print(longitude);
       print(latitude);
-      LatLng ltPosition = LatLng(latitude!, longitude!);
+      LatLng ltPosition = LatLng(latitude, longitude);
       CameraPosition cameraPosition =
           CameraPosition(target: ltPosition, zoom: 10);
       // ignore: unused_local_variable
