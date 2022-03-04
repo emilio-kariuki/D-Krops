@@ -593,6 +593,7 @@ class _HomeState extends State<Home> {
                                       (GoogleMapController controller) {
                                     _controller.complete(controller);
                                     // getLocation();
+                                    getPermission();
                                   },
                                 ),
                               )),
