@@ -64,6 +64,8 @@ class _HomeState extends State<Home> {
       // print(locate.longitude);
       latitude = locate.latitude;
       longitude = locate.longitude;
+      print(latitude);
+      print(longitude);
       lat = locate.latitude;
       long = locate.longitude;
     }
@@ -703,7 +705,7 @@ class _HomeState extends State<Home> {
   }
 
   _makeGetRequest() async {
-     var dio = Dio();
+    var dio = Dio();
     var formData = FormData.fromMap({
       "x_coordinate": latitude,
       "y_coordinate": longitude,
@@ -712,7 +714,8 @@ class _HomeState extends State<Home> {
       "image": image,
       "type": selectedType
     });
-    var response = await dio.post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: formData);
+    var response = await dio
+        .post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: formData);
     loading = true;
     print(response);
   }
