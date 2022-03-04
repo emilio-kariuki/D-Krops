@@ -662,36 +662,34 @@ class _HomeState extends State<Home> {
                     child:
                         Text('Submit', style: GoogleFonts.roboto(fontSize: 20)),
                     onPressed: () {
-                        _makeGetRequest();
-                        loading
-                            ? CircularProgressIndicator()
-                            : showDialog(
-                                context: context,
-                                builder: (BuildContext context) {
-                                  return AlertDialog(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(20.0))),
-                                    title: Text(""),
-                                    content: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Lottie.asset(
-                                            "assets/lottie/successful.json",
-                                            height: size.height * 0.21),
-                                        Text('Successful',
-                                            style: GoogleFonts.roboto(
-                                                fontSize: 27,
-                                                color: Colors.black)),
-                                      ],
-                                    ),
-                                  );
-                                });
-                        Future.delayed(const Duration(milliseconds: 1670),
-                            () => Navigator.of(context).pop());
-                      
+                      _makeGetRequest();
+                      loading
+                          ? CircularProgressIndicator()
+                          : showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return AlertDialog(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(20.0))),
+                                  title: Text(""),
+                                  content: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Lottie.asset(
+                                          "assets/lottie/successful.json",
+                                          height: size.height * 0.21),
+                                      Text('Successful',
+                                          style: GoogleFonts.roboto(
+                                              fontSize: 27,
+                                              color: Colors.black)),
+                                    ],
+                                  ),
+                                );
+                              });
+                      Future.delayed(const Duration(milliseconds: 1670),
+                          () => Navigator.of(context).pop());
                     },
                   ),
                 ),
@@ -716,5 +714,6 @@ class _HomeState extends State<Home> {
       "type": selectedType
     });
     loading = true;
+    print(response);
   }
 }
