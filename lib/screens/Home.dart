@@ -713,7 +713,7 @@ class _HomeState extends State<Home> {
     });
     var dio = Dio();
     var response = await dio.post(
-        'iggresapps.dkut.ac.ke/crop_mapping.php',
+        'https://iggresapps.dkut.ac.ke/crop_mapping.php',
         data: formData);
     loading = true;
     print('the respose is $response');
