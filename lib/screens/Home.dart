@@ -702,7 +702,7 @@ class _HomeState extends State<Home> {
   _makeGetRequest() async {
     final url = Uri.parse('https://iggresapps.dkut.ac.ke/crop_mapping.php');
     Response response = await post(url,
-        headers: {"content-type": "application/json"},
+        // headers: {"content-type": "application/json"},
         body: jsonEncode({
           "x_coordinate": latitude,
           "y_coordinate": longitude,
