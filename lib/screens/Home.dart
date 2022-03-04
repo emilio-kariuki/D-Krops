@@ -706,6 +706,7 @@ class _HomeState extends State<Home> {
     // var dio = Dio();
     var response = await http
         .post(Uri.parse('iggresapps.dkut.ac.ke/crop_mapping.php'), body: {
+          
       "x_coordinate": latitude,
       "y_coordinate": longitude,
       "latitude": latitude,
