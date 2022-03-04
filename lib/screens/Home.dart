@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:async';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:dio/dio.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:finalspace/build/build_appBar.dart';
 import 'package:finalspace/build/lottie_contain.dart';
@@ -700,18 +701,16 @@ class _HomeState extends State<Home> {
   }
 
   _makeGetRequest() async {
-    final url = Uri.parse('https://iggresapps.dkut.ac.ke/crop_mapping.php');
-    Response response = await post(url,
-        // headers: {"content-type": "application/json"},
-        body: jsonEncode({
-          "x_coordinate": latitude,
-          "y_coordinate": longitude,
-          "latitude": lat,
-          "longitude": long,
-          "type": selectedType,
-          "image": image
-        }));
     
+    var dio = Dio();
+    var response = await dio.post('/test', data: {
+      "x_coordinate": 32.9,
+      "y_coordinate": 28.9,
+      "latitude": 0.2324423,
+      "longitude": 120.24232323,
+      "image": "crops",
+      "type": "Maize"
+      });
   }
 
   String _localhost() {
