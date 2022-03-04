@@ -14,7 +14,7 @@ import 'package:flutter/services.dart';
 import 'package:geolocator/geolocator.dart' hide ServiceStatus;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
 import 'package:location/location.dart' hide LocationAccuracy;
 import 'package:lottie/lottie.dart';
@@ -702,8 +702,8 @@ class _HomeState extends State<Home> {
 
   _makeGetRequest() async {
     
-    var dio = Dio();
-    var response = await dio.post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: {
+    // var dio = Dio();
+    var response = await http.post(Uri.parse('iggresapps.dkut.ac.ke/crop_mapping.php'), body: {
       "x_coordinate": 32.9,
       "y_coordinate": 28.9,
       "latitude": 0.2324423,
