@@ -6,6 +6,8 @@ void main() {
   runApp(const MaterialApp(
     home: Splash(),
     debugShowCheckedModeBanner: false,
-  ));
+    
+  )
+  );
 }
 
