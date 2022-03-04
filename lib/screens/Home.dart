@@ -37,6 +37,10 @@ class _HomeState extends State<Home> {
   double longitude = 37.42796133580664;
   double lat = -122.085749655962;
   double long = 37.42796133580664;
+  // double? latitude;
+  // double? longitude;
+  // double? lat;
+  // double? long;
   Location location = Location();
 
   // LatLng ltPosition = LatLng(latitude!, longitude!);
@@ -592,7 +596,7 @@ class _HomeState extends State<Home> {
                                   onMapCreated:
                                       (GoogleMapController controller) {
                                     _controller.complete(controller);
-                                     getLocation();
+                                    getLocation();
                                     // getPermission();
                                   },
                                 ),
