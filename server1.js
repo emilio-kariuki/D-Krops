@@ -7,15 +7,16 @@ const hostname = "127.0.0.1";
 const client = require('./post');
 
 app.post('/',(req,res) =>{
-    try{
-        const {x_coordinate,y_coordinate,lat,long,type} = req.body;
-        const dbt = client.query("INSERT INTO crop_mapping(x_coordinate,y_coordinate,geom,type)VALUES($1,$2, ST_SetSRID(ST_MakePoint($3, $4), 4326),$5)",
-        [x_coordinate,y_coordinate,lat,long,type]);
-        res.json(dbt);
+    // try{
+    //     const {x_coordinate,y_coordinate,lat,long,type} = req.body;
+    //     const dbt = client.query("INSERT INTO crop_mapping(x_coordinate,y_coordinate,geom,type)VALUES($1,$2, ST_SetSRID(ST_MakePoint($3, $4), 4326),$5)",
+    //     [x_coordinate,y_coordinate,lat,long,type]);
+    //     res.json(dbt);
 
-    }catch(err){
-        console.log(err.message)
-    }
+    // }catch(err){
+    //     console.log(err.message)
+    // }
+    res.send("hello world")
 });
 
 app.listen(port,hostname, ()=>{
