@@ -6,7 +6,7 @@ let port = process.env.PORT || 5000;
 const hostname = "127.0.0.1";
 const client = require('./post');
 
-app.post('/',(req,res) =>{
+app.get('/',(req,res) =>{
     // try{
     //     const {x_coordinate,y_coordinate,lat,long,type} = req.body;
     //     const dbt = client.query("INSERT INTO crop_mapping(x_coordinate,y_coordinate,geom,type)VALUES($1,$2, ST_SetSRID(ST_MakePoint($3, $4), 4326),$5)",
