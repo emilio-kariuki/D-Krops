@@ -681,7 +681,7 @@ class _HomeState extends State<Home> {
                           ),
                           child: Text('Submit',
                               style: GoogleFonts.roboto(fontSize: 20)),
-                          onPressed: () async{
+                          onPressed: () async {
                             setState(() {
                               loading = true;
                             });
@@ -754,5 +754,6 @@ class _HomeState extends State<Home> {
     loading = true;
     print(response);
     // getLocation();
+    loading = false;
   }
 }
