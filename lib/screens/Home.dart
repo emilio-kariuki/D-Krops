@@ -599,7 +599,7 @@ class _HomeState extends State<Home> {
                                   child: Scaffold(
                                 body: GoogleMap(
                                   mapType: MapType.hybrid,
-                                  myLocationEnabled: false,
+                                  myLocationEnabled: true,
                                   zoomControlsEnabled: false,
                                   zoomGesturesEnabled: true,
                                   initialCameraPosition: _kGooglePlex,
