@@ -600,7 +600,7 @@ class _HomeState extends State<Home> {
                                 body: GoogleMap(
                                   mapType: MapType.hybrid,
                                   myLocationEnabled: true,
-                                  zoomControlsEnabled: false,
+                                  zoomControlsEnabled: true,
                                   zoomGesturesEnabled: true,
                                   initialCameraPosition: _kGooglePlex,
                                   onMapCreated:
