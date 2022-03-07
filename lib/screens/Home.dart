@@ -696,10 +696,17 @@ class _HomeState extends State<Home> {
                                       Lottie.asset(
                                           "assets/lottie/successful.json",
                                           height: size.height * 0.21),
-                                      Text('Successful',
-                                          style: GoogleFonts.roboto(
-                                              fontSize: 27,
-                                              color: Colors.black)),
+                                      GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            Navigator.of(context).pop();
+                                          });
+                                        },
+                                        child: Text('Successful',
+                                            style: GoogleFonts.roboto(
+                                                fontSize: 27,
+                                                color: Colors.black)),
+                                      ),
                                     ],
                                   ),
                                 );
@@ -736,6 +743,5 @@ class _HomeState extends State<Home> {
     loading = true;
     print(response);
     getLocation();
-    
   }
 }
