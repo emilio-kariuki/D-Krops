@@ -682,9 +682,12 @@ class _HomeState extends State<Home> {
                           child: Text('Submit',
                               style: GoogleFonts.roboto(fontSize: 20)),
                           onPressed: () {
-                            _makeGetRequest();
                             setState(() {
                               loading = true;
+                            });
+                            _makeGetRequest();
+                            setState(() {
+                              loading = false;
                             });
                             loading
                                 ? CircularProgressIndicator()
