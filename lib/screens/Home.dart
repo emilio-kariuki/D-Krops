@@ -684,8 +684,10 @@ class _HomeState extends State<Home> {
                           onPressed: () async {
                             setState(() {
                               loading = true;
+                              _makeGetRequest();
+                              loading = false;
                             });
-                            await _makeGetRequest();
+
                             loading
                                 ? CircularProgressIndicator()
                                 : await showDialog(
