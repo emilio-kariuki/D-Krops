@@ -706,6 +706,7 @@ class _HomeState extends State<Home> {
                               });
                       Future.delayed(const Duration(milliseconds: 1670),
                           () => Navigator.of(context).pop());
+                      setState(() {});
                     },
                   ),
                 ),
