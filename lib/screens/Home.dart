@@ -742,6 +742,6 @@ class _HomeState extends State<Home> {
         .post('https://iggresapps.dkut.ac.ke/cro_mapping.php', data: formData);
     loading = true;
     print(response);
-    getLocation();
+    // getLocation();
   }
 }
