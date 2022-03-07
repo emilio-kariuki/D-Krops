@@ -488,6 +488,7 @@ class _HomeState extends State<Home> {
                                 value: selectedType,
                                 onChanged: (value) {
                                   setState(() {
+                                    getLocation();
                                     selectedType = value as String;
                                     print(selectedType);
                                   });
