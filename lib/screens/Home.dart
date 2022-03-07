@@ -735,6 +735,6 @@ class _HomeState extends State<Home> {
     loading = true;
     print(response);
     getLocation();
-    setState(() {});
+    
   }
 }
