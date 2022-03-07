@@ -125,8 +125,9 @@ class _HomeState extends State<Home> {
 
   String? selectedType;
   // String? selectedVariety;
-  File? image;
+  File? image ;
   ImagePicker picker = ImagePicker();
+  
 
   void takePhoto(ImageSource source) async {
     final image = await picker.pickImage(source: source);
@@ -721,13 +722,16 @@ class _HomeState extends State<Home> {
   }
 
   _makeGetRequest() async {
+    final bytes = image?.readAsBytesSync();
+
+    String base= base64Encode(bytes!);
     var dio = Dio();
     var formData = FormData.fromMap({
       "x_coordinate": latitude,
       "y_coordinate": longitude,
       "latitude": latitude,
       "longitude": longitude,
-      "image": image,
+      "image": base,
       "type": selectedType
     });
     var response = await dio
