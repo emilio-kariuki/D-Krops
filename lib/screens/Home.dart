@@ -719,7 +719,6 @@ class _HomeState extends State<Home> {
   }
 
   _makeGetRequest() async {
-    
     final bytes = image?.readAsBytesSync();
     String imageEncoded = base64Encode(bytes!);
     var dio = Dio();
@@ -736,5 +735,6 @@ class _HomeState extends State<Home> {
     loading = true;
     print(response);
     getLocation();
+    setState(() {});
   }
 }
