@@ -727,7 +727,7 @@ class _HomeState extends State<Home> {
       "y_coordinate": longitude,
       "latitude": latitude,
       "longitude": longitude,
-      "image": image,
+      "image": image?.path,
       "type": selectedType
     });
     var response = await dio
