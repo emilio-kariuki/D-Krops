@@ -689,9 +689,7 @@ class _HomeState extends State<Home> {
                             setState(() {
                               loading = false;
                             });
-                            loading
-                                ? CircularProgressIndicator()
-                                : showDialog(
+                            showDialog(
                                     context: context,
                                     builder: (BuildContext context) {
                                       return AlertDialog(
