@@ -60,7 +60,6 @@ class _HomeState extends State<Home> {
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
-      
         return Future.error('Location permissions are denied');
       }
     }
@@ -71,19 +70,19 @@ class _HomeState extends State<Home> {
     }
     // When we reach here, permissions are granted and we can
     // continue accessing the position of the device.
-    var locate = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
-      // var locate = await Geolocator.getCurrentPosition(
-      //   desiredAccuracy: LocationAccuracy.best,
-      // );
-      // print(locate.longitude);
-      latitude = locate.latitude;
-      longitude = locate.longitude;
-      lat = locate.latitude;
-      long = locate.longitude;
-      print(latitude);
-      print(longitude);
-    }
-  
+    var locate = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.high);
+    // var locate = await Geolocator.getCurrentPosition(
+    //   desiredAccuracy: LocationAccuracy.best,
+    // );
+    // print(locate.longitude);
+    latitude = locate.latitude;
+    longitude = locate.longitude;
+    lat = locate.latitude;
+    long = locate.longitude;
+    print(latitude);
+    print(longitude);
+  }
 
   // getLocation() {
   //   getPermission().then((locate) {
@@ -125,9 +124,8 @@ class _HomeState extends State<Home> {
 
   String? selectedType;
   // String? selectedVariety;
-  File? image ;
+  File? image;
   ImagePicker picker = ImagePicker();
-  
 
   void takePhoto(ImageSource source) async {
     final image = await picker.pickImage(source: source);
@@ -708,7 +706,6 @@ class _HomeState extends State<Home> {
                               });
                       Future.delayed(const Duration(milliseconds: 1670),
                           () => Navigator.of(context).pop());
-                         
                     },
                   ),
                 ),
@@ -722,9 +719,10 @@ class _HomeState extends State<Home> {
   }
 
   _makeGetRequest() async {
+    
     final bytes = image?.readAsBytesSync();
 
-    String base= base64Encode(bytes!);
+    String base = base64Encode(bytes!);
     var dio = Dio();
     var formData = FormData.fromMap({
       "x_coordinate": latitude,
@@ -738,5 +736,6 @@ class _HomeState extends State<Home> {
         .post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: formData);
     loading = true;
     print(response);
+    getLocation();
   }
 }
