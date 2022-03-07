@@ -721,15 +721,14 @@ class _HomeState extends State<Home> {
   _makeGetRequest() async {
     
     final bytes = image?.readAsBytesSync();
-
-    String base = base64Encode(bytes!);
+    String imageEncoded = base64Encode(bytes!);
     var dio = Dio();
     var formData = FormData.fromMap({
       "x_coordinate": latitude,
       "y_coordinate": longitude,
       "latitude": latitude,
       "longitude": longitude,
-      "image": base,
+      "image": imageEncoded,
       "type": selectedType
     });
     var response = await dio
