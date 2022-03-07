@@ -740,7 +740,7 @@ class _HomeState extends State<Home> {
       "type": selectedType
     });
     var response = await dio
-        .post('https://iggresapps.dkut.ac.ke/cro_mapping.php', data: formData);
+        .post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: formData);
     loading = true;
     print(response);
     // getLocation();
