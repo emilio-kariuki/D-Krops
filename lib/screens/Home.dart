@@ -948,7 +948,7 @@ class _HomeState extends State<Home> {
                                 ],
                               ),
                         ),
-                        
+                        Text(today.toString(),style:GoogleFonts.roboto(fontSize:25,color:Colors.white))
                       ],
                     )
                 )
