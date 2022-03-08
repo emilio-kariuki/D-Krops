@@ -842,7 +842,7 @@ class _HomeState extends State<Home> {
                 elevation: 20,
                 shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 child:Container(
-                  // padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                     borderRadius:BorderRadius.circular(20),
                   ),
