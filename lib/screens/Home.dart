@@ -553,6 +553,32 @@ class _HomeState extends State<Home> {
                               LottieContain(
                                   lottieUrl: "assets/lottie/select.json"),
                               SizedBox(width: size.width * 0.06),
+                              Flexible(
+                                flex:1,
+                                child: TextFormField(
+                                  keyboardType: TextInputType.multiline,
+                                  // style: TextStyle(height:10),
+                                  
+                                  decoration: InputDecoration(
+                                      isDense: true, 
+                                      contentPadding: EdgeInsets.fromLTRB(15, 20, 15, 15),
+                                      // contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10.0),
+                                      ),
+                                      // icon: Icon(Icons.person,size:30,color: Colors.black),
+                                      filled: true,
+                                      hintStyle:
+                                          TextStyle(color: Colors.grey[800]),
+                                      focusColor: Colors.red,
+                                      hintText: "Height",
+                                      // suffixText: "10",
+                                      // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
+                                      fillColor: Colors.grey[200]),
+                                  controller: height,
+                                ),
+                              ),
+                              SizedBox(width:15),
                             ],
                           ),
                         ),
