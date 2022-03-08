@@ -879,70 +879,76 @@ class _HomeState extends State<Home> {
                                 ),
                               ],
                             ),
-                        Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                SizedBox(width: 20),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 10),
-                                  child: Text("Pick Date",
-                                      style: GoogleFonts.redressed(
-                                          fontSize: 22, color: Colors.white)),
-                                ),
-                                SizedBox(width:20),
-                                LottieContainer(
-                                      func: () {
-                                        HapticFeedback.lightImpact();
-                                        setState(() {
-                                          showDatePicker(
-                                                  builder: (context, child) {
-                                                    return Theme(
-                                                      data: Theme.of(context)
-                                                          .copyWith(
-                                                        colorScheme:
-                                                            ColorScheme.light(
-                                                          primary: Color.fromARGB(
-                                                              255,
-                                                              201,
-                                                              22,
-                                                              31), // header background color
-                                                          onPrimary: Colors
-                                                              .black, // header text color
-                                                          onSurface: Color.fromARGB(
-                                                              255,
-                                                              0,
-                                                              0,
-                                                              0), // body text color
-                                                        ),
-                                                        textButtonTheme:
-                                                            TextButtonThemeData(
-                                                          style: TextButton
-                                                              .styleFrom(
-                                                            primary: Colors
-                                                                .red, // button text color
+                        Padding(
+                          padding: const EdgeInsets.all(3.0),
+                          child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  SizedBox(width: 20),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 10),
+                                    child: Text("Pick Date",
+                                        style: GoogleFonts.redressed(
+                                            fontSize: 22, color: Colors.white)),
+                                  ),
+                                  SizedBox(width:20),
+                                  Icon(Icons.forward,color:Colors.white),
+                                  SizedBox(width:20),
+                                  LottieContainer(
+                                        func: () {
+                                          HapticFeedback.lightImpact();
+                                          setState(() {
+                                            showDatePicker(
+                                                    builder: (context, child) {
+                                                      return Theme(
+                                                        data: Theme.of(context)
+                                                            .copyWith(
+                                                          colorScheme:
+                                                              ColorScheme.light(
+                                                            primary: Color.fromARGB(
+                                                                255,
+                                                                201,
+                                                                22,
+                                                                31), // header background color
+                                                            onPrimary: Colors
+                                                                .black, // header text color
+                                                            onSurface: Color.fromARGB(
+                                                                255,
+                                                                0,
+                                                                0,
+                                                                0), // body text color
+                                                          ),
+                                                          textButtonTheme:
+                                                              TextButtonThemeData(
+                                                            style: TextButton
+                                                                .styleFrom(
+                                                              primary: Colors
+                                                                  .red, // button text color
+                                                            ),
                                                           ),
                                                         ),
-                                                      ),
-                                                      child: child!,
-                                                    );
-                                                  },
-                                                  context: context,
-                                                  initialDate:
-                                                      today ?? DateTime.now(),
-                                                  firstDate: DateTime(2000),
-                                                  lastDate: DateTime(2023))
-                                              .then((value) {
-                                            setState(() {
-                                              today = value;
-                                              today = DateFormat.yMMM()
-                                                  .format(today!) as DateTime?;
+                                                        child: child!,
+                                                      );
+                                                    },
+                                                    context: context,
+                                                    initialDate:
+                                                        today ?? DateTime.now(),
+                                                    firstDate: DateTime(2000),
+                                                    lastDate: DateTime(2023))
+                                                .then((value) {
+                                              setState(() {
+                                                today = value;
+                                                today = DateFormat.yMMM()
+                                                    .format(today!) as DateTime?;
+                                              });
                                             });
                                           });
-                                        });
-                                      },
-                                      lottieUrl: "assets/lottie/icon.json"),
-                              ],
-                            ),
+                                        },
+                                        lottieUrl: "assets/lottie/icon.json"),
+                                ],
+                              ),
+                        ),
+                        
                       ],
                     )
                 )
