@@ -723,7 +723,7 @@ class _HomeState extends State<Home> {
                           child: Row(
                             children: [
                               LottieContain(
-                                  lottieUrl: "assets/lottie/select.json"),
+                                  lottieUrl: "assets/lottie/shovel.json"),
                               SizedBox(width: size.width * 0.06),
                               DropdownButton2(
                                 hint: Text("Planting method",style:GoogleFonts.roboto(color: Color.fromARGB(255, 49, 49, 49))),
