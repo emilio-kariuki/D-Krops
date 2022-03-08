@@ -31,7 +31,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  
+
   final height = TextEditingController();
   final variety = TextEditingController();
   final row = TextEditingController();
@@ -582,7 +582,7 @@ class _HomeState extends State<Home> {
                                       // suffixText: "10",
                                       // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
                                       fillColor: Colors.grey[200]),
-                                  controller: height,
+                                  controller: variety,
                                 ),
                               ),
                               SizedBox(width:15),
@@ -648,7 +648,7 @@ class _HomeState extends State<Home> {
                                       // suffixText: "10",
                                       // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
                                       fillColor: Colors.grey[200]),
-                                  controller: height,
+                                  controller: row,
                                 ),
                               ),
                               SizedBox(width:15),
@@ -685,7 +685,7 @@ class _HomeState extends State<Home> {
                                       // suffixText: "10",
                                       // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
                                       fillColor: Colors.grey[200]),
-                                  controller: height,
+                                  controller: column,
                                 ),
                               ),
                               SizedBox(width:15),
