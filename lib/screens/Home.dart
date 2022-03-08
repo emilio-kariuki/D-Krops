@@ -172,13 +172,13 @@ class _HomeState extends State<Home> {
                       bottomLeft: Radius.circular(40),
                       bottomRight: Radius.circular(40))),
               child: Container(
-                height: size.height * 0.11,
+                height: size.height * 0.07,
                 width: size.width,
                 decoration: BoxDecoration(
-                  // border: Border(bottom: BorderSide(color: Colors.blueGrey![800])),
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(40),
-                      bottomRight: Radius.circular(40)),
+                  // // border: Border(bottom: BorderSide(color: Colors.blueGrey![800])),
+                  // borderRadius: BorderRadius.only(
+                  //     bottomLeft: Radius.circular(30),
+                  //     bottomRight: Radius.circular(30)),
                   color: Color.fromARGB(255, 14, 14, 20),
                   shape: BoxShape.rectangle,
                 ),
@@ -206,7 +206,7 @@ class _HomeState extends State<Home> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              SizedBox(height: size.height * 0.038),
+                              SizedBox(height: size.height * 0.015),
                               Text("Small-Scale Mapping",
                                   style: GoogleFonts.redressed(
                                       fontSize: 29,
