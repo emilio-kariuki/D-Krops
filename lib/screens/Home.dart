@@ -854,7 +854,7 @@ class _HomeState extends State<Home> {
                                 SizedBox(width: 20),
                                 Padding(
                                   padding: const EdgeInsets.only(top: 10),
-                                  child: Text("Choose Location",
+                                  child: Text("Date of Plantation",
                                       style: GoogleFonts.redressed(
                                           fontSize: 22, color: Colors.white)),
                                 ),
@@ -874,7 +874,18 @@ class _HomeState extends State<Home> {
                                 ),
                               ],
                             ),
-                        
+                        Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                SizedBox(width: 20),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 10),
+                                  child: Text("Date of Plantation",
+                                      style: GoogleFonts.redressed(
+                                          fontSize: 22, color: Colors.white)),
+                                ),
+                              ],
+                            ),
                       ],
                     )
                 )
