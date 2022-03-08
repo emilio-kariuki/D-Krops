@@ -33,7 +33,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   DateTime? today;
   DateTime? plantation;
 
@@ -488,7 +487,6 @@ class _HomeState extends State<Home> {
                           ],
                         ),
                         Padding(
-
                           padding: const EdgeInsets.only(
                               left: 20, bottom: 8, top: 5),
                           child: Row(
@@ -497,7 +495,10 @@ class _HomeState extends State<Home> {
                                   lottieUrl: "assets/lottie/select.json"),
                               SizedBox(width: size.width * 0.06),
                               DropdownButton2(
-                                hint: Text("Type of Crop",style:GoogleFonts.roboto(color: Color.fromARGB(255, 49, 49, 49))),
+                                hint: Text("Type of Crop",
+                                    style: GoogleFonts.roboto(
+                                        color:
+                                            Color.fromARGB(255, 49, 49, 49))),
                                 value: selectedType,
                                 onChanged: (value) {
                                   setState(() {
@@ -566,17 +567,19 @@ class _HomeState extends State<Home> {
                                   lottieUrl: "assets/lottie/balls.json"),
                               SizedBox(width: size.width * 0.06),
                               Flexible(
-                                flex:1,
+                                flex: 1,
                                 child: TextFormField(
                                   keyboardType: TextInputType.multiline,
                                   // style: TextStyle(height:10),
-                                  
+
                                   decoration: InputDecoration(
-                                      isDense: true, 
-                                      contentPadding: EdgeInsets.fromLTRB(15, 20, 15, 15),
+                                      isDense: true,
+                                      contentPadding:
+                                          EdgeInsets.fromLTRB(15, 20, 15, 15),
                                       // contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
                                       border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10.0),
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
                                       ),
                                       // icon: Icon(Icons.person,size:30,color: Colors.black),
                                       filled: true,
@@ -590,7 +593,7 @@ class _HomeState extends State<Home> {
                                   controller: variety,
                                 ),
                               ),
-                              SizedBox(width:15),
+                              SizedBox(width: 15),
                             ],
                           ),
                         ),
@@ -632,17 +635,19 @@ class _HomeState extends State<Home> {
                                   lottieUrl: "assets/lottie/row.json"),
                               SizedBox(width: size.width * 0.06),
                               Flexible(
-                                flex:1,
+                                flex: 1,
                                 child: TextFormField(
                                   keyboardType: TextInputType.multiline,
                                   // style: TextStyle(height:10),
-                                  
+
                                   decoration: InputDecoration(
-                                      isDense: true, 
-                                      contentPadding: EdgeInsets.fromLTRB(15, 20, 15, 15),
+                                      isDense: true,
+                                      contentPadding:
+                                          EdgeInsets.fromLTRB(15, 20, 15, 15),
                                       // contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
                                       border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10.0),
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
                                       ),
                                       // icon: Icon(Icons.person,size:30,color: Colors.black),
                                       filled: true,
@@ -656,7 +661,7 @@ class _HomeState extends State<Home> {
                                   controller: row,
                                 ),
                               ),
-                              SizedBox(width:15),
+                              SizedBox(width: 15),
                             ],
                           ),
                         ),
@@ -669,17 +674,19 @@ class _HomeState extends State<Home> {
                                   lottieUrl: "assets/lottie/columns.json"),
                               SizedBox(width: size.width * 0.06),
                               Flexible(
-                                flex:1,
+                                flex: 1,
                                 child: TextFormField(
                                   keyboardType: TextInputType.multiline,
                                   // style: TextStyle(height:10),
-                                  
+
                                   decoration: InputDecoration(
-                                      isDense: true, 
-                                      contentPadding: EdgeInsets.fromLTRB(15, 20, 15, 15),
+                                      isDense: true,
+                                      contentPadding:
+                                          EdgeInsets.fromLTRB(15, 20, 15, 15),
                                       // contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
                                       border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10.0),
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
                                       ),
                                       // icon: Icon(Icons.person,size:30,color: Colors.black),
                                       filled: true,
@@ -693,7 +700,7 @@ class _HomeState extends State<Home> {
                                   controller: column,
                                 ),
                               ),
-                              SizedBox(width:15),
+                              SizedBox(width: 15),
                             ],
                           ),
                         ),
@@ -727,7 +734,6 @@ class _HomeState extends State<Home> {
                           ],
                         ),
                         Padding(
-
                           padding: const EdgeInsets.only(
                               left: 20, bottom: 8, top: 5),
                           child: Row(
@@ -736,7 +742,10 @@ class _HomeState extends State<Home> {
                                   lottieUrl: "assets/lottie/shovel.json"),
                               SizedBox(width: size.width * 0.06),
                               DropdownButton2(
-                                hint: Text("Planting method",style:GoogleFonts.roboto(color: Color.fromARGB(255, 49, 49, 49))),
+                                hint: Text("Planting method",
+                                    style: GoogleFonts.roboto(
+                                        color:
+                                            Color.fromARGB(255, 49, 49, 49))),
                                 value: selectedType,
                                 onChanged: (value) {
                                   setState(() {
@@ -805,17 +814,19 @@ class _HomeState extends State<Home> {
                                   lottieUrl: "assets/lottie/height.json"),
                               SizedBox(width: size.width * 0.06),
                               Flexible(
-                                flex:1,
+                                flex: 1,
                                 child: TextFormField(
                                   keyboardType: TextInputType.multiline,
                                   // style: TextStyle(height:10),
-                                  
+
                                   decoration: InputDecoration(
-                                      isDense: true, 
-                                      contentPadding: EdgeInsets.fromLTRB(15, 20, 15, 15),
+                                      isDense: true,
+                                      contentPadding:
+                                          EdgeInsets.fromLTRB(15, 20, 15, 15),
                                       // contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
                                       border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10.0),
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
                                       ),
                                       // icon: Icon(Icons.person,size:30,color: Colors.black),
                                       filled: true,
@@ -829,7 +840,7 @@ class _HomeState extends State<Home> {
                                   controller: height,
                                 ),
                               ),
-                              SizedBox(width:15),
+                              SizedBox(width: 15),
                             ],
                           ),
                         ),
@@ -843,116 +854,123 @@ class _HomeState extends State<Home> {
             Padding(
               padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
               child: Material(
-                color: Colors.blueGrey[800],
-                elevation: 20,
-                shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                child:Container(
-                  padding: const EdgeInsets.all(5),
-                  decoration: BoxDecoration(
-                    borderRadius:BorderRadius.circular(20),
-                  ),
-                  child:Column(
-                      children: [
-                        Row(
+                  color: Colors.blueGrey[800],
+                  elevation: 20,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Container(
+                      padding: const EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              SizedBox(width: 20),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10),
+                                child: Text("Date of Plantation",
+                                    style: GoogleFonts.redressed(
+                                        fontSize: 22, color: Colors.white)),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Container(
+                                    margin: const EdgeInsets.only(
+                                        left: 20.0, right: 20.0),
+                                    child: Divider(
+                                      color: Color.fromARGB(255, 0, 0, 0),
+                                      height: 5,
+                                      thickness: 0.4,
+                                    )),
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(3.0),
+                            child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 SizedBox(width: 20),
                                 Padding(
                                   padding: const EdgeInsets.only(top: 10),
-                                  child: Text("Date of Plantation",
+                                  child: Text("Pick Date",
                                       style: GoogleFonts.redressed(
                                           fontSize: 22, color: Colors.white)),
                                 ),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: Container(
-                                      margin: const EdgeInsets.only(
-                                          left: 20.0, right: 20.0),
-                                      child: Divider(
-                                        color: Color.fromARGB(255, 0, 0, 0),
-                                        height: 5,
-                                        thickness: 0.4,
-                                      )),
-                                ),
-                              ],
-                            ),
-                        Padding(
-                          padding: const EdgeInsets.all(3.0),
-                          child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  SizedBox(width: 20),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 10),
-                                    child: Text("Pick Date",
-                                        style: GoogleFonts.redressed(
-                                            fontSize: 22, color: Colors.white)),
-                                  ),
-                                  SizedBox(width:20),
-                                  Icon(Icons.forward,color:Colors.white),
-                                  SizedBox(width:20),
-                                  LottieContainer(
-                                        func: () {
-                                          HapticFeedback.lightImpact();
-                                          setState(() {
-                                            showDatePicker(
-                                                    builder: (context, child) {
-                                                      return Theme(
-                                                        data: Theme.of(context)
-                                                            .copyWith(
-                                                          colorScheme:
-                                                              ColorScheme.light(
-                                                            primary: Color.fromARGB(
-                                                                255,
-                                                                201,
-                                                                22,
-                                                                31), // header background color
-                                                            onPrimary: Colors
-                                                                .black, // header text color
-                                                            onSurface: Color.fromARGB(
-                                                                255,
-                                                                0,
-                                                                0,
-                                                                0), // body text color
-                                                          ),
-                                                          textButtonTheme:
-                                                              TextButtonThemeData(
-                                                            style: TextButton
-                                                                .styleFrom(
-                                                              primary: Colors
-                                                                  .red, // button text color
-                                                            ),
-                                                          ),
+                                SizedBox(width: 20),
+                                Icon(Icons.forward, color: Colors.white),
+                                SizedBox(width: 20),
+                                LottieContainer(
+                                    func: () {
+                                      HapticFeedback.lightImpact();
+                                      setState(() {
+                                        showDatePicker(
+                                                builder: (context, child) {
+                                                  return Theme(
+                                                    data: Theme.of(context)
+                                                        .copyWith(
+                                                      colorScheme:
+                                                          ColorScheme.light(
+                                                        primary: Color.fromARGB(
+                                                            255,
+                                                            201,
+                                                            22,
+                                                            31), // header background color
+                                                        onPrimary: Colors
+                                                            .black, // header text color
+                                                        onSurface: Color.fromARGB(
+                                                            255,
+                                                            0,
+                                                            0,
+                                                            0), // body text color
+                                                      ),
+                                                      textButtonTheme:
+                                                          TextButtonThemeData(
+                                                        style: TextButton
+                                                            .styleFrom(
+                                                          primary: Colors
+                                                              .red, // button text color
                                                         ),
-                                                        child: child!,
-                                                      );
-                                                    },
-                                                    context: context,
-                                                    initialDate:
-                                                        today ?? DateTime.now(),
-                                                    firstDate: DateTime(2000),
-                                                    lastDate: DateTime(2023))
-                                                .then((value) {
-                                              setState(() {
-                                                today = value;
-                                                today = DateFormat.yMMM()
-                                                    .format(today!) as DateTime?;
-                                              });
-                                            });
+                                                      ),
+                                                    ),
+                                                    child: child!,
+                                                  );
+                                                },
+                                                context: context,
+                                                initialDate:
+                                                    today ?? DateTime.now(),
+                                                firstDate: DateTime(2000),
+                                                lastDate: DateTime(2023))
+                                            .then((value) {
+                                          setState(() {
+                                            today = value;
+                                            today = DateFormat.yMMM()
+                                                .format(today!) as DateTime?;
                                           });
-                                        },
-                                        lottieUrl: "assets/lottie/icon.json"),
-                                ],
-                              ),
-                        ),
-                        Text(today.toString(),style:GoogleFonts.roboto(fontSize:25,color:Colors.white))
-                      ],
-                    )
-                )
-              ),
+                                        });
+                                      });
+                                    },
+                                    lottieUrl: "assets/lottie/icon.json"),
+                              ],
+                            ),
+                          ),
+                          
+                          InkWell(
+                            onTap: () {
+                              setState(() {});
+                            },
+                            child: Text(today.toString(),
+                                style: GoogleFonts.redressed(
+                                    fontSize: 22, color: Colors.white)),
+                          ),
+                        ],
+                      ))),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
