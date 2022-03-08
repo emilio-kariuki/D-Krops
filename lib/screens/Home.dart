@@ -619,7 +619,7 @@ class _HomeState extends State<Home> {
                           child: Row(
                             children: [
                               LottieContain(
-                                  lottieUrl: "assets/lottie/select.json"),
+                                  lottieUrl: "assets/lottie/row.json"),
                               SizedBox(width: size.width * 0.06),
                               Flexible(
                                 flex:1,
