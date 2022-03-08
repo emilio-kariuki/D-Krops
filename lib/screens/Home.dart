@@ -554,7 +554,7 @@ class _HomeState extends State<Home> {
                               Padding(
                                 padding: const EdgeInsets.only(
                                     top: 10, left: 20, bottom: 4),
-                                child: Text("Type of crop",
+                                child: Text("Spacing",
                                     style: GoogleFonts.redressed(
                                         fontSize: 22, color: Colors.white)),
                               ),
@@ -601,7 +601,7 @@ class _HomeState extends State<Home> {
                                       hintStyle:
                                           TextStyle(color: Colors.grey[800]),
                                       focusColor: Colors.red,
-                                      hintText: "Height",
+                                      hintText: "Row",
                                       // suffixText: "10",
                                       // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
                                       fillColor: Colors.grey[200]),
@@ -638,7 +638,7 @@ class _HomeState extends State<Home> {
                                       hintStyle:
                                           TextStyle(color: Colors.grey[800]),
                                       focusColor: Colors.red,
-                                      hintText: "Height",
+                                      hintText: "Column",
                                       // suffixText: "10",
                                       // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
                                       fillColor: Colors.grey[200]),
