@@ -478,6 +478,7 @@ class _HomeState extends State<Home> {
                           ],
                         ),
                         Padding(
+
                           padding: const EdgeInsets.only(
                               left: 20, bottom: 8, top: 5),
                           child: Row(
@@ -544,6 +545,35 @@ class _HomeState extends State<Home> {
                               ),
                             ],
                           ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 5),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 10, left: 20, bottom: 4),
+                                child: Text("Type of crop",
+                                    style: GoogleFonts.redressed(
+                                        fontSize: 22, color: Colors.white)),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Container(
+                                  margin: const EdgeInsets.only(
+                                      left: 20.0, right: 20.0),
+                                  child: Divider(
+                                    color: Color.fromARGB(255, 255, 255, 255),
+                                    height: 5,
+                                    thickness: 0.4,
+                                  )),
+                            ),
+                          ],
                         ),
                         Padding(
                           padding: const EdgeInsets.only(
