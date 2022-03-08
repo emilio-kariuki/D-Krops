@@ -31,6 +31,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final height = TextEditingController();
   bool loading = false;
   GoogleMapController? newGoogleMapController;
   // double latitude = -122.085749655962;
@@ -552,7 +553,6 @@ class _HomeState extends State<Home> {
                               LottieContain(
                                   lottieUrl: "assets/lottie/select.json"),
                               SizedBox(width: size.width * 0.06),
-                              
                             ],
                           ),
                         ),
@@ -564,7 +564,30 @@ class _HomeState extends State<Home> {
                               LottieContain(
                                   lottieUrl: "assets/lottie/select.json"),
                               SizedBox(width: size.width * 0.06),
-                              
+                              Flexible(
+                                child: TextFormField(
+                                  minLines: 2,
+                                  maxLines: 10,
+                                  keyboardType: TextInputType.multiline,
+                                  // style: TextStyle(height:10),
+                                  maxLength: 360,
+                                  decoration: InputDecoration(
+                                      // contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10.0),
+                                      ),
+                                      // icon: Icon(Icons.person,size:30,color: Colors.black),
+                                      filled: true,
+                                      hintStyle:
+                                          TextStyle(color: Colors.grey[800]),
+                                      focusColor: Colors.red,
+                                      hintText: "Summary of the waste",
+                                      // suffixText: "10",
+                                      // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
+                                      fillColor: Colors.grey[200]),
+                                  controller: height,
+                                ),
+                              ),
                             ],
                           ),
                         ),
