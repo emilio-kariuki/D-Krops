@@ -835,6 +835,17 @@ class _HomeState extends State<Home> {
               ),
             ),
             //the code to add the map\
+            Material(
+              color: Colors.blueGrey[800],
+              elevation: 20,
+              shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+              child:Container(
+                decoration: BoxDecoration(
+                  borderRadius:BorderRadius.circular(20),
+                  
+                )
+              )
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
               child: Material(
