@@ -571,6 +571,8 @@ class _HomeState extends State<Home> {
                                   // style: TextStyle(height:10),
                                   
                                   decoration: InputDecoration(
+                                      isDense: true, 
+                                      contentPadding: EdgeInsets.fromLTRB(15, 10, 10, 0),
                                       // contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
                                       border: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(10.0),
