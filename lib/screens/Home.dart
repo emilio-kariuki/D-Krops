@@ -565,12 +565,11 @@ class _HomeState extends State<Home> {
                                   lottieUrl: "assets/lottie/select.json"),
                               SizedBox(width: size.width * 0.06),
                               Flexible(
+                                flex:1,
                                 child: TextFormField(
-                                  minLines: 2,
-                                  maxLines: 10,
                                   keyboardType: TextInputType.multiline,
                                   // style: TextStyle(height:10),
-                                  maxLength: 360,
+                                  
                                   decoration: InputDecoration(
                                       // contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
                                       border: OutlineInputBorder(
@@ -581,13 +580,14 @@ class _HomeState extends State<Home> {
                                       hintStyle:
                                           TextStyle(color: Colors.grey[800]),
                                       focusColor: Colors.red,
-                                      hintText: "Summary of the waste",
+                                      hintText: "Height",
                                       // suffixText: "10",
                                       // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
                                       fillColor: Colors.grey[200]),
                                   controller: height,
                                 ),
                               ),
+                              SizedBox(width:15),
                             ],
                           ),
                         ),
