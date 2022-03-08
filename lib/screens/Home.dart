@@ -889,6 +889,7 @@ class _HomeState extends State<Home> {
                                       style: GoogleFonts.redressed(
                                           fontSize: 22, color: Colors.white)),
                                 ),
+                                SizedBox(width:20),
                                 LottieContainer(
                                       func: () {
                                         HapticFeedback.lightImpact();
@@ -939,7 +940,7 @@ class _HomeState extends State<Home> {
                                           });
                                         });
                                       },
-                                      lottieUrl: "assets/icon.json"),
+                                      lottieUrl: "assets/lottie/icon.json"),
                               ],
                             ),
                       ],
