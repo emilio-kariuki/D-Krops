@@ -31,7 +31,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  
   final height = TextEditingController();
+  final variety = TextEditingController();
+  final row = TextEditingController();
+  final column = TextEditingController();
+
   bool loading = false;
   GoogleMapController? newGoogleMapController;
   // double latitude = -122.085749655962;
