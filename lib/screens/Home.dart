@@ -961,13 +961,16 @@ class _HomeState extends State<Home> {
                             ),
                           ),
                           
-                          InkWell(
-                            onTap: () {
-                              setState(() {});
-                            },
-                            child: Text(today.toString(),
-                                style: GoogleFonts.redressed(
-                                    fontSize: 22, color: Colors.white)),
+                          Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: InkWell(
+                              onTap: () {
+                                setState(() {});
+                              },
+                              child: Text(today.toString(),
+                                  style: GoogleFonts.redressed(
+                                      fontSize: 22, color: Colors.white)),
+                            ),
                           ),
                         ],
                       ))),
