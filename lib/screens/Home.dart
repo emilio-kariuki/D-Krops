@@ -903,9 +903,9 @@ class _HomeState extends State<Home> {
                                       style: GoogleFonts.redressed(
                                           fontSize: 22, color: Colors.white)),
                                 ),
-                                SizedBox(width: 20),
+                                SizedBox(width: size.width * 0.17),
                                 Icon(Icons.forward, color: Colors.white),
-                                SizedBox(width: 20),
+                                SizedBox(width: size.width * 0.17),
                                 LottieContainer(
                                     func: () {
                                       HapticFeedback.lightImpact();
