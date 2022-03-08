@@ -8,6 +8,7 @@ import 'package:dio/dio.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:finalspace/build/build_appBar.dart';
 import 'package:finalspace/build/lottie_contain.dart';
+import 'package:finalspace/build/lottie_container.dart';
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
@@ -16,6 +17,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
+import 'package:intl/intl.dart';
 import 'package:location/location.dart' hide LocationAccuracy;
 import 'package:lottie/lottie.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -31,6 +33,9 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  DateTime? today;
+  DateTime? plantation;
 
   final height = TextEditingController();
   final variety = TextEditingController();
@@ -884,6 +889,57 @@ class _HomeState extends State<Home> {
                                       style: GoogleFonts.redressed(
                                           fontSize: 22, color: Colors.white)),
                                 ),
+                                LottieContainer(
+                                      func: () {
+                                        HapticFeedback.lightImpact();
+                                        setState(() {
+                                          showDatePicker(
+                                                  builder: (context, child) {
+                                                    return Theme(
+                                                      data: Theme.of(context)
+                                                          .copyWith(
+                                                        colorScheme:
+                                                            ColorScheme.light(
+                                                          primary: Color.fromARGB(
+                                                              255,
+                                                              201,
+                                                              22,
+                                                              31), // header background color
+                                                          onPrimary: Colors
+                                                              .black, // header text color
+                                                          onSurface: Color.fromARGB(
+                                                              255,
+                                                              0,
+                                                              0,
+                                                              0), // body text color
+                                                        ),
+                                                        textButtonTheme:
+                                                            TextButtonThemeData(
+                                                          style: TextButton
+                                                              .styleFrom(
+                                                            primary: Colors
+                                                                .red, // button text color
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      child: child!,
+                                                    );
+                                                  },
+                                                  context: context,
+                                                  initialDate:
+                                                      today ?? DateTime.now(),
+                                                  firstDate: DateTime(2000),
+                                                  lastDate: DateTime(2023))
+                                              .then((value) {
+                                            setState(() {
+                                              today = value;
+                                              today = DateFormat.yMMM()
+                                                  .format(today!) as DateTime?;
+                                            });
+                                          });
+                                        });
+                                      },
+                                      lottieUrl: "assets/icon.json"),
                               ],
                             ),
                       ],
