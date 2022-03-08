@@ -835,16 +835,50 @@ class _HomeState extends State<Home> {
               ),
             ),
             //the code to add the map\
-            Material(
-              color: Colors.blueGrey[800],
-              elevation: 20,
-              shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-              child:Container(
-                decoration: BoxDecoration(
-                  borderRadius:BorderRadius.circular(20),
-                  
+            Padding(
+              padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
+              child: Material(
+                color: Colors.blueGrey[800],
+                elevation: 20,
+                shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                child:Container(
+                  // padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    borderRadius:BorderRadius.circular(20),
+                  ),
+                  child:Column(
+                      children: [
+                        Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                SizedBox(width: 20),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 10),
+                                  child: Text("Choose Location",
+                                      style: GoogleFonts.redressed(
+                                          fontSize: 22, color: Colors.white)),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                      margin: const EdgeInsets.only(
+                                          left: 20.0, right: 20.0),
+                                      child: Divider(
+                                        color: Color.fromARGB(255, 0, 0, 0),
+                                        height: 5,
+                                        thickness: 0.4,
+                                      )),
+                                ),
+                              ],
+                            ),
+                        
+                      ],
+                    )
                 )
-              )
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
