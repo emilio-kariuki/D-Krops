@@ -960,7 +960,6 @@ class _HomeState extends State<Home> {
                               ],
                             ),
                           ),
-                          
                           Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: InkWell(
@@ -1162,6 +1161,7 @@ class _HomeState extends State<Home> {
   }
 
   _makeGetRequest() async {
+    final String variety_1 = variety.text;
     final bytes = image?.readAsBytesSync();
     String imageEncoded = base64Encode(bytes!);
     var dio = Dio();
@@ -1172,7 +1172,7 @@ class _HomeState extends State<Home> {
       "longitude": longitude,
       "image": imageEncoded,
       "type": selectedType,
-      
+      "variety": variety_1
     });
     var response = await dio
         .post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: formData);
