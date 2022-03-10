@@ -1171,7 +1171,8 @@ class _HomeState extends State<Home> {
       "latitude": latitude,
       "longitude": longitude,
       "image": imageEncoded,
-      "type": selectedType
+      "type": selectedType,
+      "variety":variety.text
     });
     var response = await dio
         .post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: formData);
