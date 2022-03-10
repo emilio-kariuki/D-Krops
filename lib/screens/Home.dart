@@ -129,11 +129,11 @@ class _HomeState extends State<Home> {
     'capcicum',
     'coriander',
     'pumpkins',
-    ''
+    
   ];
 
   String? selectedType;
-  String? selectedVariety;
+  String? selectedMethod;
   File? image;
   ImagePicker picker = ImagePicker();
 
