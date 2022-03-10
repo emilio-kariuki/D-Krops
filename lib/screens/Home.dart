@@ -637,7 +637,7 @@ class _HomeState extends State<Home> {
                               Flexible(
                                 flex: 1,
                                 child: TextFormField(
-                                  keyboardType: TextInputType.multiline,
+                                  // keyboardType: TextInputType.multiline,
                                   // style: TextStyle(height:10),
 
                                   decoration: InputDecoration(
@@ -746,12 +746,12 @@ class _HomeState extends State<Home> {
                                     style: GoogleFonts.roboto(
                                         color:
                                             Color.fromARGB(255, 49, 49, 49))),
-                                value: selectedType,
+                                value: selectedMethod,
                                 onChanged: (value) {
                                   setState(() {
                                     getLocation();
-                                    selectedType = value as String;
-                                    print(selectedType);
+                                    selectedMethod = value as String;
+                                    print(selectedMethod);
                                   });
                                 },
                                 icon: const Icon(
@@ -816,7 +816,7 @@ class _HomeState extends State<Home> {
                               Flexible(
                                 flex: 1,
                                 child: TextFormField(
-                                  keyboardType: TextInputType.multiline,
+                                  // keyboardType: TextInputType.multiline,
                                   // style: TextStyle(height:10),
 
                                   decoration: InputDecoration(
@@ -1148,6 +1148,7 @@ class _HomeState extends State<Home> {
                               loading = false;
                             });
                             selectedType = null;
+                            selectedMethod = null;
                           },
                         ),
                       ),
