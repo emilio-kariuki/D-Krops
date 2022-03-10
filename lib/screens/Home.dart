@@ -133,7 +133,7 @@ class _HomeState extends State<Home> {
   ];
 
   String? selectedType;
-  // String? selectedVariety;
+  String? selectedVariety;
   File? image;
   ImagePicker picker = ImagePicker();
 
@@ -1162,6 +1162,10 @@ class _HomeState extends State<Home> {
 
   _makeGetRequest() async {
     final String variety_1 = variety.text;
+    final String row_1 = variety.text;
+    final String column_1 = variety.text;
+    final String height_1 = variety.text;
+    
     final bytes = image?.readAsBytesSync();
     String imageEncoded = base64Encode(bytes!);
     var dio = Dio();
