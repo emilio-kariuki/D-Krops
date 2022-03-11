@@ -36,7 +36,7 @@ class _HomeState extends State<Home> {
   DateTime? today;
   DateTime? plantation;
 
-  final height = TextEditingController();
+  final heights = TextEditingController();
   final variety = TextEditingController();
   final row = TextEditingController();
   final column = TextEditingController();
@@ -836,7 +836,7 @@ class _HomeState extends State<Home> {
                                       // suffixText: "10",
                                       // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
                                       fillColor: Colors.grey[200]),
-                                  controller: height,
+                                  controller: heights,
                                 ),
                               ),
                               SizedBox(width: 15),
@@ -1164,8 +1164,8 @@ class _HomeState extends State<Home> {
     final String variety_1 = variety.text;
     final String row_1 = row.text;
     final String column_1 = column.text;
-    final String height_1 = height.text;
-    final String date_1 = today.toString();
+    final String height_1 = heights.text;
+    // final String date_1 = today.toString();
 
     final bytes = image?.readAsBytesSync();
     String imageEncoded = base64Encode(bytes!);
