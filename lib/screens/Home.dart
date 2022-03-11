@@ -129,7 +129,6 @@ class _HomeState extends State<Home> {
     'capcicum',
     'coriander',
     'pumpkins',
-    
   ];
 
   String? selectedType;
@@ -1166,8 +1165,8 @@ class _HomeState extends State<Home> {
     final String row_1 = row.text;
     final String column_1 = column.text;
     final String height_1 = height.text;
-    // final String date_1 = today.toStri
-    
+    final String date_1 = today.toString();
+
     final bytes = image?.readAsBytesSync();
     String imageEncoded = base64Encode(bytes!);
     var dio = Dio();
@@ -1179,11 +1178,11 @@ class _HomeState extends State<Home> {
       "image": imageEncoded,
       "type": selectedType,
       "variety": variety_1,
-      "height":height_1,
-      "plantation_method":selectedMethod,
-      "row":row_1,
-      "column":column_1,
-      "date_of_plantation":today.toString(),
+      "height": height_1,
+      "plantation_method": selectedMethod,
+      "row": row_1,
+      "column": column_1,
+      "date_of_plantation": today.toString(),
     });
     var response = await dio
         .post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: formData);
