@@ -1190,7 +1190,7 @@ class _HomeState extends State<Home> {
       "image": imageEncoded,
       "type": selectedType,
       "variety": variety_1,
-      // "height": height_1,
+      "height": height_1,
       // "plantation_method": selectedMethod,
       // "row": row_1,
       // "column": column_1,
