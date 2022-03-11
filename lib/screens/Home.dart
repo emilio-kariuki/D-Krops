@@ -1192,7 +1192,7 @@ class _HomeState extends State<Home> {
       "variety": variety_1,
       "height": height_1,
       "plantation_method": selectedMethod,
-      "row_1": row_1,
+      "row": row_1,
       // "column": column_1,
       // "date_of_plantation": date_1,
     });
