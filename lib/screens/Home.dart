@@ -676,7 +676,7 @@ class _HomeState extends State<Home> {
                               Flexible(
                                 flex: 1,
                                 child: TextFormField(
-                                  keyboardType: TextInputType.multiline,
+                                  // keyboardType: TextInputType.multiline,
                                   // style: TextStyle(height:10),
 
                                   decoration: InputDecoration(
