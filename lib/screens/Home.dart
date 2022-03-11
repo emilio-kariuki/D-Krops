@@ -1177,7 +1177,12 @@ class _HomeState extends State<Home> {
       "longitude": longitude,
       "image": imageEncoded,
       "type": selectedType,
-      "variety": variety_1
+      "variety": variety_1,
+      "height":height_1,
+      "plantation_method":selectedMethod,
+      "row":row_1,
+      "column":column_1,
+      "date_of_plantation":today.toString,
     });
     var response = await dio
         .post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: formData);
