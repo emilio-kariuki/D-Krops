@@ -1182,7 +1182,7 @@ class _HomeState extends State<Home> {
       "plantation_method":selectedMethod,
       "row":row_1,
       "column":column_1,
-      "date_of_plantation":today.toString,
+      //"date_of_plantation":today.toString,
     });
     var response = await dio
         .post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: formData);
