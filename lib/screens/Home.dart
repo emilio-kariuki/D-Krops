@@ -1179,9 +1179,9 @@ class _HomeState extends State<Home> {
       "type": selectedType,
       "variety": variety_1,
       "height": height_1,
-      "plantation_method": selectedMethod,
-      "row": row_1,
-      "column": column_1,
+      // "plantation_method": selectedMethod,
+      // "row": row_1,
+      // "column": column_1,
       // "date_of_plantation": date_1,
     });
     var response = await dio
