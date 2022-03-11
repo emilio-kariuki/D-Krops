@@ -636,6 +636,10 @@ class _HomeState extends State<Home> {
                               Flexible(
                                 flex: 1,
                                 child: TextFormField(
+                                  keyboardType: TextInputType.number,
+                                  inputFormatters: <TextInputFormatter>[
+                                    FilteringTextInputFormatter.digitsOnly
+                                  ], 
                                   // keyboardType: TextInputType.multiline,
                                   // style: TextStyle(height:10),
 
@@ -675,6 +679,10 @@ class _HomeState extends State<Home> {
                               Flexible(
                                 flex: 1,
                                 child: TextFormField(
+                                  keyboardType: TextInputType.number,
+                                  inputFormatters: <TextInputFormatter>[
+                                    FilteringTextInputFormatter.digitsOnly
+                                  ], //
                                   // keyboardType: TextInputType.multiline,
                                   // style: TextStyle(height:10),
 
@@ -815,6 +823,10 @@ class _HomeState extends State<Home> {
                               Flexible(
                                 flex: 1,
                                 child: TextFormField(
+                                  keyboardType: TextInputType.number,
+                                  inputFormatters: <TextInputFormatter>[
+                                    FilteringTextInputFormatter.digitsOnly
+                                  ], //
                                   // keyboardType: TextInputType.multiline,
                                   // style: TextStyle(height:10),
 
