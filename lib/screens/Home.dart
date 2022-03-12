@@ -154,6 +154,24 @@ class _HomeState extends State<Home> {
     'coriander',
     'pumpkins',
   ];
+  List<String> itemz = [
+    'maize',
+    "spinach",
+    "kales",
+    "beans",
+    "cabbage",
+    "Sorghum",
+    "peas",
+    "green grams",
+    "carrots",
+    "onions",
+    'Tomatoes',
+    "potatoes",
+    'capcicum',
+    'coriander',
+    'pumpkins',
+  ];
+
 
   String? selectedType;
   String? selectedMethod;
