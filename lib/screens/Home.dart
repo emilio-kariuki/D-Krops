@@ -895,7 +895,7 @@ class _HomeState extends State<Home> {
                                     margin: const EdgeInsets.only(
                                         left: 20.0, right: 20.0),
                                     child: Divider(
-                                      color: Color.fromARGB(255, 0, 0, 0),
+                                      color: Color.fromARGB(255, 247, 247, 247),
                                       height: 5,
                                       thickness: 0.4,
                                     )),
