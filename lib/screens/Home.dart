@@ -1180,6 +1180,8 @@ class _HomeState extends State<Home> {
     final String row_1 = row.text;
     final String column_1 = column.text;
     final String height_1 = heights.text;
+    final DateFormat formatter = DateFormat('yyyy-MM-dd');
+  final String formatted = formatter.format(today!);
     final String date_1 = today.toString();
 
     final bytes = image?.readAsBytesSync();
@@ -1206,7 +1208,7 @@ class _HomeState extends State<Home> {
       "row": row_1,
       "column": column_1,
       //the date of plantation of the crop in the field
-      "date_of_plantation": date_1,
+      "date_of_plantation": formatted,
     });
     //api that sends the data to the server
     var response = await dio
