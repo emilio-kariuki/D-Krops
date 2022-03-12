@@ -948,14 +948,14 @@ class _HomeState extends State<Home> {
                                 children: [
                                   SizedBox(width: 20),
                                   Padding(
-                                    padding: const EdgeInsets.only(top: 10),
+                                    padding: const EdgeInsets.only(top: 15),
                                     child: Text("Pick Date",
                                         style: GoogleFonts.redressed(
                                             fontSize: 22, color: Colors.white)),
                                   ),
-                                  SizedBox(width: size.width * 0.17),
+                                  SizedBox(width: size.width * 0.15),
                                   Icon(Icons.forward, color: Colors.white),
-                                  SizedBox(width: size.width * 0.17),
+                                  SizedBox(width: size.width * 0.15),
                                   LottieContainer(
                                       func: () {
                                         HapticFeedback.lightImpact();
