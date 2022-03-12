@@ -363,7 +363,7 @@ class _HomeState extends State<Home> {
                                 )
                               : Text("Select Image",
                                   style:
-                                      GoogleFonts.roboto(color: Colors.white)),
+                                      GoogleFonts.roboto(fontSize:20,color: Colors.white)),
                         ),
                         height: size.height * 0.3,
                         width: size.width,
@@ -453,7 +453,7 @@ class _HomeState extends State<Home> {
                               });
                             },
                             icon: Icon(Icons.add_a_photo,
-                                size: 30,
+                                size: 35,
                                 color: image != null
                                     ? Colors.white
                                     : Colors.black)))
@@ -501,7 +501,7 @@ class _HomeState extends State<Home> {
                                       top: 10, left: 20, bottom: 4),
                                   child: Text("Type of crop",
                                       style: GoogleFonts.redressed(
-                                          fontSize: 22, color: Colors.white)),
+                                          fontSize: 23, color: Colors.white)),
                                 ),
                               ],
                             ),
