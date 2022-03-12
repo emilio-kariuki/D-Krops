@@ -1034,6 +1034,7 @@ class _HomeState extends State<Home> {
                                   child: Scaffold(
                                 body: GoogleMap(
                                   mapType: MapType.hybrid,
+                                  myLocationButtonEnabled:true,
                                   myLocationEnabled: true,
                                   zoomControlsEnabled: false,
                                   zoomGesturesEnabled: true,
