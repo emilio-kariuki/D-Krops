@@ -68,8 +68,10 @@ class _HomeState extends State<Home> {
       // App to enable the location services.
       await Geolocator.openLocationSettings();
       return Future.error(
-        
-        'Location services are disabled.');
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text('Location services are disabled.'),
+          duration: Duration(milliseconds: 600)))
+        );
     }
     permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
@@ -85,7 +87,10 @@ class _HomeState extends State<Home> {
     if (permission == LocationPermission.deniedForever) {
       // Permissions are denied forever, handle appropriately.
       return Future.error(
-          'Location permissions are permanently denied, we cannot request permissions.');
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text('Location permissions are permanently denied, we cannot request permissions.'),
+          duration: Duration(milliseconds: 600)))
+          );
     }
     // When we reach here, permissions are granted and we can
     // continue accessing the position of the device.
