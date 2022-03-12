@@ -1183,19 +1183,29 @@ class _HomeState extends State<Home> {
     String imageEncoded = base64Encode(bytes!);
     var dio = Dio();
     var formData = FormData.fromMap({
+    //coordinates for the map
       "x_coordinate": latitude,
       "y_coordinate": longitude,
+      // coordinates for the geometry
       "latitude": latitude,
       "longitude": longitude,
+      //the image taken in the application
       "image": imageEncoded,
+      //the crop type choosen
       "type": selectedType,
+      //the variety of the crop taken
       "variety": variety_1,
+      //the height of the crop
       "height": height_1,
+      //the plantation method
       "plantation_method": selectedMethod,
+      //the spacing of the crops in the field
       "row": row_1,
       "column": column_1,
+      //the date of plantation of the crop in the field
       "date_of_plantation": date_1,
     });
+    //api that sends the data to the server
     var response = await dio
         .post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: formData);
     print(response);
