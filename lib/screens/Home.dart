@@ -986,7 +986,85 @@ class _HomeState extends State<Home> {
                       ))),
             ),
             //the code to show the map
-            Maps(size),
+            Padding(
+              padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
+              child: Material(
+                  color: Colors.blueGrey[800],
+                  elevation: 20,
+                  // shadowColor: Color.fromARGB(255, 255, 255, 255),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Stack(
+                    children: [
+                      Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              SizedBox(width: 20),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10),
+                                child: Text("Choose Location",
+                                    style: GoogleFonts.redressed(
+                                        fontSize: 22, color: Colors.white)),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Container(
+                                    margin: const EdgeInsets.only(
+                                        left: 20.0, right: 20.0),
+                                    child: Divider(
+                                      color: Color.fromARGB(255, 0, 0, 0),
+                                      height: 5,
+                                      thickness: 0.4,
+                                    )),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 10),
+                          Material(
+                            elevation: 10,
+                            borderRadius: BorderRadius.circular(30),
+                            child: Container(
+                              //  color: Colors.grey,
+                              child: Center(
+                                  child: Scaffold(
+                                body: GoogleMap(
+                                  mapType: MapType.hybrid,
+                                  myLocationEnabled: true,
+                                  zoomControlsEnabled: false,
+                                  zoomGesturesEnabled: true,
+                                  initialCameraPosition: _kGooglePlex,
+                                  onMapCreated:
+                                      (GoogleMapController controller) {
+                                    _controller.complete(controller);
+                                    // getLocation();
+                                    // getPermission();
+                                  },
+                                ),
+                              )),
+                              height: size.height * 0.21,
+                              width: size.width,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(30),
+                                  color: Colors.white),
+                              // image: image
+                            ),
+                          ),
+                        ],
+                      ),
+                      Positioned(
+                        top: 5,
+                        left: 15,
+                        child: Lottie.asset("assets/lottie/celebration.json",
+                            height: 200.1, width: 100.1, animate: true),
+                      ),
+                    ],
+                  )),
+            ),
             SizedBox(height: size.height * 0.02),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -1094,88 +1172,6 @@ class _HomeState extends State<Home> {
         ),
       ]),
     )));
-  }
-
-  Padding Maps(Size size) {
-    return Padding(
-            padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
-            child: Material(
-                color: Colors.blueGrey[800],
-                elevation: 20,
-                // shadowColor: Color.fromARGB(255, 255, 255, 255),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                child: Stack(
-                  children: [
-                    Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            SizedBox(width: 20),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 10),
-                              child: Text("Choose Location",
-                                  style: GoogleFonts.redressed(
-                                      fontSize: 22, color: Colors.white)),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Container(
-                                  margin: const EdgeInsets.only(
-                                      left: 20.0, right: 20.0),
-                                  child: Divider(
-                                    color: Color.fromARGB(255, 0, 0, 0),
-                                    height: 5,
-                                    thickness: 0.4,
-                                  )),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        Material(
-                          elevation: 10,
-                          borderRadius: BorderRadius.circular(30),
-                          child: Container(
-                            //  color: Colors.grey,
-                            child: Center(
-                                child: Scaffold(
-                              body: GoogleMap(
-                                mapType: MapType.hybrid,
-                                myLocationEnabled: true,
-                                zoomControlsEnabled: false,
-                                zoomGesturesEnabled: true,
-                                initialCameraPosition: _kGooglePlex,
-                                onMapCreated:
-                                    (GoogleMapController controller) {
-                                  _controller.complete(controller);
-                                  // getLocation();
-                                  // getPermission();
-                                },
-                              ),
-                            )),
-                            height: size.height * 0.21,
-                            width: size.width,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(30),
-                                color: Colors.white),
-                            // image: image
-                          ),
-                        ),
-                      ],
-                    ),
-                    Positioned(
-                      top: 5,
-                      left: 15,
-                      child: Lottie.asset("assets/lottie/celebration.json",
-                          height: 200.1, width: 100.1, animate: true),
-                    ),
-                  ],
-                )),
-          );
   }
 
   _makeGetRequest() async {
