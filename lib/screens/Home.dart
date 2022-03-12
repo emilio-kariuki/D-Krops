@@ -152,6 +152,7 @@ class _HomeState extends State<Home> {
 
   @override
   void initState() {
+    SystemChannels.textInput.invokeMethod('TextInput.hide');
     // ignore: todo
     // TODO: implement initState
     super.initState();
