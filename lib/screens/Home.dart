@@ -67,13 +67,19 @@ class _HomeState extends State<Home> {
       // accessing the position and request users of the
       // App to enable the location services.
       await Geolocator.openLocationSettings();
-      return Future.error('Location services are disabled.');
+      return Future.error(
+        
+        'Location services are disabled.');
     }
     permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
-        return Future.error('Location permissions are denied');
+        return Future.error(
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text('Location permissions are denied'),
+          duration: Duration(milliseconds: 600)))
+          );
       }
     }
     if (permission == LocationPermission.deniedForever) {
