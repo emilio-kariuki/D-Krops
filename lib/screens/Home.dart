@@ -641,7 +641,7 @@ class _HomeState extends State<Home> {
                                       top: 10, left: 20, bottom: 4),
                                   child: Text("Spacing",
                                       style: GoogleFonts.redressed(
-                                          fontSize: 22, color: Colors.white)),
+                                          fontSize: 23, color: Colors.white)),
                                 ),
                               ],
                             ),
@@ -756,7 +756,7 @@ class _HomeState extends State<Home> {
                                       top: 10, left: 20, bottom: 4),
                                   child: Text("Features",
                                       style: GoogleFonts.redressed(
-                                          fontSize: 22, color: Colors.white)),
+                                          fontSize: 23, color: Colors.white)),
                                 ),
                               ],
                             ),
