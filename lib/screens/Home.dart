@@ -162,7 +162,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    FocusManager.instance.primaryFocus!.unfocus();
+    // FocusManager.instance.primaryFocus!.unfocus();
     // SystemChannels.textInput.invokeMethod('TextInput.hide');
     // setState(() {
     // });
@@ -825,7 +825,8 @@ class _HomeState extends State<Home> {
                               Flexible(
                                 flex: 1,
                                 child: TextFormField(
-                                  // focusNode:FocusScope.of(context).requestFocus(FocusNode()),
+                                  // focusNode:FocusManager.instance.primaryFocus!.unfocus(),
+
                                   keyboardType: TextInputType.number,
                                   inputFormatters: <TextInputFormatter>[
                                     FilteringTextInputFormatter.digitsOnly
