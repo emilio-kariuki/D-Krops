@@ -1,4 +1,4 @@
-// ignore_for_file: unused_local_variable, curly_braces_in_flow_control_structures, avoid_print, duplicate_ignore, unused_import, deprecated_member_use, prefer_final_fields, unnecessary_import
+// ignore_for_file: unused_local_variable, curly_braces_in_flow_control_structures, avoid_print, duplicate_ignore, unused_import, deprecated_member_use, prefer_final_fields, unnecessary_import, unnecessary_new, unnecessary_null_comparison
 
 import 'dart:convert';
 import 'dart:io';
@@ -22,7 +22,7 @@ import 'package:location/location.dart' hide LocationAccuracy;
 import 'package:lottie/lottie.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:location_permissions/location_permissions.dart'
-    hide PermissionStatus;
+        hide PermissionStatus;
 import 'package:restart_app/restart_app.dart';
 
 class Home extends StatefulWidget {
@@ -33,6 +33,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  
+
   DateTime? today;
   DateTime? plantation;
 
@@ -43,6 +45,7 @@ class _HomeState extends State<Home> {
 
   bool loading = false;
   GoogleMapController? newGoogleMapController;
+  Completer<GoogleMapController> _controller = Completer();
   // double latitude = -122.085749655962;
   // double longitude = 37.42796133580664;
   // double lat = -122.085749655962;
@@ -92,6 +95,13 @@ class _HomeState extends State<Home> {
     long = locate.longitude;
     print(latitude);
     print(longitude);
+    setState(() {
+      var latlong =  LatLng(locate.latitude, locate.longitude);
+      var _cameraPosition = CameraPosition(target: latlong, zoom: 10.0);
+      if (_controller != null)
+        newGoogleMapController?.animateCamera(CameraUpdate.newCameraPosition(_cameraPosition));
+    });
+
   }
 
   // getLocation() {
@@ -107,7 +117,7 @@ class _HomeState extends State<Home> {
   //   });
   // }
 
-  Completer<GoogleMapController> _controller = Completer();
+  
 
   static final CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(37.42796133580664, -122.085749655962),
@@ -176,9 +186,9 @@ class _HomeState extends State<Home> {
         body: SafeArea(
             child: SingleChildScrollView(
       child: GestureDetector(
-        onTap:() {
-                      FocusScope.of(context).requestFocus(FocusNode());
-                  },
+        onTap: () {
+          FocusScope.of(context).requestFocus(FocusNode());
+        },
         child: Column(children: [
           Stack(children: [
             Material(
@@ -218,7 +228,7 @@ class _HomeState extends State<Home> {
                           //     ),
                           //   ),
                           // ),
-      
+
                           Center(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -227,8 +237,8 @@ class _HomeState extends State<Home> {
                                 Text("D-Krops",
                                     style: GoogleFonts.redressed(
                                         fontSize: 29,
-                                        color:
-                                            Color.fromARGB(255, 224, 225, 228))),
+                                        color: Color.fromARGB(
+                                            255, 224, 225, 228))),
                               ],
                             ),
                           ),
@@ -339,7 +349,8 @@ class _HomeState extends State<Home> {
                                   ),
                                 )
                               : Text("Select Image",
-                                  style: GoogleFonts.roboto(color: Colors.white)),
+                                  style:
+                                      GoogleFonts.roboto(color: Colors.white)),
                         ),
                         height: size.height * 0.3,
                         width: size.width,
@@ -377,7 +388,8 @@ class _HomeState extends State<Home> {
                                     height: size.height * 0.2,
                                     decoration: BoxDecoration(
                                       border: Border.all(
-                                          color: Color.fromARGB(255, 14, 14, 20),
+                                          color:
+                                              Color.fromARGB(255, 14, 14, 20),
                                           width: 1),
                                       //border: Border.all(color: Color.fromARGB(255, 182, 36, 116),width:1 ),
                                       borderRadius: BorderRadius.circular(10),
@@ -429,12 +441,13 @@ class _HomeState extends State<Home> {
                             },
                             icon: Icon(Icons.add_a_photo,
                                 size: 30,
-                                color:
-                                    image != null ? Colors.white : Colors.black)))
+                                color: image != null
+                                    ? Colors.white
+                                    : Colors.black)))
                   ],
                 ),
               ),
-      
+
               //the code to add the dropdown menu in the app
               Container(
                 decoration: BoxDecoration(
@@ -537,8 +550,8 @@ class _HomeState extends State<Home> {
                                             ),
                                           ))
                                       .toList(),
-                                  buttonPadding:
-                                      const EdgeInsets.only(left: 14, right: 14),
+                                  buttonPadding: const EdgeInsets.only(
+                                      left: 14, right: 14),
                                   buttonDecoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(
@@ -549,8 +562,8 @@ class _HomeState extends State<Home> {
                                   ),
                                   buttonElevation: 5,
                                   itemHeight: 40,
-                                  itemPadding:
-                                      const EdgeInsets.only(left: 14, right: 14),
+                                  itemPadding: const EdgeInsets.only(
+                                      left: 14, right: 14),
                                   dropdownMaxHeight: 200,
                                   dropdownWidth: 200,
                                   dropdownPadding: EdgeInsets.only(top: 3),
@@ -579,7 +592,7 @@ class _HomeState extends State<Home> {
                                   child: TextFormField(
                                     //keyboardType: TextInputType.multiline,
                                     // style: TextStyle(height:10),
-      
+
                                     decoration: InputDecoration(
                                         isDense: true,
                                         contentPadding:
@@ -648,10 +661,10 @@ class _HomeState extends State<Home> {
                                     keyboardType: TextInputType.number,
                                     inputFormatters: <TextInputFormatter>[
                                       FilteringTextInputFormatter.digitsOnly
-                                    ], 
+                                    ],
                                     // keyboardType: TextInputType.multiline,
                                     // style: TextStyle(height:10),
-      
+
                                     decoration: InputDecoration(
                                         isDense: true,
                                         contentPadding:
@@ -694,7 +707,7 @@ class _HomeState extends State<Home> {
                                     ], //
                                     // keyboardType: TextInputType.multiline,
                                     // style: TextStyle(height:10),
-      
+
                                     decoration: InputDecoration(
                                         isDense: true,
                                         contentPadding:
@@ -792,8 +805,8 @@ class _HomeState extends State<Home> {
                                             ),
                                           ))
                                       .toList(),
-                                  buttonPadding:
-                                      const EdgeInsets.only(left: 14, right: 14),
+                                  buttonPadding: const EdgeInsets.only(
+                                      left: 14, right: 14),
                                   buttonDecoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(
@@ -804,8 +817,8 @@ class _HomeState extends State<Home> {
                                   ),
                                   buttonElevation: 5,
                                   itemHeight: 40,
-                                  itemPadding:
-                                      const EdgeInsets.only(left: 14, right: 14),
+                                  itemPadding: const EdgeInsets.only(
+                                      left: 14, right: 14),
                                   dropdownMaxHeight: 200,
                                   dropdownWidth: 200,
                                   dropdownPadding: EdgeInsets.only(top: 3),
@@ -833,14 +846,14 @@ class _HomeState extends State<Home> {
                                   flex: 1,
                                   child: TextFormField(
                                     // focusNode:FocusManager.instance.primaryFocus!.unfocus(),
-      
+
                                     keyboardType: TextInputType.number,
                                     inputFormatters: <TextInputFormatter>[
                                       FilteringTextInputFormatter.digitsOnly
                                     ], //
                                     // keyboardType: TextInputType.multiline,
                                     // style: TextStyle(height:10),
-      
+
                                     decoration: InputDecoration(
                                         isDense: true,
                                         contentPadding:
@@ -883,7 +896,7 @@ class _HomeState extends State<Home> {
                     child: Container(
                         padding: const EdgeInsets.all(5),
                         decoration: BoxDecoration(
-                          border:Border.all(width:1,color: Colors.black),
+                          border: Border.all(width: 1, color: Colors.black),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Column(
@@ -907,7 +920,8 @@ class _HomeState extends State<Home> {
                                       margin: const EdgeInsets.only(
                                           left: 20.0, right: 20.0),
                                       child: Divider(
-                                        color: Color.fromARGB(255, 247, 247, 247),
+                                        color:
+                                            Color.fromARGB(255, 247, 247, 247),
                                         height: 5,
                                         thickness: 0.4,
                                       )),
@@ -988,7 +1002,6 @@ class _HomeState extends State<Home> {
                               child: InkWell(
                                 onTap: () {
                                   setState(() {});
-                                  
                                 },
                                 child: Text(today.toString(),
                                     style: GoogleFonts.redressed(
@@ -1030,7 +1043,8 @@ class _HomeState extends State<Home> {
                                       margin: const EdgeInsets.only(
                                           left: 20.0, right: 20.0),
                                       child: Divider(
-                                        color: Color.fromARGB(255, 255, 255, 255),
+                                        color:
+                                            Color.fromARGB(255, 255, 255, 255),
                                         height: 5,
                                         thickness: 0.4,
                                       )),
@@ -1047,7 +1061,7 @@ class _HomeState extends State<Home> {
                                     child: Scaffold(
                                   body: GoogleMap(
                                     mapType: MapType.hybrid,
-                                    myLocationButtonEnabled:true,
+                                    myLocationButtonEnabled: true,
                                     myLocationEnabled: true,
                                     zoomControlsEnabled: false,
                                     zoomGesturesEnabled: true,
@@ -1091,7 +1105,8 @@ class _HomeState extends State<Home> {
                         backgroundColor: MaterialStateProperty.all(
                             Color.fromARGB(255, 14, 14, 20)),
                         // MaterialStateProperty<Color?>?
-                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0),
                             side: BorderSide(
@@ -1101,8 +1116,8 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ),
-                      child:
-                          Text('Close', style: GoogleFonts.roboto(fontSize: 20)),
+                      child: Text('Close',
+                          style: GoogleFonts.roboto(fontSize: 20)),
                       onPressed: () => exit(0),
                     ),
                   ),
@@ -1195,14 +1210,14 @@ class _HomeState extends State<Home> {
     final String column_1 = column.text;
     final String height_1 = heights.text;
     final DateFormat formatter = DateFormat('yyyy-MM-dd');
-  final String formatted = formatter.format(today!);
+    final String formatted = formatter.format(today!);
     final String date_1 = today.toString();
 
     final bytes = image?.readAsBytesSync();
     String imageEncoded = base64Encode(bytes!);
     var dio = Dio();
     var formData = FormData.fromMap({
-    //coordinates for the map
+      //coordinates for the map
       "x_coordinate": latitude,
       "y_coordinate": longitude,
       // coordinates for the geometry
