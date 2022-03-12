@@ -162,6 +162,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChannels.textInput.invokeMethod('TextInput.hide');
     // setState(() {
     // });
     final size = MediaQuery.of(context).size;
@@ -823,6 +824,7 @@ class _HomeState extends State<Home> {
                               Flexible(
                                 flex: 1,
                                 child: TextFormField(
+                                  // focusNode:FocusScope.of(context).requestFocus(FocusNode()),
                                   keyboardType: TextInputType.number,
                                   inputFormatters: <TextInputFormatter>[
                                     FilteringTextInputFormatter.digitsOnly
