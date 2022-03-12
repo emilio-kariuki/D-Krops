@@ -883,6 +883,7 @@ class _HomeState extends State<Home> {
                     child: Container(
                         padding: const EdgeInsets.all(5),
                         decoration: BoxDecoration(
+                          border:Border.all(width:1,color: Colors.black),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Column(
