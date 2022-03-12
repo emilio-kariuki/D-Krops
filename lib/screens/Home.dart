@@ -215,9 +215,9 @@ class _HomeState extends State<Home> {
                   width: size.width,
                   decoration: BoxDecoration(
                     // // border: Border(bottom: BorderSide(color: Colors.blueGrey![800])),
-                    // borderRadius: BorderRadius.only(
-                    //     bottomLeft: Radius.circular(30),
-                    //     bottomRight: Radius.circular(30)),
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10)),
                     color: Color.fromARGB(255, 14, 14, 20),
                     shape: BoxShape.rectangle,
                   ),
