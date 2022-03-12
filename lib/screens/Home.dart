@@ -207,15 +207,17 @@ class _HomeState extends State<Home> {
                 elevation: 20,
                 // shadowColor: Color.fromARGB(255, 255, 255, 255),
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20))),
                 child: Container(
                   height: size.height * 0.07,
                   width: size.width,
                   decoration: BoxDecoration(
                     // // border: Border(bottom: BorderSide(color: Colors.blueGrey![800])),
                     borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(10),
-                        bottomRight: Radius.circular(10)),
+                        bottomLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20)),
                     color: Color.fromARGB(255, 14, 14, 20),
                     shape: BoxShape.rectangle,
                   ),
