@@ -985,6 +985,7 @@ class _HomeState extends State<Home> {
                         ],
                       ))),
             ),
+            //the code to show the map
             Padding(
               padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
               child: Material(
@@ -1094,6 +1095,7 @@ class _HomeState extends State<Home> {
                 SizedBox(width: size.width * 0.08),
                 loading
                     ? CircularProgressIndicator()
+                    //the code to show the dialog box
                     : SizedBox(
                         height: size.height * 0.06,
                         width: size.width * 0.36,
