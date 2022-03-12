@@ -163,8 +163,8 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    final DateFormat formatter_1 = DateFormat('yyyy-MM-dd');
-    final String formatted_1 = formatter_1.format(today!);
+    // final DateFormat formatter_1 = DateFormat('yyyy-MM-dd');
+    // final String formatted_1 = formatter_1.format(today!);
     // FocusManager.instance.primaryFocus!.unfocus();
     // SystemChannels.textInput.invokeMethod('TextInput.hide');
     // setState(() {
@@ -989,7 +989,7 @@ class _HomeState extends State<Home> {
                                   setState(() {});
                                   
                                 },
-                                child: Text(formatted_1,
+                                child: Text(today.toString(),
                                     style: GoogleFonts.redressed(
                                         fontSize: 22, color: Colors.white)),
                               ),
