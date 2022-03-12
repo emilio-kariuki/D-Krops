@@ -57,7 +57,7 @@ class _HomeState extends State<Home> {
   Location location = Location();
 
   // LatLng ltPosition = LatLng(latitude!, longitude!);
-  //function to get the current
+  //function to get the current location of the user
   getLocation() async {
     bool serviceEnabled;
     LocationPermission permission;
