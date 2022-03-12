@@ -215,7 +215,7 @@ class _HomeState extends State<Home> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               SizedBox(height: size.height * 0.015),
-                              Text("Small-Scale Mapping",
+                              Text("D-Krops",
                                   style: GoogleFonts.redressed(
                                       fontSize: 29,
                                       color:
