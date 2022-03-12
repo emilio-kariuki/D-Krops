@@ -248,7 +248,8 @@ class _HomeState extends State<Home> {
                                 SizedBox(height: size.height * 0.015),
                                 Text("D-Krops",
                                     style: GoogleFonts.redressed(
-                                        fontSize: 29,
+                                      
+                                        fontSize: 31,
                                         color: Color.fromARGB(
                                             255, 224, 225, 228))),
                               ],
