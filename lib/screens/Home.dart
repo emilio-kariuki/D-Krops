@@ -162,14 +162,6 @@ class _HomeState extends State<Home> {
     "Direct-seeding",
     "ploughing",
     "Harrowing",
-    "green grams",
-    "carrots",
-    "onions",
-    'Tomatoes',
-    "potatoes",
-    'capcicum',
-    'coriander',
-    'pumpkins',
   ];
 
 
