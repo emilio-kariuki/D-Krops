@@ -159,7 +159,7 @@ class _HomeState extends State<Home> {
     "Broadcasting",
     "Fallowing",
     "Tranplanting",
-    "Dibbling",
+    "Direct-seeding",
     "Sorghum",
     "peas",
     "green grams",
