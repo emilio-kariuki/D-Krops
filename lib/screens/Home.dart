@@ -817,7 +817,7 @@ class _HomeState extends State<Home> {
                                       Color.fromARGB(255, 255, 255, 255),
                                   buttonHeight: size.height * 0.06,
                                   buttonWidth: size.width * 0.65,
-                                  items: items
+                                  items: itemz
                                       .map((item) => DropdownMenuItem<String>(
                                             value: item,
                                             child: Text(
