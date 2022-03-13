@@ -932,7 +932,7 @@ class _HomeState extends State<Home> {
                                 SizedBox(width: 20),
                                 Padding(
                                   padding: const EdgeInsets.only(top: 10),
-                                  child: Text("Date of Plantation",
+                                  child: Text("Plantation Date",
                                       style: GoogleFonts.redressed(
                                           fontSize: 22, color: Colors.white)),
                                 ),
