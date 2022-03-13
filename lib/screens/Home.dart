@@ -979,11 +979,7 @@ class _HomeState extends State<Home> {
                                                           .copyWith(
                                                         colorScheme:
                                                             ColorScheme.light(
-                                                          primary: Color.fromARGB(
-                                                              255,
-                                                              201,
-                                                              22,
-                                                              31), // header background color
+                                                          primary: Color.fromARGB(255, 221, 165, 9), // header background color
                                                           onPrimary: Colors
                                                               .black, // header text color
                                                           onSurface: Color.fromARGB(
