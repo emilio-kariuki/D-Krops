@@ -156,7 +156,8 @@ class _HomeState extends State<Home> {
     'bananas',
     'tea',
     'coffee',
-    ''
+    'Arrow-roots',
+    'sweet-potatoes'
   ];
   List<String> itemz = [
     'Agro-forestry',
