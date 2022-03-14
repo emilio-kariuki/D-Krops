@@ -38,7 +38,7 @@ class _SplashState extends State<Splash> {
             right: size.width * 0.38,
             child:
               Text("D-krops",
-                  style: GoogleFonts.roboto(fontSize: 30, color: Colors.white)),
+                  style: GoogleFonts.roboto(fontSize: MediaQuery.of(context).size.width * 0.05, color: Colors.white)),
             ),
         
       ]),
