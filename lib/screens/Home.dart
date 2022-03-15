@@ -178,7 +178,11 @@ class _HomeState extends State<Home> {
   ImagePicker picker = ImagePicker();
 
   void takePhoto(ImageSource source) async {
-    final image = await picker.pickImage(source: source,maxHeight: 480,maxWidth: 640,imageQuality: 50);
+    final image = await picker.pickImage(
+      source: source,
+      maxHeight: 480,
+      maxWidth: 640,
+      imageQuality: 50);
     try {
       if (image == null) return;
 
