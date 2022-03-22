@@ -3,6 +3,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'dart:async';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:dio/dio.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
@@ -1155,8 +1156,9 @@ class _HomeState extends State<Home> {
                           width: size.width * 0.36,
                           child: RaisedButton(
                             // disabledColor: isActivated ? Colors.grey : Color.fromARGB(255, 14, 14, 20),
-                            color:Color.fromARGB(255, 14, 14, 20),
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                            color: Color.fromARGB(255, 14, 14, 20),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30)),
                             // style: ButtonStyle(
                             //   backgroundColor: MaterialStateProperty.all(
                             //       Color.fromARGB(255, 14, 14, 20)),
@@ -1173,9 +1175,19 @@ class _HomeState extends State<Home> {
                             //   ),
                             // ),
                             child: Text('Submit',
-                                style: GoogleFonts.roboto(fontSize: 20,color: Colors.white)),
+                                style: GoogleFonts.roboto(
+                                    fontSize: 20, color: Colors.white)),
                             onPressed: () async {
-                              setState(() {
+                              if (selectedType == null && image == null) {
+                                Fluttertoast.showToast(
+                                    backgroundColor: Colors.red,
+                                    msg: "Valid Email",
+                                    toastLength: Toast.LENGTH_SHORT,
+                                    gravity: ToastGravity.BOTTOM,
+                                    timeInSecForIosWeb: 1,
+                                    fontSize: 16.0);
+                              }else{
+                                setState(() {
                                 loading = true;
                               });
                               await _makeGetRequest();
@@ -1219,6 +1231,8 @@ class _HomeState extends State<Home> {
                               });
                               selectedType = null;
                               selectedMethod = null;
+                              }
+                              
                             },
                           ),
                         ),
