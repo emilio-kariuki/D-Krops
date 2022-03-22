@@ -24,7 +24,7 @@ flutter_icons:
   adaptive_icon_background: "000000"
   android: true
   ios: true
-  image_path: "assets/lottie/spca.jpg"
+  image_path: "assets/lottie/logo.png"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
