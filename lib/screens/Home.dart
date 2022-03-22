@@ -1172,7 +1172,7 @@ class _HomeState extends State<Home> {
                             //   ),
                             // ),
                             child: Text('Submit',
-                                style: GoogleFonts.roboto(fontSize: 20)),
+                                style: GoogleFonts.roboto(fontSize: 20,color: Colors.white)),
                             onPressed: () async {
                               setState(() {
                                 loading = true;
