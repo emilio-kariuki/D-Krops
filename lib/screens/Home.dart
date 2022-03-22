@@ -150,6 +150,8 @@ class _HomeState extends State<Home> {
     _position.target.latitude;
     longitude:
     _position.target.longitude;
+    print(latitude);
+    print(longitude);
     print(
         'inside updatePosition ${_position.target.latitude} ${_position.target.longitude}');
     Marker marker =
