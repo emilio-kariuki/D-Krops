@@ -156,7 +156,7 @@ class _HomeState extends State<Home> {
         _markers.firstWhere((p) => p.markerId == MarkerId('marker_2'));
 
     final bitmapIcon = await BitmapDescriptor.fromAssetImage(
-        ImageConfiguration(size: Size(4, 4)), "assets/lottie/location.png");
+        ImageConfiguration(size: Size(4, 4)), "assets/lottie/loc.png");
     _markers.remove(marker);
     _markers.add(
       Marker(
