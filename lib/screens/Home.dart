@@ -1181,7 +1181,7 @@ class _HomeState extends State<Home> {
                               if (selectedType == null && image == null) {
                                 Fluttertoast.showToast(
                                     backgroundColor: Colors.red,
-                                    msg: "Valid Email",
+                                    msg: "Ensure all the fields are filled",
                                     toastLength: Toast.LENGTH_SHORT,
                                     gravity: ToastGravity.BOTTOM,
                                     timeInSecForIosWeb: 1,
