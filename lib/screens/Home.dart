@@ -168,6 +168,7 @@ class _HomeState extends State<Home> {
   File? image;
   ImagePicker picker = ImagePicker();
   bool isActivated = false;
+  bool isValidate = false;
 
   void takePhoto(ImageSource source) async {
     final image = await picker.pickImage(
@@ -620,6 +621,7 @@ class _HomeState extends State<Home> {
                                     // style: TextStyle(height:10),
 
                                     decoration: InputDecoration(
+                                      errorText: isValidate ? 'Value Can\'t Be Empty' : null,
                                         isDense: true,
                                         contentPadding:
                                             EdgeInsets.fromLTRB(15, 20, 15, 15),
@@ -1178,7 +1180,9 @@ class _HomeState extends State<Home> {
                                 style: GoogleFonts.roboto(
                                     fontSize: 20, color: Colors.white)),
                             onPressed: () async {
-                              if (selectedType == null && image == null && today == null) {
+                              if (selectedType == null &&
+                                  image == null &&
+                                  today == null) {
                                 Fluttertoast.showToast(
                                     backgroundColor: Colors.red,
                                     msg: "Ensure all the fields are filled",
@@ -1186,53 +1190,53 @@ class _HomeState extends State<Home> {
                                     gravity: ToastGravity.BOTTOM,
                                     timeInSecForIosWeb: 1,
                                     fontSize: 16.0);
-                              }else{
+                              } else {
                                 setState(() {
-                                loading = true;
-                              });
-                              await _makeGetRequest();
-                              loading
-                                  ? CircularProgressIndicator()
-                                  : await showDialog(
-                                      context: context,
-                                      builder: (BuildContext context) {
-                                        return AlertDialog(
-                                          shape: RoundedRectangleBorder(
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(20.0))),
-                                          title: Text(""),
-                                          content: Column(
-                                            mainAxisSize: MainAxisSize.min,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Lottie.asset(
-                                                  "assets/lottie/successful.json",
-                                                  height: size.height * 0.21),
-                                              GestureDetector(
-                                                onTap: () {
-                                                  setState(() {
-                                                    Navigator.of(context).pop();
-                                                  });
-                                                },
-                                                child: Text('Successful',
-                                                    style: GoogleFonts.roboto(
-                                                        fontSize: 27,
-                                                        color: Colors.black)),
-                                              ),
-                                            ],
-                                          ),
-                                        );
-                                      });
-                              // Future.delayed(const Duration(milliseconds: 1670),
-                              //     () => Navigator.of(context).pop());
-                              setState(() {
-                                loading = false;
-                              });
-                              selectedType = null;
-                              selectedMethod = null;
+                                  loading = true;
+                                });
+                                await _makeGetRequest();
+                                loading
+                                    ? CircularProgressIndicator()
+                                    : await showDialog(
+                                        context: context,
+                                        builder: (BuildContext context) {
+                                          return AlertDialog(
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(20.0))),
+                                            title: Text(""),
+                                            content: Column(
+                                              mainAxisSize: MainAxisSize.min,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Lottie.asset(
+                                                    "assets/lottie/successful.json",
+                                                    height: size.height * 0.21),
+                                                GestureDetector(
+                                                  onTap: () {
+                                                    setState(() {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    });
+                                                  },
+                                                  child: Text('Successful',
+                                                      style: GoogleFonts.roboto(
+                                                          fontSize: 27,
+                                                          color: Colors.black)),
+                                                ),
+                                              ],
+                                            ),
+                                          );
+                                        });
+                                // Future.delayed(const Duration(milliseconds: 1670),
+                                //     () => Navigator.of(context).pop());
+                                setState(() {
+                                  loading = false;
+                                });
+                                selectedType = null;
+                                selectedMethod = null;
                               }
-                              
                             },
                           ),
                         ),
