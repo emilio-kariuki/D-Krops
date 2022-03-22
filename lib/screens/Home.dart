@@ -139,18 +139,18 @@ class _HomeState extends State<Home> {
   );
   List<String> items = [
     'forest',
-    'Napier grass',
+    'napier grass',
     'maize',
     "spinach",
     "kales",
     "beans",
     "cabbage",
-    "Sorghum",
+    "sorghum",
     "peas",
     "green grams",
     "carrots",
     "onions",
-    'Tomatoes',
+    'tomatoes',
     "potatoes",
     'capcicum',
     'coriander',
@@ -158,9 +158,10 @@ class _HomeState extends State<Home> {
     'bananas',
     'tea',
     'coffee',
-    'Arrow-roots',
+    'arrow-roots',
     'sweet-potatoes',
-    'Avocado'
+    'avocado',
+    'other'
   ];
   List<String> itemz = [
     'Agro-forestry',
@@ -177,6 +178,7 @@ class _HomeState extends State<Home> {
   String? selectedMethod;
   File? image;
   ImagePicker picker = ImagePicker();
+  bool isActivated = false;
 
   void takePhoto(ImageSource source) async {
     final image = await picker.pickImage(
