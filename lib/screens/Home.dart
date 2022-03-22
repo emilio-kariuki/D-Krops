@@ -146,10 +146,8 @@ class _HomeState extends State<Home> {
 //the method to update the location in the marker
 
   void _updatePosition(CameraPosition _position) async {
-    latitude:
-    _position.target.latitude;
-    longitude:
-    _position.target.longitude;
+    latitude =_position.target.latitude;
+    longitude = _position.target.longitude;
     print(latitude);
     print(longitude);
     print(
