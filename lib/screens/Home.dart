@@ -163,7 +163,7 @@ class _HomeState extends State<Home> {
         markerId: MarkerId('marker_2'),
         position: LatLng(_position.target.latitude, _position.target.longitude),
         draggable: true,
-        icon: bitmapIcon,
+        // icon: bitmapIcon,
       ),
     );
     setState(() {});
