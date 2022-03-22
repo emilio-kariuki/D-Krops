@@ -1154,6 +1154,7 @@ class _HomeState extends State<Home> {
                           height: size.height * 0.06,
                           width: size.width * 0.36,
                           child: RaisedButton(
+                            disabledColor: isActivated ? Color.fromARGB(255, 14, 14, 20) : Colors.grey,
                             color:Color.fromARGB(255, 14, 14, 20),
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
                             // style: ButtonStyle(
