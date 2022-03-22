@@ -126,6 +126,14 @@ class _HomeState extends State<Home> {
 
   //create a marker fot the map
   List<Marker> _markers = [];
+  // _markers.add(
+  //     Marker(
+  //       markerId: MarkerId('marker_2'),
+  //       position: LatLng(_position.target.latitude, _position.target.longitude),
+  //       draggable: true,
+  //       icon: bitmapIcon,
+  //     ),
+  //   );
   
 //the method to update the location in the marker
 
@@ -1120,7 +1128,7 @@ class _HomeState extends State<Home> {
                                         _updatePosition(_position)),
                                     markers: Set<Marker>.of(_markers),
                                     mapType: MapType.hybrid,
-                                    myLocationButtonEnabled: true,
+                                    myLocationButtonEnabled: false,
                                     myLocationEnabled: true,
                                     tiltGesturesEnabled: true,
                                     // zoomControlsEnabled: true,
