@@ -1,4 +1,4 @@
-// ignore_for_file: unused_local_variable
+// ignore_for_file: unused_local_variable, deprecated_member_use
 
 import 'dart:convert';
 import 'dart:io';
@@ -1154,6 +1154,8 @@ class _HomeState extends State<Home> {
                           height: size.height * 0.06,
                           width: size.width * 0.36,
                           child: RaisedButton(
+                            color:Color.fromARGB(255, 14, 14, 20),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
                             // style: ButtonStyle(
                             //   backgroundColor: MaterialStateProperty.all(
                             //       Color.fromARGB(255, 14, 14, 20)),
