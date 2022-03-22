@@ -4,6 +4,8 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:async';
 import 'dart:typed_data';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:dio/dio.dart';
@@ -127,11 +129,10 @@ class _HomeState extends State<Home> {
   //create a marker fot the map
   // ignore: prefer_final_fields
   List<Marker> _markers = [
-     Marker(
-          markerId: MarkerId('marker_2'),
-          position: LatLng(36.959988288487104,-0.398163985596978),
-          draggable: true
-         ),
+    Marker(
+        markerId: MarkerId('marker_2'),
+        position: LatLng(36.959988288487104, -0.398163985596978),
+        draggable: true),
   ];
   // _markers.add(
   //     Marker(
@@ -141,7 +142,7 @@ class _HomeState extends State<Home> {
   //       icon: bitmapIcon,
   //     ),
   //   );
-  
+
 //the method to update the location in the marker
 
   void _updatePosition(CameraPosition _position) async {
@@ -165,7 +166,7 @@ class _HomeState extends State<Home> {
   }
 
   static final CameraPosition _kGooglePlex = CameraPosition(
-    target: LatLng(36.959988288487104,-0.398163985596978),
+    target: LatLng(36.959988288487104, -0.398163985596978),
     zoom: 14.4746,
   );
   List<String> items = [
@@ -1131,6 +1132,12 @@ class _HomeState extends State<Home> {
                                 child: Center(
                                     child: Scaffold(
                                   body: GoogleMap(
+                                    gestureRecognizers:
+                                        <Factory<OneSequenceGestureRecognizer>>{
+                                      Factory<OneSequenceGestureRecognizer>(
+                                        () => EagerGestureRecognizer(),
+                                      ),
+                                    },
                                     onCameraMove: ((_position) =>
                                         _updatePosition(_position)),
                                     markers: Set<Marker>.of(_markers),
