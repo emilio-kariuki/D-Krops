@@ -557,7 +557,7 @@ class _HomeState extends State<Home> {
                                       style: GoogleFonts.roboto(
                                           color:
                                               Color.fromARGB(255, 49, 49, 49))),
-                                  value: selectedType,
+                                  value: selectedType != null ? isActivated = true : isActivated = false,
                                   onChanged: (value) {
                                     setState(() {
                                       getLocation();
