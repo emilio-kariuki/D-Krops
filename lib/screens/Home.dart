@@ -124,7 +124,14 @@ class _HomeState extends State<Home> {
   // }
 
   //create a marker fot the map
-  
+//   _markers.add(
+//         Marker(
+//           markerId: MarkerId('marker_2'),
+//           position: latLng,
+//           draggable: true,
+//           icon: _searchMarkerIcon,
+//          ),
+//  );
 
   static final CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(37.42796133580664, -122.085749655962),
