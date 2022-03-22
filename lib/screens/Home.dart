@@ -125,7 +125,13 @@ class _HomeState extends State<Home> {
   // }
 
   //create a marker fot the map
-  List<Marker> _markers = [];
+  List<Marker> _markers = [
+     Marker(
+          markerId: MarkerId('marker_2'),
+          position: LatLng(36.959988288487104,-0.398163985596978),
+          draggable: true
+         ),
+  ];
   // _markers.add(
   //     Marker(
   //       markerId: MarkerId('marker_2'),
@@ -158,7 +164,7 @@ class _HomeState extends State<Home> {
   }
 
   static final CameraPosition _kGooglePlex = CameraPosition(
-    target: LatLng(37.42796133580664, -122.085749655962),
+    target: LatLng(36.959988288487104,-0.398163985596978),
     zoom: 14.4746,
   );
   List<String> items = [
