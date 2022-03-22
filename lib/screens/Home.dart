@@ -146,6 +146,10 @@ class _HomeState extends State<Home> {
 //the method to update the location in the marker
 
   void _updatePosition(CameraPosition _position) async {
+    latitude:
+    _position.target.latitude;
+    longitude:
+    _position.target.longitude;
     print(
         'inside updatePosition ${_position.target.latitude} ${_position.target.longitude}');
     Marker marker =
@@ -1132,8 +1136,8 @@ class _HomeState extends State<Home> {
                                 child: Center(
                                     child: Scaffold(
                                   body: GoogleMap(
-                                    gestureRecognizers:
-                                        <Factory<OneSequenceGestureRecognizer>>{
+                                    gestureRecognizers: <
+                                        Factory<OneSequenceGestureRecognizer>>{
                                       Factory<OneSequenceGestureRecognizer>(
                                         () => EagerGestureRecognizer(),
                                       ),
