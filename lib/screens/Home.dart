@@ -126,15 +126,7 @@ class _HomeState extends State<Home> {
 
   //create a marker fot the map
   List<Marker> _markers = [];
-//   _markers.add(
-//         Marker(
-//           markerId: MarkerId('marker_2'),
-//           position: latLng,
-//           draggable: true,
-//           icon: _searchMarkerIcon,
-//          ),
-//  );
-
+  
 //the method to update the location in the marker
 
   void _updatePosition(CameraPosition _position) async {
@@ -1126,7 +1118,7 @@ class _HomeState extends State<Home> {
                                   body: GoogleMap(
                                     onCameraMove: ((_position) =>
                                         _updatePosition(_position)),
-                                    // markers: _markers,
+                                    markers: Set<Marker>.of(_markers),
                                     mapType: MapType.hybrid,
                                     myLocationButtonEnabled: true,
                                     myLocationEnabled: true,
