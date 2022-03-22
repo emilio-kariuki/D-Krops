@@ -22,7 +22,7 @@ import 'package:location/location.dart' hide LocationAccuracy;
 import 'package:lottie/lottie.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:location_permissions/location_permissions.dart'
-        hide PermissionStatus;
+    hide PermissionStatus;
 import 'package:restart_app/restart_app.dart';
 
 class Home extends StatefulWidget {
@@ -33,8 +33,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  
-
   DateTime? today;
   DateTime? plantation;
 
@@ -68,30 +66,25 @@ class _HomeState extends State<Home> {
       // accessing the position and request users of the
       // App to enable the location services.
       await Geolocator.openLocationSettings();
-      return Future.error(
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      return Future.error(ScaffoldMessenger.of(context).showSnackBar(SnackBar(
           content: Text('Location services are disabled.'),
-          duration: Duration(milliseconds: 600)))
-        );
+          duration: Duration(milliseconds: 600))));
     }
     permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
-        return Future.error(
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          content: Text('Location permissions are denied'),
-          duration: Duration(milliseconds: 600)))
-          );
+        return Future.error(ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text('Location permissions are denied'),
+            duration: Duration(milliseconds: 600))));
       }
     }
     if (permission == LocationPermission.deniedForever) {
       // Permissions are denied forever, handle appropriately.
-      return Future.error(
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          content: Text('Location permissions are permanently denied, we cannot request permissions.'),
-          duration: Duration(milliseconds: 600)))
-          );
+      return Future.error(ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text(
+              'Location permissions are permanently denied, we cannot request permissions.'),
+          duration: Duration(milliseconds: 600))));
     }
     // When we reach here, permissions are granted and we can
     // continue accessing the position of the device.
@@ -108,12 +101,12 @@ class _HomeState extends State<Home> {
     print(latitude);
     print(longitude);
     setState(() {
-      var latlong =  LatLng(locate.latitude, locate.longitude);
+      var latlong = LatLng(locate.latitude, locate.longitude);
       var _cameraPosition = CameraPosition(target: latlong, zoom: 10.0);
       if (_controller != null)
-        newGoogleMapController?.animateCamera(CameraUpdate.newCameraPosition(_cameraPosition));
+        newGoogleMapController
+            ?.animateCamera(CameraUpdate.newCameraPosition(_cameraPosition));
     });
-
   }
 
   // getLocation() {
@@ -128,8 +121,6 @@ class _HomeState extends State<Home> {
   //         ?.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
   //   });
   // }
-
-  
 
   static final CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(37.42796133580664, -122.085749655962),
@@ -171,7 +162,6 @@ class _HomeState extends State<Home> {
     "Harrowing",
   ];
 
-
   String? selectedType;
   String? selectedMethod;
   File? image;
@@ -180,10 +170,7 @@ class _HomeState extends State<Home> {
 
   void takePhoto(ImageSource source) async {
     final image = await picker.pickImage(
-      source: source,
-      maxHeight: 480,
-      maxWidth: 640,
-      imageQuality: 50);
+        source: source, maxHeight: 480, maxWidth: 640, imageQuality: 50);
     try {
       if (image == null) return;
 
@@ -272,7 +259,7 @@ class _HomeState extends State<Home> {
                                 SizedBox(height: size.height * 0.015),
                                 Text("D-Krops",
                                     style: GoogleFonts.redressed(
-                                        fontWeight:FontWeight.w500,
+                                        fontWeight: FontWeight.w500,
                                         fontSize: 33,
                                         color: Color.fromARGB(
                                             255, 224, 225, 228))),
@@ -386,8 +373,8 @@ class _HomeState extends State<Home> {
                                   ),
                                 )
                               : Text("Select Image",
-                                  style:
-                                      GoogleFonts.roboto(fontSize:20,color: Colors.white)),
+                                  style: GoogleFonts.roboto(
+                                      fontSize: 20, color: Colors.white)),
                         ),
                         height: size.height * 0.3,
                         width: size.width,
@@ -557,12 +544,13 @@ class _HomeState extends State<Home> {
                                       style: GoogleFonts.roboto(
                                           color:
                                               Color.fromARGB(255, 49, 49, 49))),
-                                  value: selectedType != null ? isActivated = true : isActivated = false,
+                                  value: selectedType,
                                   onChanged: (value) {
                                     setState(() {
                                       getLocation();
                                       selectedType = value as String;
                                       print(selectedType);
+                                      isActivated = true;
                                     });
                                   },
                                   icon: const Icon(
@@ -991,7 +979,11 @@ class _HomeState extends State<Home> {
                                                           .copyWith(
                                                         colorScheme:
                                                             ColorScheme.light(
-                                                          primary: Color.fromARGB(255, 221, 165, 9), // header background color
+                                                          primary: Color.fromARGB(
+                                                              255,
+                                                              221,
+                                                              165,
+                                                              9), // header background color
                                                           onPrimary: Colors
                                                               .black, // header text color
                                                           onSurface: Color.fromARGB(
