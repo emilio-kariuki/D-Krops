@@ -583,7 +583,7 @@ class _HomeState extends State<Home> {
                                     lottieUrl: "assets/lottie/select.json"),
                                 SizedBox(width: size.width * 0.06),
                                 DropdownButton2(
-                                  hint: Text("Type of Crop",
+                                  hint: Text("Select",
                                       style: GoogleFonts.roboto(
                                           color:
                                               Color.fromARGB(255, 49, 49, 49))),
