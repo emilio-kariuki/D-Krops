@@ -1154,26 +1154,26 @@ class _HomeState extends State<Home> {
                       : SizedBox(
                           height: size.height * 0.06,
                           width: size.width * 0.36,
-                          child: RaisedButton(
+                          child: ElevatedButton(
                             // disabledColor: isActivated ? Colors.grey : Color.fromARGB(255, 14, 14, 20),
-                            color: Color.fromARGB(255, 14, 14, 20),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            // style: ButtonStyle(
-                            //   backgroundColor: MaterialStateProperty.all(
-                            //       Color.fromARGB(255, 14, 14, 20)),
-                            //   // MaterialStateProperty<Color?>?
-                            //   shape: MaterialStateProperty.all<
-                            //       RoundedRectangleBorder>(
-                            //     RoundedRectangleBorder(
-                            //       borderRadius: BorderRadius.circular(30.0),
-                            //       side: BorderSide(
-                            //         color: Color.fromARGB(255, 14, 14, 20),
-                            //         width: 2.0,
-                            //       ),
-                            //     ),
-                            //   ),
-                            // ),
+                            // color: Color.fromARGB(255, 14, 14, 20),
+                            // shape: RoundedRectangleBorder(
+                            //     borderRadius: BorderRadius.circular(30)),
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(
+                                  Color.fromARGB(255, 14, 14, 20)),
+                              // MaterialStateProperty<Color?>?
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30.0),
+                                  side: BorderSide(
+                                    color: Color.fromARGB(255, 14, 14, 20),
+                                    width: 2.0,
+                                  ),
+                                ),
+                              ),
+                            ),
                             child: Text('Submit',
                                 style: GoogleFonts.roboto(
                                     fontSize: 20, color: Colors.white)),
