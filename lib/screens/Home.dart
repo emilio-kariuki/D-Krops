@@ -1128,7 +1128,7 @@ class _HomeState extends State<Home> {
                                         _updatePosition(_position)),
                                     markers: Set<Marker>.of(_markers),
                                     mapType: MapType.hybrid,
-                                    myLocationButtonEnabled: false,
+                                    myLocationButtonEnabled: true,
                                     myLocationEnabled: true,
                                     tiltGesturesEnabled: true,
                                     // zoomControlsEnabled: true,
