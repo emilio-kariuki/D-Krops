@@ -3,6 +3,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'dart:async';
+import 'dart:typed_data';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:dio/dio.dart';
@@ -20,7 +21,7 @@ import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:location/location.dart' hide LocationAccuracy;
-import 'package:lottie/lottie.dart';
+import 'package:lottie/lottie.dart' hide Marker;
 import 'package:permission_handler/permission_handler.dart';
 import 'package:location_permissions/location_permissions.dart'
     hide PermissionStatus;
@@ -124,6 +125,7 @@ class _HomeState extends State<Home> {
   // }
 
   //create a marker fot the map
+  List<Marker> _markers = [];
 //   _markers.add(
 //         Marker(
 //           markerId: MarkerId('marker_2'),
@@ -132,6 +134,28 @@ class _HomeState extends State<Home> {
 //           icon: _searchMarkerIcon,
 //          ),
 //  );
+
+//the method to update the location in the marker
+
+  void _updatePosition(CameraPosition _position) async {
+    print(
+        'inside updatePosition ${_position.target.latitude} ${_position.target.longitude}');
+    Marker marker =
+        _markers.firstWhere((p) => p.markerId == MarkerId('marker_2'));
+
+    final bitmapIcon = await BitmapDescriptor.fromAssetImage(
+        ImageConfiguration(size: Size(24, 24)), "assets/lottie/location.png");
+    _markers.remove(marker);
+    _markers.add(
+      Marker(
+        markerId: MarkerId('marker_2'),
+        position: LatLng(_position.target.latitude, _position.target.longitude),
+        draggable: true,
+        icon: bitmapIcon,
+      ),
+    );
+    setState(() {});
+  }
 
   static final CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(37.42796133580664, -122.085749655962),
@@ -631,7 +655,9 @@ class _HomeState extends State<Home> {
                                     // style: TextStyle(height:10),
 
                                     decoration: InputDecoration(
-                                      errorText: isValidate ? 'Value Can\'t Be Empty' : null,
+                                        errorText: isValidate
+                                            ? 'Value Can\'t Be Empty'
+                                            : null,
                                         isDense: true,
                                         contentPadding:
                                             EdgeInsets.fromLTRB(15, 20, 15, 15),
@@ -1098,6 +1124,9 @@ class _HomeState extends State<Home> {
                                 child: Center(
                                     child: Scaffold(
                                   body: GoogleMap(
+                                    onCameraMove: ((_position) =>
+                                        _updatePosition(_position)),
+                                    // markers: _markers,
                                     mapType: MapType.hybrid,
                                     myLocationButtonEnabled: true,
                                     myLocationEnabled: true,

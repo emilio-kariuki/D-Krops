@@ -47,7 +47,7 @@ dependencies:
   animated_text_kit: ^4.2.1
   image_picker: ^0.8.4+9
   dropdown_button2: ^1.1.1
-  google_maps_flutter: ^2.1.1
+  google_maps_flutter: ^0.5.19+2
   geolocator: ^8.2.0
   permission_handler: ^9.1.0
   location_permissions: ^4.0.1
