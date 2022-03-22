@@ -1161,7 +1161,7 @@ class _HomeState extends State<Home> {
                                     },
                                   ),
                                 )),
-                                height: size.height * 0.28,
+                                height: size.height * 0.33,
                                 width: size.width,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(30),
