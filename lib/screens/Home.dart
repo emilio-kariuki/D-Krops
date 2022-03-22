@@ -1178,7 +1178,7 @@ class _HomeState extends State<Home> {
                                 style: GoogleFonts.roboto(
                                     fontSize: 20, color: Colors.white)),
                             onPressed: () async {
-                              if (selectedType == null && image == null) {
+                              if (selectedType == null && image == null && today == null) {
                                 Fluttertoast.showToast(
                                     backgroundColor: Colors.red,
                                     msg: "Ensure all the fields are filled",
