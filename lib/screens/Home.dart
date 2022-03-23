@@ -1043,15 +1043,13 @@ class _HomeState extends State<Home> {
                                   SizedBox(width: size.width * 0.15),
                                   LottieContainer(
                                       func: () {
-                                        onTap:
-                                        () {
-                                          FocusScopeNode currentFocus =
-                                              FocusScope.of(context);
+                                        FocusScopeNode currentFocus =
+                                            FocusScope.of(context);
 
-                                          if (!currentFocus.hasPrimaryFocus) {
-                                            currentFocus.unfocus();
-                                          }
-                                        };
+                                        if (!currentFocus.hasPrimaryFocus) {
+                                          currentFocus.unfocus();
+                                        }
+
                                         HapticFeedback.lightImpact();
                                         setState(() {
                                           showDatePicker(
