@@ -881,7 +881,7 @@ class _HomeState extends State<Home> {
                                     Icons.arrow_forward_ios_outlined,
                                   ),
                                   iconSize: 18,
-                                  iconEnabledColor: Color.fromARGB(255, 29, 29, 29),
+                                  iconEnabledColor: Colors.indigo,
                                   iconDisabledColor:
                                       Color.fromARGB(255, 255, 255, 255),
                                   buttonHeight: size.height * 0.06,
@@ -893,7 +893,7 @@ class _HomeState extends State<Home> {
                                               item,
                                               style: GoogleFonts.notoSerif(
                                                   fontSize: 18,
-                                                  color: Colors.indigo,
+                                                  color: Color.fromARGB(255, 27, 27, 27),
                                                   fontWeight: FontWeight.w600),
                                               overflow: TextOverflow.ellipsis,
                                             ),
