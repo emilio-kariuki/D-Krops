@@ -62,26 +62,36 @@ class _HomeState extends State<Home> {
       // accessing the position and request users of the
       // App to enable the location services.
       await Geolocator.openLocationSettings();
-      return Future.error(ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          content: Text('Location services are disabled.'),
-          duration: Duration(milliseconds: 600))));
+      return Fluttertoast.showToast(
+          backgroundColor: Colors.red,
+          msg: "Location Services are disabled.",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIosWeb: 1,
+          fontSize: 16.0);
     }
     permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
-        return Future.error(ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-            content: Text('Location permissions are denied'),
-            duration: Duration(milliseconds: 600))));
+        return Fluttertoast.showToast(
+          backgroundColor: Colors.red,
+          msg: "Location permissions denied.",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIosWeb: 1,
+          fontSize: 16.0);
       }
     }
     if (permission == LocationPermission.deniedForever) {
       // Permissions are denied forever, handle appropriately.
-      return Future.error(ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          content: Text(
-            'Location permissions are permanently denied, we cannot request permissions.'
-              ),
-          duration: Duration(milliseconds: 600))));
+      return Fluttertoast.showToast(
+          backgroundColor: Colors.red,
+          msg: "Location permissions are permanently denied, we cannot request permissions.",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIosWeb: 1,
+          fontSize: 16.0);
     }
     // When we reach here, permissions are granted and we can
     // continue accessing the position of the device.
