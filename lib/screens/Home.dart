@@ -848,7 +848,7 @@ class _HomeState extends State<Home> {
                             ],
                           ),
 
-                          //the code to taek
+                          //the code to take the plantation method from the user
                           Padding(
                             padding: const EdgeInsets.only(
                                 left: 20, bottom: 8, top: 5),
