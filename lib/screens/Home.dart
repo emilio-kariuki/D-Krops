@@ -146,7 +146,7 @@ class _HomeState extends State<Home> {
 //the method to update the location in the marker
 
   void _updatePosition(CameraPosition _position) async {
-    latitude =_position.target.latitude;
+    latitude = _position.target.latitude;
     longitude = _position.target.longitude;
     print(latitude);
     print(longitude);
@@ -174,7 +174,6 @@ class _HomeState extends State<Home> {
     zoom: 14.4746,
   );
   List<String> items = [
-    
     'arrow-roots',
     'avocado',
     'bananas',
@@ -524,16 +523,6 @@ class _HomeState extends State<Home> {
               //the code to add the dropdown menu in the app
               Container(
                 decoration: BoxDecoration(
-                  // boxShadow: [
-                  //   BoxShadow(
-                  //     color: Color.fromARGB(255, 255, 255, 255)
-                  //         .withOpacity(0.4),
-                  //     spreadRadius: 5,
-                  //     blurRadius: 7,
-                  //     offset: Offset(
-                  //         0, 3), // changes position of shadow
-                  //   ),
-                  // ],
                   borderRadius: BorderRadius.circular(30),
                 ),
                 child: Padding(
