@@ -79,7 +79,8 @@ class _HomeState extends State<Home> {
       // Permissions are denied forever, handle appropriately.
       return Future.error(ScaffoldMessenger.of(context).showSnackBar(SnackBar(
           content: Text(
-              'Location permissions are permanently denied, we cannot request permissions.'),
+            'Location permissions are permanently denied, we cannot request permissions.'
+              ),
           duration: Duration(milliseconds: 600))));
     }
     // When we reach here, permissions are granted and we can
