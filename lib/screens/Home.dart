@@ -847,6 +847,8 @@ class _HomeState extends State<Home> {
                               ),
                             ],
                           ),
+
+                          //the code to taek
                           Padding(
                             padding: const EdgeInsets.only(
                                 left: 20, bottom: 8, top: 5),
@@ -1012,6 +1014,8 @@ class _HomeState extends State<Home> {
                                 ),
                               ],
                             ),
+
+                            //the code to pick the date of plantation of the type of crop
                             Padding(
                               padding: const EdgeInsets.all(3.0),
                               child: Row(
@@ -1096,7 +1100,7 @@ class _HomeState extends State<Home> {
                         ))),
               ),
 
-              
+
               //the code to show the map
               Padding(
                 padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
