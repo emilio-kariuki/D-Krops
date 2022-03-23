@@ -1140,7 +1140,7 @@ class _HomeState extends State<Home> {
                                     myLocationButtonEnabled: true,
                                     myLocationEnabled: true,
                                     tiltGesturesEnabled: true,
-                                    // zoomControlsEnabled: true,
+                                    zoomControlsEnabled: true,
                                     zoomGesturesEnabled: false,
                                     initialCameraPosition: _kGooglePlex,
                                     onMapCreated:
