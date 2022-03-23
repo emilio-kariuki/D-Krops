@@ -75,19 +75,20 @@ class _HomeState extends State<Home> {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
         return Fluttertoast.showToast(
-          backgroundColor: Colors.red,
-          msg: "Location permissions denied.",
-          toastLength: Toast.LENGTH_SHORT,
-          gravity: ToastGravity.BOTTOM,
-          timeInSecForIosWeb: 1,
-          fontSize: 16.0);
+            backgroundColor: Colors.red,
+            msg: "Location permissions denied.",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            fontSize: 16.0);
       }
     }
     if (permission == LocationPermission.deniedForever) {
       // Permissions are denied forever, handle appropriately.
       return Fluttertoast.showToast(
           backgroundColor: Colors.red,
-          msg: "Location permissions are permanently denied, we cannot request permissions.",
+          msg:
+              "Location permissions are permanently denied, we cannot request permissions.",
           toastLength: Toast.LENGTH_SHORT,
           gravity: ToastGravity.BOTTOM,
           timeInSecForIosWeb: 1,
@@ -1216,6 +1217,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   SizedBox(width: size.width * 0.08),
+                  /
                   loading
                       ? CircularProgressIndicator()
                       //the code to show the dialog box
@@ -1265,13 +1267,14 @@ class _HomeState extends State<Home> {
                                     ? CircularProgressIndicator(
                                         color: Color.fromARGB(255, 240, 144, 1),
                                       )
-                                    : await  Fluttertoast.showToast(
-                                    backgroundColor: Color.fromARGB(255, 105, 228, 4),
-                                    msg: "Information Sent Successfully !!",
-                                    toastLength: Toast.LENGTH_LONG,
-                                    gravity: ToastGravity.BOTTOM,
-                                    timeInSecForIosWeb: 1,
-                                    fontSize: 16.0);
+                                    : await Fluttertoast.showToast(
+                                        backgroundColor:
+                                            Color.fromARGB(255, 105, 228, 4),
+                                        msg: "Information Sent Successfully !!",
+                                        toastLength: Toast.LENGTH_LONG,
+                                        gravity: ToastGravity.BOTTOM,
+                                        timeInSecForIosWeb: 1,
+                                        fontSize: 16.0);
                                 // Future.delayed(const Duration(milliseconds: 1670),
                                 //     () => Navigator.of(context).pop());
                                 setState(() {
@@ -1332,13 +1335,6 @@ class _HomeState extends State<Home> {
     var response = await dio
         .post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: formData);
     print(response);
-    Fluttertoast.showToast(
-          backgroundColor: Colors.red,
-          msg: "$response",
-          toastLength: Toast.LENGTH_SHORT,
-          gravity: ToastGravity.TOP,
-          timeInSecForIosWeb: 1,
-          fontSize: 16.0);
     getLocation();
     loading = false;
   }
