@@ -502,8 +502,8 @@ class _HomeState extends State<Home> {
                                             onTap: () {
                                               Navigator.pop(context);
                                             },
-                                            leading: Icon(Icons.camera,
-                                                color: Colors.blueGrey[900]),
+                                            leading: Icon(Icons.cancel,
+                                                color: Colors.red),
                                             title: Text("Cancel"),
                                           ),
                                         ]),
