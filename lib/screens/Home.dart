@@ -497,6 +497,15 @@ class _HomeState extends State<Home> {
                                                 },
                                                 child: Text("Gallery")),
                                           ),
+                                          ListTile(
+                                            selectedColor: Colors.grey,
+                                            onTap: () {
+                                              Navigator.pop(context);
+                                            },
+                                            leading: Icon(Icons.camera,
+                                                color: Colors.blueGrey[900]),
+                                            title: Text("Cancel"),
+                                          ),
                                         ]),
                                       ),
                                     ),
@@ -1241,7 +1250,7 @@ class _HomeState extends State<Home> {
                                         context: context,
                                         builder: (BuildContext context) {
                                           return AlertDialog(
-                                            
+
                                             shape: RoundedRectangleBorder(
                                                 borderRadius: BorderRadius.all(
                                                     Radius.circular(20.0))),
