@@ -742,33 +742,43 @@ class _HomeState extends State<Home> {
                                 SizedBox(width: size.width * 0.06),
                                 Flexible(
                                   flex: 1,
-                                  child: TextFormField(
-                                    keyboardType: TextInputType.number,
-                                    inputFormatters: <TextInputFormatter>[
-                                      FilteringTextInputFormatter.digitsOnly
-                                    ],
-                                    // keyboardType: TextInputType.multiline,
-                                    // style: TextStyle(height:10),
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      FocusScopeNode currentFocus =
+                                          FocusScope.of(context);
 
-                                    decoration: InputDecoration(
-                                        isDense: true,
-                                        contentPadding:
-                                            EdgeInsets.fromLTRB(15, 20, 15, 15),
-                                        // contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
-                                        border: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10.0),
-                                        ),
-                                        // icon: Icon(Icons.person,size:30,color: Colors.black),
-                                        filled: true,
-                                        hintStyle:
-                                            TextStyle(color: Colors.grey[800]),
-                                        focusColor: Colors.red,
-                                        hintText: "Row",
-                                        // suffixText: "10",
-                                        // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
-                                        fillColor: Colors.grey[200]),
-                                    controller: row,
+                                      if (!currentFocus.hasPrimaryFocus) {
+                                        currentFocus.unfocus();
+                                      }
+                                    },
+                                    child: TextFormField(
+                                      keyboardType: TextInputType.number,
+                                      inputFormatters: <TextInputFormatter>[
+                                        FilteringTextInputFormatter.digitsOnly
+                                      ],
+                                      // keyboardType: TextInputType.multiline,
+                                      // style: TextStyle(height:10),
+
+                                      decoration: InputDecoration(
+                                          isDense: true,
+                                          contentPadding: EdgeInsets.fromLTRB(
+                                              15, 20, 15, 15),
+                                          // contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
+                                          border: OutlineInputBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(10.0),
+                                          ),
+                                          // icon: Icon(Icons.person,size:30,color: Colors.black),
+                                          filled: true,
+                                          hintStyle: TextStyle(
+                                              color: Colors.grey[800]),
+                                          focusColor: Colors.red,
+                                          hintText: "Row",
+                                          // suffixText: "10",
+                                          // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
+                                          fillColor: Colors.grey[200]),
+                                      controller: row,
+                                    ),
                                   ),
                                 ),
                                 SizedBox(width: 15),
@@ -1100,7 +1110,6 @@ class _HomeState extends State<Home> {
                         ))),
               ),
 
-
               //the code to show the map
               Padding(
                 padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
@@ -1149,7 +1158,7 @@ class _HomeState extends State<Home> {
                                 //  color: Colors.grey,
                                 child: Center(
                                     child: Scaffold(
-                                      //adding the map to the application for taking the coordinates of the user
+                                  //adding the map to the application for taking the coordinates of the user
                                   body: GoogleMap(
                                     gestureRecognizers: <
                                         Factory<OneSequenceGestureRecognizer>>{
