@@ -1270,7 +1270,7 @@ class _HomeState extends State<Home> {
                                       )
                                     : await  Fluttertoast.showToast(
                                     backgroundColor: Color.fromARGB(255, 105, 228, 4),
-                                    msg: "Successful!!",
+                                    msg: "Information Sent Successfully !!",
                                     toastLength: Toast.LENGTH_LONG,
                                     gravity: ToastGravity.BOTTOM,
                                     timeInSecForIosWeb: 1,
