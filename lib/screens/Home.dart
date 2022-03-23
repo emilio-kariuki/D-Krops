@@ -678,9 +678,6 @@ class _HomeState extends State<Home> {
                                     // style: TextStyle(height:10),
 
                                     decoration: InputDecoration(
-                                        errorText: isValidate
-                                            ? 'Value Can\'t Be Empty'
-                                            : null,
                                         isDense: true,
                                         contentPadding:
                                             EdgeInsets.fromLTRB(15, 20, 15, 15),
