@@ -1133,7 +1133,7 @@ class _HomeState extends State<Home> {
                               children: [
                                 SizedBox(width: 20),
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 10),
+                                  padding: const EdgeInsets.only(top: 10,left: 10),
                                   child: Text("Choose Location",
                                       style: GoogleFonts.redressed(
                                           fontSize: 22, color: Colors.white)),
@@ -1145,7 +1145,7 @@ class _HomeState extends State<Home> {
                                 Expanded(
                                   child: Container(
                                       margin: const EdgeInsets.only(
-                                          left: 20.0, right: 20.0),
+                                          left: 30.0, right: 30.0),
                                       child: Divider(
                                         color:
                                             Color.fromARGB(255, 255, 255, 255),
