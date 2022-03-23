@@ -1360,6 +1360,13 @@ class _HomeState extends State<Home> {
     var response = await dio
         .post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: formData);
     print(response);
+    Fluttertoast.showToast(
+          backgroundColor: Colors.red,
+          msg: "$response",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.TOP,
+          timeInSecForIosWeb: 1,
+          fontSize: 16.0);
     // getLocation();
     loading = false;
   }
