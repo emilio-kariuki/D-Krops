@@ -486,7 +486,7 @@ class _HomeState extends State<Home> {
                                               });
                                             },
                                             leading: Icon(Icons.layers,
-                                                color: Color.fromARGB(255, 7, 12, 14)),
+                                                color: Color.fromARGB(255, 22, 15, 31)),
                                             title: GestureDetector(
                                                 onTap: () {
                                                   setState(() {
@@ -517,7 +517,7 @@ class _HomeState extends State<Home> {
                                 size: 35,
                                 color: image != null
                                     ? Colors.white
-                                    : Colors.black)))
+                                    : Color.fromARGB(255, 197, 178, 7))))
                   ],
                 ),
               ),
