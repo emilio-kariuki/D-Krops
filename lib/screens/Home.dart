@@ -1241,6 +1241,7 @@ class _HomeState extends State<Home> {
                                         context: context,
                                         builder: (BuildContext context) {
                                           return AlertDialog(
+                                            
                                             shape: RoundedRectangleBorder(
                                                 borderRadius: BorderRadius.all(
                                                     Radius.circular(20.0))),
