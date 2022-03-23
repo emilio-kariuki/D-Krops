@@ -474,7 +474,7 @@ class _HomeState extends State<Home> {
                                               Navigator.pop(context);
                                             },
                                             leading: Icon(Icons.camera,
-                                                color: Colors.blueGrey[900]),
+                                                color: Color.fromARGB(255, 3, 130, 194)),
                                             title: Text("Camera"),
                                           ),
                                           ListTile(
@@ -486,7 +486,7 @@ class _HomeState extends State<Home> {
                                               });
                                             },
                                             leading: Icon(Icons.layers,
-                                                color: Color.fromARGB(255, 161, 133, 7)),
+                                                color: Color.fromARGB(255, 180, 149, 8)),
                                             title: GestureDetector(
                                                 onTap: () {
                                                   setState(() {
