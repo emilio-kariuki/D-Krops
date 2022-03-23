@@ -474,7 +474,7 @@ class _HomeState extends State<Home> {
                                               Navigator.pop(context);
                                             },
                                             leading: Icon(Icons.camera,
-                                                color: Color.fromARGB(255, 3, 130, 194)),
+                                                color: Color.fromARGB(255, 3, 194, 3)),
                                             title: Text("Camera"),
                                           ),
                                           ListTile(
