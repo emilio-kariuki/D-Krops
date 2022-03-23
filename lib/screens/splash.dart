@@ -33,12 +33,15 @@ class _SplashState extends State<Splash> {
       body: Stack(children: [
         Lottie.asset("assets/lottie/update_splash.json",
             width: size.width, height: size.height * 2),
-        Positioned(
-            bottom: size.height * 0.31,
-            right: size.width * 0.40,
+        Positioned.fill(
+            top: size.height * 0.31,
+            // right: size.width * 0.40,
             child:
-              Text("D-krops",
-                  style: GoogleFonts.roboto(fontSize: MediaQuery.of(context).size.width * 0.07, color: Colors.white)),
+              Align(
+                alignment: Alignment.center,
+                child: Text("D-krops",
+                    style: GoogleFonts.roboto(fontSize: MediaQuery.of(context).size.width * 0.07, color: Colors.white)),
+              ),
             ),
         
       ]),
