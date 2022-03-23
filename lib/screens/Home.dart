@@ -1095,6 +1095,8 @@ class _HomeState extends State<Home> {
                           ],
                         ))),
               ),
+
+              
               //the code to show the map
               Padding(
                 padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
@@ -1143,6 +1145,7 @@ class _HomeState extends State<Home> {
                                 //  color: Colors.grey,
                                 child: Center(
                                     child: Scaffold(
+                                      //adding the map to the application for taking the coordinates of the user
                                   body: GoogleMap(
                                     gestureRecognizers: <
                                         Factory<OneSequenceGestureRecognizer>>{
@@ -1189,6 +1192,7 @@ class _HomeState extends State<Home> {
                     )),
               ),
               SizedBox(height: size.height * 0.02),
+              //the close button to exit the application
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -1217,7 +1221,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   SizedBox(width: size.width * 0.08),
-                  /
+                  //the submit button for the application
                   loading
                       ? CircularProgressIndicator()
                       //the code to show the dialog box
