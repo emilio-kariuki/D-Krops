@@ -606,7 +606,7 @@ class _HomeState extends State<Home> {
                                   value: selectedType,
                                   onChanged: (value) {
                                     setState(() {
-                                      getLocation();
+                                      // getLocation();
                                       selectedType = value as String;
                                       print(selectedType);
                                       isActivated = true;
