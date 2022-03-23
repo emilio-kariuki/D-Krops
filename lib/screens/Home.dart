@@ -1,33 +1,24 @@
-// ignore_for_file: unused_local_variable, deprecated_member_use
+// ignore_for_file: unused_local_variable, deprecated_member_use, avoid_print
 
 import 'dart:convert';
 import 'dart:io';
 import 'dart:async';
-import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:dio/dio.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:finalspace/build/build_appBar.dart';
 import 'package:finalspace/build/lottie_contain.dart';
 import 'package:finalspace/build/lottie_container.dart';
-import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
 import 'package:geolocator/geolocator.dart' hide ServiceStatus;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:location/location.dart' hide LocationAccuracy;
 import 'package:lottie/lottie.dart' hide Marker;
-import 'package:permission_handler/permission_handler.dart';
-import 'package:location_permissions/location_permissions.dart'
-    hide PermissionStatus;
-import 'package:restart_app/restart_app.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -47,6 +38,7 @@ class _HomeState extends State<Home> {
 
   bool loading = false;
   GoogleMapController? newGoogleMapController;
+  // ignore: prefer_final_fields
   Completer<GoogleMapController> _controller = Completer();
   // double latitude = -122.085749655962;
   // double longitude = 37.42796133580664;
@@ -108,6 +100,7 @@ class _HomeState extends State<Home> {
       var latlong = LatLng(locate.latitude, locate.longitude);
       var _cameraPosition = CameraPosition(target: latlong, zoom: 10.0);
       if (_controller != null)
+        // ignore: curly_braces_in_flow_control_structures
         newGoogleMapController
             ?.animateCamera(CameraUpdate.newCameraPosition(_cameraPosition));
     });

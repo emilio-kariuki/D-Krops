@@ -1,4 +1,3 @@
-import 'package:finalspace/screens/Home.dart';
 import 'package:finalspace/screens/splash.dart';
 import 'package:flutter/material.dart';
 
