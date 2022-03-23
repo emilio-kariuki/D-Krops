@@ -1245,7 +1245,9 @@ class _HomeState extends State<Home> {
                                 });
                                 await _makeGetRequest();
                                 loading
-                                    ? CircularProgressIndicator()
+                                    ? CircularProgressIndicator(
+                                      color: Color.fromARGB(255, 240, 144, 1),
+                                    )
                                     : await showDialog(
                                         context: context,
                                         builder: (BuildContext context) {
