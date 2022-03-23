@@ -133,10 +133,10 @@ class _HomeState extends State<Home> {
   //create a marker fot the map
   // ignore: prefer_final_fields
   List<Marker> _markers = [
-    // Marker(
-    //     markerId: MarkerId('marker_2'),
-    //     position: LatLng(36.959988288487104, -0.398163985596978),
-    //     draggable: true),
+    Marker(
+        markerId: MarkerId('marker_2'),
+        position: LatLng(36.959988288487104, -0.398163985596978),
+        draggable: true),
   ];
   // _markers.add(
   //     Marker(
