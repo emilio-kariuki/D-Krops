@@ -1268,38 +1268,13 @@ class _HomeState extends State<Home> {
                                     ? CircularProgressIndicator(
                                         color: Color.fromARGB(255, 240, 144, 1),
                                       )
-                                    : await showDialog(
-                                        context: context,
-                                        builder: (BuildContext context) {
-                                          return AlertDialog(
-                                            shape: RoundedRectangleBorder(
-                                                borderRadius: BorderRadius.all(
-                                                    Radius.circular(20.0))),
-                                            title: Text(""),
-                                            content: Column(
-                                              mainAxisSize: MainAxisSize.min,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Lottie.asset(
-                                                    "assets/lottie/successful.json",
-                                                    height: size.height * 0.21),
-                                                GestureDetector(
-                                                  onTap: () {
-                                                    setState(() {
-                                                      Navigator.of(context)
-                                                          .pop();
-                                                    });
-                                                  },
-                                                  child: Text('Successful',
-                                                      style: GoogleFonts.roboto(
-                                                          fontSize: 27,
-                                                          color: Colors.black)),
-                                                ),
-                                              ],
-                                            ),
-                                          );
-                                        });
+                                    : await  Fluttertoast.showToast(
+                                    backgroundColor: Colors.red,
+                                    msg: "Successful!!",
+                                    toastLength: Toast.LENGTH_LONG,
+                                    gravity: ToastGravity.BOTTOM,
+                                    timeInSecForIosWeb: 1,
+                                    fontSize: 16.0);
                                 // Future.delayed(const Duration(milliseconds: 1670),
                                 //     () => Navigator.of(context).pop());
                                 setState(() {
