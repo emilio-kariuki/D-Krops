@@ -1234,7 +1234,7 @@ class _HomeState extends State<Home> {
                                   today == null) {
                                 Fluttertoast.showToast(
                                     backgroundColor: Colors.red,
-                                    msg: "Ensure all the fields are filled",
+                                    msg: "Fill Empty Fields",
                                     toastLength: Toast.LENGTH_SHORT,
                                     gravity: ToastGravity.BOTTOM,
                                     timeInSecForIosWeb: 1,
