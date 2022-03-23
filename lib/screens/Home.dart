@@ -855,7 +855,6 @@ class _HomeState extends State<Home> {
                                   value: selectedMethod,
                                   onChanged: (value) {
                                     setState(() {
-                                      getLocation();
                                       selectedMethod = value as String;
                                       print(selectedMethod);
                                     });
