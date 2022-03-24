@@ -49,7 +49,7 @@ class _HomeState extends State<Home> {
   double? lat;
   double? long;
   Location location = Location();
-  double ?unique;
+  double? unique;
 
   // LatLng ltPosition = LatLng(latitude!, longitude!);
   //function to get the current location of the user
@@ -493,7 +493,8 @@ class _HomeState extends State<Home> {
                                               Navigator.pop(context);
                                             },
                                             leading: Icon(Icons.camera,
-                                                color: Color.fromARGB(255, 255, 123, 0)),
+                                                color: Color.fromARGB(
+                                                    255, 255, 123, 0)),
                                             title: Text("Camera"),
                                           ),
                                           ListTile(
@@ -505,7 +506,8 @@ class _HomeState extends State<Home> {
                                               });
                                             },
                                             leading: Icon(Icons.layers,
-                                                color: Color.fromARGB(255, 0, 0, 0)),
+                                                color: Color.fromARGB(
+                                                    255, 0, 0, 0)),
                                             title: GestureDetector(
                                                 onTap: () {
                                                   setState(() {
@@ -628,7 +630,8 @@ class _HomeState extends State<Home> {
                                               item,
                                               style: GoogleFonts.notoSerif(
                                                   fontSize: 18,
-                                                  color: Color.fromARGB(255, 58, 57, 57),
+                                                  color: Color.fromARGB(
+                                                      255, 58, 57, 57),
                                                   fontWeight: FontWeight.w600),
                                               overflow: TextOverflow.ellipsis,
                                             ),
@@ -894,7 +897,8 @@ class _HomeState extends State<Home> {
                                               item,
                                               style: GoogleFonts.notoSerif(
                                                   fontSize: 18,
-                                                  color: Color.fromARGB(255, 27, 27, 27),
+                                                  color: Color.fromARGB(
+                                                      255, 27, 27, 27),
                                                   fontWeight: FontWeight.w600),
                                               overflow: TextOverflow.ellipsis,
                                             ),
@@ -1134,7 +1138,8 @@ class _HomeState extends State<Home> {
                               children: [
                                 SizedBox(width: 20),
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 10,left: 10),
+                                  padding:
+                                      const EdgeInsets.only(top: 10, left: 10),
                                   child: Text("Choose Location",
                                       style: GoogleFonts.redressed(
                                           fontSize: 22, color: Colors.white)),
@@ -1320,9 +1325,12 @@ class _HomeState extends State<Home> {
   }
 
   _makeGetRequest() async {
-    if( selectedType == 'maize'){
-      
-
+    if (selectedType == 'maize') {
+      unique = 1;
+    } else if (selectedType == "coffee") {
+      unique = 2;
+    } else if (selectedType == "bananas") {
+      unique = 3;
     }
     final String variety_1 = variety.text;
     final String row_1 = row.text;
