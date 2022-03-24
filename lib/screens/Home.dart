@@ -1331,6 +1331,44 @@ class _HomeState extends State<Home> {
       unique = 2;
     } else if (selectedType == "bananas") {
       unique = 3;
+    } else if (selectedType == "forest") {
+      unique = 4;
+    } else if (selectedType == "avocado") {
+      unique = 5;
+    } else if (selectedType == "beans") {
+      unique = 6;
+    } else if (selectedType == "cabbage") {
+      unique = 7;
+    } else if (selectedType == "capcicum") {
+      unique = 8;
+    } else if (selectedType == "coriander") {
+      unique = 9;
+    } else if (selectedType == "carrots") {
+      unique = 10;
+    } else if (selectedType == "green grams") {
+      unique = 11;
+    } else if (selectedType == "kales") {
+      unique = 12;
+    } else if (selectedType == "napier grass") {
+      unique = 13;
+    } else if (selectedType == "onions") {
+      unique = 14;
+    } else if (selectedType == "peas") {
+      unique = 15;
+    } else if (selectedType == "potatoes") {
+      unique = 16;
+    } else if (selectedType == "pumpkins") {
+      unique = 17;
+    } else if (selectedType == "spinach") {
+      unique = 18;
+    } else if (selectedType == "sorghum") {
+      unique = 19;
+    } else if (selectedType == "sweet-potatoes") {
+      unique = 20;
+    } else if (selectedType == "tomatoes") {
+      unique = 21;
+    } else if (selectedType == "tea") {
+      unique = 22;
     }
     final String variety_1 = variety.text;
     final String row_1 = row.text;
