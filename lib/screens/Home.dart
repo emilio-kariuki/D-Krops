@@ -49,6 +49,7 @@ class _HomeState extends State<Home> {
   double? lat;
   double? long;
   Location location = Location();
+  double ?unique;
 
   // LatLng ltPosition = LatLng(latitude!, longitude!);
   //function to get the current location of the user
@@ -1319,6 +1320,10 @@ class _HomeState extends State<Home> {
   }
 
   _makeGetRequest() async {
+    if( selectedType == 'maize'){
+      
+
+    }
     final String variety_1 = variety.text;
     final String row_1 = row.text;
     final String column_1 = column.text;
