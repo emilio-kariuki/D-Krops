@@ -19,7 +19,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:location/location.dart' hide LocationAccuracy;
 import 'package:lottie/lottie.dart' hide Marker;
-
+import 'package:get/get.dart' hide FormData;
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -521,7 +521,7 @@ class _HomeState extends State<Home> {
                                           ListTile(
                                             selectedColor: Colors.grey,
                                             onTap: () {
-                                              Navigator.pop(context);
+                                              Get.back();
                                             },
                                             leading: Icon(Icons.cancel,
                                                 color: Colors.red),
