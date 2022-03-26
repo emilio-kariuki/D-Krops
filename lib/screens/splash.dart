@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
-
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
 
@@ -16,10 +15,9 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(
-        const Duration(seconds: 4),
-        () => Get.to(Home()));
-            
+    Future.delayed(const Duration(seconds: 4), () {
+      Get.to(Home());
+    });
   }
 
   @override
@@ -32,16 +30,16 @@ class _SplashState extends State<Splash> {
         Lottie.asset("assets/lottie/update_splash.json",
             width: size.width, height: size.height * 2),
         Positioned.fill(
-            top: size.height * 0.31,
-            // right: size.width * 0.40,
-            child:
-              Align(
-                alignment: Alignment.center,
-                child: Text("D-krops",
-                    style: GoogleFonts.roboto(fontSize: MediaQuery.of(context).size.width * 0.07, color: Colors.white)),
-              ),
-            ),
-        
+          top: size.height * 0.31,
+          // right: size.width * 0.40,
+          child: Align(
+            alignment: Alignment.center,
+            child: Text("D-krops",
+                style: GoogleFonts.roboto(
+                    fontSize: MediaQuery.of(context).size.width * 0.07,
+                    color: Colors.white)),
+          ),
+        ),
       ]),
     );
   }
