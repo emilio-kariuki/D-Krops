@@ -57,6 +57,7 @@ dependencies:
   dio: ^4.0.4
   restart_app: ^1.1.0
   fluttertoast: ^8.0.9
+  get: ^4.6.1
   
 
 dev_dependencies:
