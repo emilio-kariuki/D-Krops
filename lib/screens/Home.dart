@@ -1206,12 +1206,12 @@ class _HomeState extends State<Home> {
                             ),
                           ],
                         ),
-                        Positioned(
-                          top: 5,
-                          left: 15,
-                          child: Lottie.asset("assets/lottie/celebration.json",
-                              height: 200.1, width: 100.1, animate: true),
-                        ),
+                        // Positioned(
+                        //   top: 5,
+                        //   left: 15,
+                        //   child: Lottie.asset("assets/lottie/celebration.json",
+                        //       height: 200.1, width: 100.1, animate: true),
+                        // ),
                       ],
                     )),
               ),
