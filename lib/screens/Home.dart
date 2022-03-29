@@ -1362,7 +1362,8 @@ class _HomeState extends State<Home> {
       unique = 8;
     } else if (selectedType == "coriander") {
       unique = 9;
-    } else if (selectedType == "carrots") {
+    }
+    else if (selectedType == "carrots") {
       unique = 10;
     } else if (selectedType == "green grams") {
       unique = 11;
@@ -1417,6 +1418,16 @@ class _HomeState extends State<Home> {
       unique = 35;
     }else if (selectedType == "shrubland") {
       unique = 36;
+    }else if (selectedType == "cauliflower") {
+      unique = 37;
+    }else if (selectedType == "cucumber") {
+      unique = 38;
+    }else if (selectedType == "eggplant") {
+      unique = 39;
+    }else if (selectedType == "garlic") {
+      unique = 40;
+    }else if (selectedType == "lettuce") {
+      unique = 41;
     }
 
 
