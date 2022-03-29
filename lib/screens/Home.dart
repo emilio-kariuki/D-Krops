@@ -210,22 +210,18 @@ class _HomeState extends State<Home> {
     'wheat',
     'yams',
     'zucchini',
-
-
-    'road',
+    " ",
     'buildings',
     'barren-land',
-    'swamps',
+    'bare-rock',
     'dams',
     'forest',
     'grassland',
-    'shrubland',
-    'ice',
+    'road',
     'range-land',
+    'swamps',
     'river',
-    'bare-rock',
-    
-
+    'shrubland',
 
   ];
   List<String> itemz = [
