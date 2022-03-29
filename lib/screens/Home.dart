@@ -187,10 +187,15 @@ class _HomeState extends State<Home> {
     "cabbage",
     'capcicum',
     'coriander',
+    'cauliflower'
+    'cucumber',
     "carrots",
     'coffee',
+    'eggplant',
     "green grams",
+    'garlic',
     "kales",
+    'lettuce',
     'maize',
     'napier grass',
     "onions",
@@ -204,7 +209,8 @@ class _HomeState extends State<Home> {
     'tea',
     'wheat',
     'yams',
-    'zu'
+    'zucchini',
+
 
     'road',
     'buildings',
