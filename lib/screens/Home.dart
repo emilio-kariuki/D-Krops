@@ -667,10 +667,10 @@ class _HomeState extends State<Home> {
                                     color: Color.fromARGB(255, 255, 255, 255),
                                   ),
                                   buttonElevation: 5,
-                                  itemHeight: 40,
+                                  itemHeight: 35,
                                   itemPadding: const EdgeInsets.only(
                                       left: 14, right: 14),
-                                  dropdownMaxHeight: 200,
+                                  dropdownMaxHeight: 300,
                                   dropdownWidth: 200,
                                   dropdownPadding: EdgeInsets.only(top: 3),
                                   dropdownDecoration: BoxDecoration(
