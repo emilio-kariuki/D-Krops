@@ -241,8 +241,6 @@ class _HomeState extends State<Home> {
   bool isActivated = false;
   bool isValidate = false;
 
-  
-
   void takePhoto(ImageSource source) async {
     final image = await picker.pickImage(
         source: source, maxHeight: 480, maxWidth: 640, imageQuality: 60);
@@ -633,6 +631,94 @@ class _HomeState extends State<Home> {
                                       selectedType = value as String;
                                       print(selectedType);
                                       isActivated = true;
+                                      if (selectedType == 'maize') {
+                                        unique = 1;
+                                      } else if (selectedType == "coffee") {
+                                        unique = 2;
+                                      } else if (selectedType == "bananas") {
+                                        unique = 3;
+                                      } else if (selectedType == "forest") {
+                                        unique = 4;
+                                      } else if (selectedType == "avocado") {
+                                        unique = 5;
+                                      } else if (selectedType == "beans") {
+                                        unique = 6;
+                                      } else if (selectedType == "cabbage") {
+                                        unique = 7;
+                                      } else if (selectedType == "capcicum") {
+                                        unique = 8;
+                                      } else if (selectedType == "coriander") {
+                                        unique = 9;
+                                      } else if (selectedType == "carrots") {
+                                        unique = 10;
+                                      } else if (selectedType ==
+                                          "green grams") {
+                                        unique = 11;
+                                      } else if (selectedType == "kales") {
+                                        unique = 12;
+                                      } else if (selectedType ==
+                                          "napier grass") {
+                                        unique = 13;
+                                      } else if (selectedType == "onions") {
+                                        unique = 14;
+                                      } else if (selectedType == "peas") {
+                                        unique = 15;
+                                      } else if (selectedType == "potatoes") {
+                                        unique = 16;
+                                      } else if (selectedType == "pumpkins") {
+                                        unique = 17;
+                                      } else if (selectedType == "spinach") {
+                                        unique = 18;
+                                      } else if (selectedType == "sorghum") {
+                                        unique = 19;
+                                      } else if (selectedType ==
+                                          "sweet-potatoes") {
+                                        unique = 20;
+                                      } else if (selectedType == "tomatoes") {
+                                        unique = 21;
+                                      } else if (selectedType == "tea") {
+                                        unique = 22;
+                                      } else if (selectedType == "wheat") {
+                                        unique = 23;
+                                      } else if (selectedType == "yams") {
+                                        unique = 24;
+                                      } else if (selectedType == "zucchini") {
+                                        unique = 25;
+                                      } else if (selectedType == "buildings") {
+                                        unique = 26;
+                                      } else if (selectedType ==
+                                          "barren-land") {
+                                        unique = 27;
+                                      } else if (selectedType == "bare-rock") {
+                                        unique = 28;
+                                      } else if (selectedType == "dams") {
+                                        unique = 29;
+                                      } else if (selectedType == "forest") {
+                                        unique = 30;
+                                      } else if (selectedType == "grassland") {
+                                        unique = 31;
+                                      } else if (selectedType == "road") {
+                                        unique = 32;
+                                      } else if (selectedType == "range-land") {
+                                        unique = 33;
+                                      } else if (selectedType == "swamps") {
+                                        unique = 34;
+                                      } else if (selectedType == "river") {
+                                        unique = 35;
+                                      } else if (selectedType == "shrubland") {
+                                        unique = 36;
+                                      } else if (selectedType ==
+                                          "cauliflower") {
+                                        unique = 37;
+                                      } else if (selectedType == "cucumber") {
+                                        unique = 38;
+                                      } else if (selectedType == "eggplant") {
+                                        unique = 39;
+                                      } else if (selectedType == "garlic") {
+                                        unique = 40;
+                                      } else if (selectedType == "lettuce") {
+                                        unique = 41;
+                                      }
                                     });
                                   },
                                   icon: const Icon(
@@ -1346,9 +1432,6 @@ class _HomeState extends State<Home> {
   }
 
   _makeGetRequest() async {
-    
-
-
     final String variety_1 = variety.text;
     final String row_1 = row.text;
     final String column_1 = column.text;
@@ -1383,7 +1466,7 @@ class _HomeState extends State<Home> {
       //the date of plantation of the crop in the field
       "date_of_plantation": formatted,
       //to pass the unique id
-      "unique":unique,
+      "unique": unique,
     });
     //api that sends the data to the server
     var response = await dio
