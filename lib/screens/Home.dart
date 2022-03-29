@@ -216,7 +216,7 @@ class _HomeState extends State<Home> {
     'range-land',
     'river',
     'bare-rock',
-    ''
+    
 
 
   ];
