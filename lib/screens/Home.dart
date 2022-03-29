@@ -203,9 +203,10 @@ class _HomeState extends State<Home> {
     'sweet-potatoes',
     'tomatoes',
     'tea',
-    
+
     'road',
     'buildings',
+    'barren-land',
 
   ];
   List<String> itemz = [
