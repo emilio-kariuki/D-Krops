@@ -670,7 +670,7 @@ class _HomeState extends State<Home> {
                                   itemHeight: 35,
                                   itemPadding: const EdgeInsets.only(
                                       left: 14, right: 14),
-                                  dropdownMaxHeight: 300,
+                                  dropdownMaxHeight: 250,
                                   dropdownWidth: 200,
                                   dropdownPadding: EdgeInsets.only(top: 3),
                                   dropdownDecoration: BoxDecoration(
