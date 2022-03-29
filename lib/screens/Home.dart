@@ -1466,7 +1466,7 @@ class _HomeState extends State<Home> {
       //the date of plantation of the crop in the field
       "date_of_plantation": formatted,
       //to pass the unique id
-      // "unique": unique,
+      "Unique": unique,
     });
     //api that sends the data to the server
     var response = await dio
