@@ -202,6 +202,9 @@ class _HomeState extends State<Home> {
     'sweet-potatoes',
     'tomatoes',
     'tea',
+    'wheat',
+    'yams',
+    'zu'
 
     'road',
     'buildings',
