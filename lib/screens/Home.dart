@@ -212,7 +212,8 @@ class _HomeState extends State<Home> {
     'forest',
     'grassland',
     'shrubland',
-    ''
+    'ice',
+    
 
   ];
   List<String> itemz = [
