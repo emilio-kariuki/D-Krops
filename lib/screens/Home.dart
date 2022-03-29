@@ -213,6 +213,7 @@ class _HomeState extends State<Home> {
     'grassland',
     'shrubland',
     'ice',
+    'range-land',
     
 
 
