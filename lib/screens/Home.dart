@@ -20,6 +20,7 @@ import 'package:intl/intl.dart';
 import 'package:location/location.dart' hide LocationAccuracy;
 import 'package:lottie/lottie.dart' hide Marker;
 import 'package:get/get.dart' hide FormData;
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -222,7 +223,6 @@ class _HomeState extends State<Home> {
     'swamps',
     'river',
     'shrubland',
-
   ];
   List<String> itemz = [
     'Agro-forestry',
@@ -1388,7 +1388,38 @@ class _HomeState extends State<Home> {
       unique = 21;
     } else if (selectedType == "tea") {
       unique = 22;
+    } else if (selectedType == "wheat") {
+      unique = 23;
+    }else if (selectedType == "yams") {
+      unique = 24;
+    }else if (selectedType == "zucchini") {
+      unique = 25;
+    }else if (selectedType == "buildings") {
+      unique = 26;
+    }else if (selectedType == "barren-land") {
+      unique = 27;
     }
+    else if (selectedType == "bare-rock") {
+      unique = 28;
+    }else if (selectedType == "dams") {
+      unique = 29;
+    }else if (selectedType == "forest") {
+      unique = 30;
+    }else if (selectedType == "grassland") {
+      unique = 31;
+    }else if (selectedType == "road") {
+      unique = 32;
+    }else if (selectedType == "range-land") {
+      unique = 33;
+    }else if (selectedType == "swamps") {
+      unique = 34;
+    }else if (selectedType == "river") {
+      unique = 35;
+    }else if (selectedType == "shrubland") {
+      unique = 36;
+    }
+
+
     final String variety_1 = variety.text;
     final String row_1 = row.text;
     final String column_1 = column.text;
