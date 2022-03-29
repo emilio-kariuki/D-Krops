@@ -187,7 +187,7 @@ class _HomeState extends State<Home> {
     "cabbage",
     'capcicum',
     'coriander',
-    'cauliflower'
+    'cauliflower',
     'cucumber',
     "carrots",
     'coffee',
