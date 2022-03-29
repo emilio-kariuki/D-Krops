@@ -189,7 +189,7 @@ class _HomeState extends State<Home> {
     'coriander',
     "carrots",
     'coffee',
-    'forest',
+    
     "green grams",
     "kales",
     'maize',
@@ -207,6 +207,12 @@ class _HomeState extends State<Home> {
     'road',
     'buildings',
     'barren-land',
+    'swamps',
+    'dams',
+    'forest',
+    'grassland',
+    'shrubland',
+    ''
 
   ];
   List<String> itemz = [
