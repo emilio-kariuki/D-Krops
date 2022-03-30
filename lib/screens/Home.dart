@@ -638,122 +638,122 @@ class _HomeState extends State<Home> {
                                         case 'coffee':
                                           unique = 2;
                                           break;
-                                          case 'bananas':
+                                        case 'bananas':
                                           unique = 3;
                                           break;
-                                          case 'avocado':
+                                        case 'avocado':
                                           unique = 4;
                                           break;
-                                          case 'beans':
+                                        case 'beans':
                                           unique = 5;
                                           break;
-                                          case 'cabbage':
+                                        case 'cabbage':
                                           unique = 6;
                                           break;
-                                          case 'capcicum':
+                                        case 'capcicum':
                                           unique = 7;
                                           break;
-                                          case 'dania':
+                                        case 'dania':
                                           unique = 8;
                                           break;
-                                          case 'carrots':
+                                        case 'carrots':
                                           unique = 9;
                                           break;
-                                          case 'dengu':
+                                        case 'dengu':
                                           unique = 10;
                                           break;
-                                          case 'kales':
+                                        case 'kales':
                                           unique = 11;
                                           break;
-                                          case 'napier grass':
+                                        case 'napier grass':
                                           unique = 12;
                                           break;
-                                          case 'onions':
+                                        case 'onions':
                                           unique = 13;
                                           break;
-                                          case 'peas':
+                                        case 'peas':
                                           unique = 14;
                                           break;
-                                          case 'potatoes':
+                                        case 'potatoes':
                                           unique = 15;
                                           break;
-                                          case 'pumpkins':
+                                        case 'pumpkins':
                                           unique = 16;
                                           break;
-                                          case 'sorghum':
+                                        case 'sorghum':
                                           unique = 17;
                                           break;
-                                          case 'sweet-potatoes':
+                                        case 'sweet-potatoes':
                                           unique = 18;
                                           break;
-                                          case 'spinach':
+                                        case 'spinach':
                                           unique = 19;
                                           break;
-                                          case 'tomatoes':
+                                        case 'tomatoes':
                                           unique = 20;
                                           break;
-                                          case 'tea':
+                                        case 'tea':
                                           unique = 21;
                                           break;
-                                          case 'wheat':
+                                        case 'wheat':
                                           unique = 22;
                                           break;
-                                          case 'yams':
+                                        case 'yams':
                                           unique = 23;
                                           break;
-                                          case 'zucchini':
+                                        case 'zucchini':
                                           unique = 24;
                                           break;
-                                          case 'buildings':
+                                        case 'buildings':
                                           unique = 25;
                                           break;
-                                          case 'bare-land':
+                                        case 'bare-land':
                                           unique = 26;
                                           break;
-                                          case 'dams':
+                                        case 'dams':
                                           unique = 27;
                                           break;
-                                          case 'rock':
+                                        case 'rock':
                                           unique = 28;
                                           break;
-                                          case 'forest':
+                                        case 'forest':
                                           unique = 29;
                                           break;
-                                          case 'grassland':
+                                        case 'grassland':
                                           unique = 30;
                                           break;
-                                          case 'road':
+                                        case 'road':
                                           unique = 31;
                                           break;
-                                          case 'range-land':
+                                        case 'range-land':
                                           unique = 32;
                                           break;
-                                          case 'swamps':
+                                        case 'swamps':
                                           unique = 33;
                                           break;
-                                          case 'river':
+                                        case 'river':
                                           unique = 34;
                                           break;
-                                          case 'shrub-land':
+                                        case 'shrub-land':
                                           unique = 35;
                                           break;
-                                          case 'cauliflower':
+                                        case 'cauliflower':
                                           unique = 36;
                                           break;
-                                          case 'cucumber':
+                                        case 'cucumber':
                                           unique = 37;
                                           break;
-                                          case 'garlic':
+                                        case 'garlic':
                                           unique = 38;
                                           break;
-                                          case 'lettuce':
+                                        case 'lettuce':
                                           unique = 39;
                                           break;
-                                          case 'godget':
+                                        case 'godget':
                                           unique = 40;
                                           break;
                                       }
-                                      
+                                      print(unique);
                                     });
                                   },
                                   icon: const Icon(
