@@ -292,7 +292,7 @@ class _HomeState extends State<Home> {
     // TODO: implement initState
     super.initState();
     checkConnectivity();
-    InternetPopup().initialize(context: context);
+    // InternetPopup().initialize(context: context);
     setState(() {
       print('Refreshed');
     });
