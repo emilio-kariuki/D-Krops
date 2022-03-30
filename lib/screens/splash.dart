@@ -1,3 +1,4 @@
+import 'package:background_location/background_location.dart';
 import 'package:finalspace/screens/Home.dart';
 import "package:flutter/material.dart";
 import 'package:fluttertoast/fluttertoast.dart';
@@ -21,7 +22,6 @@ class _SplashState extends State<Splash> {
     // Test if location services are enabled.
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
-      
       // Location services are not enabled don't continue
       // accessing the position and request users of the
       // App to enable the location services.
@@ -33,7 +33,6 @@ class _SplashState extends State<Splash> {
           gravity: ToastGravity.BOTTOM,
           timeInSecForIosWeb: 1,
           fontSize: 16.0);
-          
     }
     permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
@@ -63,6 +62,16 @@ class _SplashState extends State<Splash> {
     // continue accessing the position of the device.
     var locate = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
+  }
+
+  void location() async {
+    BackgroundLocation.setAndroidNotification(
+      title: 'Background service is running',
+      message: 'Background location in progress',
+      icon: 'asssets/images/logo.png',
+    );
+    //await BackgroundLocation.setAndroidConfiguration(1000);
+    await BackgroundLocation.startLocationService(distanceFilter: 20);
   }
 
   @override
