@@ -60,6 +60,7 @@ dependencies:
   get: ^4.6.1
   background_location: ^0.8.1
   internet_popup: ^1.0.3+1
+  connectivity_plus: ^2.2.1
   
 
 dev_dependencies:
