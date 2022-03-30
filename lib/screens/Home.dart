@@ -210,7 +210,7 @@ class _HomeState extends State<Home> {
     'tea',
     'wheat',
     'yams',
-    "------------",
+    "-------------------------",
     'buildings',
     'bare-land',
     'dams',
