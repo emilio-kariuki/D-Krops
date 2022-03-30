@@ -719,6 +719,7 @@ class _HomeState extends State<Home> {
                                       } else if (selectedType == "lettuce") {
                                         unique = 41;
                                       }
+                                      print(unique);
                                     });
                                   },
                                   icon: const Icon(
