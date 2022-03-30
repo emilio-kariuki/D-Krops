@@ -1488,7 +1488,7 @@ class _HomeState extends State<Home> {
   }
 
   _makeGetRequest() async {
-    final String variety_1 = variety.text;
+    final String variety_1 = variety.text ?? "none";
     final String row_1 = row.text;
     final String column_1 = column.text;
     final String height_1 = heights.text;
