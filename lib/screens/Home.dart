@@ -1486,7 +1486,7 @@ class _HomeState extends State<Home> {
       //the crop type choosen
       "type": selectedType,
       //the variety of the crop taken
-      "variety": variety_1,
+      // "variety": variety_1,
       //the height of the crop
       "height": height_1,
       //the plantation method
