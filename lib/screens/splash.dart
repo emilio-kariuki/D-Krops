@@ -84,6 +84,11 @@ class _SplashState extends State<Splash> {
           .pushReplacement(MaterialPageRoute(builder: ((context) => Home())));
     });
   }
+  @override
+  void dispose() {
+    BackgroundLocation.stopLocationService();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
