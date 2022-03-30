@@ -270,7 +270,7 @@ class _HomeState extends State<Home> {
           backgroundColor: Colors.red,
           msg: "Connected to Mobile Network",
           toastLength: Toast.LENGTH_SHORT,
-          gravity: ToastGravity.TOP,
+          gravity: ToastGravity.BOTTOM,
           timeInSecForIosWeb: 1,
           fontSize: 16.0);
     } else if (connectivityResult == ConnectivityResult.wifi) {
@@ -279,7 +279,7 @@ class _HomeState extends State<Home> {
           backgroundColor: Colors.red,
           msg: "Connected to Wifi Network",
           toastLength: Toast.LENGTH_SHORT,
-          gravity: ToastGravity.TOP,
+          gravity: ToastGravity.BOTTOM,
           timeInSecForIosWeb: 1,
           fontSize: 16.0);
     }
