@@ -702,7 +702,7 @@ class _HomeState extends State<Home> {
                                         case 'yams':
                                           unique = 23;
                                           break;
-                                      
+
                                         case 'buildings':
                                           unique = 25;
                                           break;
@@ -712,7 +712,7 @@ class _HomeState extends State<Home> {
                                         case 'dams':
                                           unique = 27;
                                           break;
-                                       
+
                                         case 'forest':
                                           unique = 29;
                                           break;
@@ -746,7 +746,6 @@ class _HomeState extends State<Home> {
                                         case 'lettuce':
                                           unique = 39;
                                           break;
-                                        
                                       }
                                       print(unique);
                                     });
@@ -1328,7 +1327,7 @@ class _HomeState extends State<Home> {
                                     onMapCreated:
                                         (GoogleMapController controller) {
                                       _controller.complete(controller);
-                                       //getLocation();
+                                      getLocation();
                                       // getPermission();
                                     },
                                   ),
