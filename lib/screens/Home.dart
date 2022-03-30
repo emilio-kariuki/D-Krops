@@ -1328,7 +1328,7 @@ class _HomeState extends State<Home> {
                                     onMapCreated:
                                         (GoogleMapController controller) {
                                       _controller.complete(controller);
-                                      // getLocation();
+                                       getLocation();
                                       // getPermission();
                                     },
                                   ),

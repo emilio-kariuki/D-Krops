@@ -21,8 +21,7 @@ class _SplashState extends State<Splash> {
     // Test if location services are enabled.
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
-      Navigator.of(context)
-          .pushReplacement(MaterialPageRoute(builder: ((context) => Home())));
+      
       // Location services are not enabled don't continue
       // accessing the position and request users of the
       // App to enable the location services.
@@ -71,7 +70,8 @@ class _SplashState extends State<Splash> {
     super.initState();
     Future.delayed(const Duration(seconds: 4), () {
       getLocation();
-      
+      Navigator.of(context)
+          .pushReplacement(MaterialPageRoute(builder: ((context) => Home())));
     });
   }
 
