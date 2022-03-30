@@ -213,8 +213,8 @@ class _HomeState extends State<Home> {
     'zucchini',
     " ",
     'buildings',
-    'barren-land',
-    'bare-rock',
+    'bare-land',
+    'rock',
     'dams',
     'forest',
     'grassland',
@@ -222,7 +222,7 @@ class _HomeState extends State<Home> {
     'range-land',
     'swamps',
     'river',
-    'shrubland',
+    'shrub-land',
   ];
   List<String> itemz = [
     'Agro-forestry',
@@ -662,73 +662,99 @@ class _HomeState extends State<Home> {
                                           case 'dengu':
                                           unique = 10;
                                           break;
-                                        
-                                        
-                                        // } else if (selectedType == "kales") {
-                                        //   unique = 12;
-                                        // } else if (selectedType ==
-                                        //     "napier grass") {
-                                        //   unique = 13;
-                                        // } else if (selectedType == "onions") {
-                                        //   unique = 14;
-                                        // } else if (selectedType == "peas") {
-                                        //   unique = 15;
-                                        // } else if (selectedType == "potatoes") {
-                                        //   unique = 16;
-                                        // } else if (selectedType == "pumpkins") {
-                                        //   unique = 17;
-                                        // } else if (selectedType == "spinach") {
-                                        //   unique = 18;
-                                        // } else if (selectedType == "sorghum") {
-                                        //   unique = 19;
-                                        // } else if (selectedType ==
-                                        //     "sweet-potatoes") {
-                                        //   unique = 20;
-                                        // } else if (selectedType == "tomatoes") {
-                                        //   unique = 21;
-                                        // } else if (selectedType == "tea") {
-                                        //   unique = 22;
-                                        // } else if (selectedType == "wheat") {
-                                        //   unique = 23;
-                                        // } else if (selectedType == "yams") {
-                                        //   unique = 24;
-                                        // } else if (selectedType == "zucchini") {
-                                        //   unique = 25;
-                                        // } else if (selectedType == "buildings") {
-                                        //   unique = 26;
-                                        // } else if (selectedType ==
-                                        //     "barren-land") {
-                                        //   unique = 27;
-                                        // } else if (selectedType == "bare-rock") {
-                                        //   unique = 28;
-                                        // } else if (selectedType == "dams") {
-                                        //   unique = 29;
-                                        // } else if (selectedType == "forest") {
-                                        //   unique = 30;
-                                        // } else if (selectedType == "grassland") {
-                                        //   unique = 31;
-                                        // } else if (selectedType == "road") {
-                                        //   unique = 32;
-                                        // } else if (selectedType == "range-land") {
-                                        //   unique = 33;
-                                        // } else if (selectedType == "swamps") {
-                                        //   unique = 34;
-                                        // } else if (selectedType == "river") {
-                                        //   unique = 35;
-                                        // } else if (selectedType == "shrubland") {
-                                        //   unique = 36;
-                                        // } else if (selectedType ==
-                                        //     "cauliflower") {
-                                        //   unique = 37;
-                                        // } else if (selectedType == "cucumber") {
-                                        //   unique = 38;
-                                        // } else if (selectedType == "eggplant") {
-                                        //   unique = 39;
-                                        // } else if (selectedType == "garlic") {
-                                        //   unique = 40;
-                                        // } else if (selectedType == "lettuce") {
-                                        //   unique = 41;
-                                        // }
+                                          case 'kales':
+                                          unique = 11;
+                                          break;
+                                          case 'napier grass':
+                                          unique = 12;
+                                          break;
+                                          case 'onions':
+                                          unique = 13;
+                                          break;
+                                          case 'peas':
+                                          unique = 14;
+                                          break;
+                                          case 'potatoes':
+                                          unique = 15;
+                                          break;
+                                          case 'pumpkins':
+                                          unique = 16;
+                                          break;
+                                          case 'sorghum':
+                                          unique = 17;
+                                          break;
+                                          case 'sweet-potatoes':
+                                          unique = 18;
+                                          break;
+                                          case 'spinach':
+                                          unique = 19;
+                                          break;
+                                          case 'tomatoes':
+                                          unique = 20;
+                                          break;
+                                          case 'tea':
+                                          unique = 21;
+                                          break;
+                                          case 'wheat':
+                                          unique = 22;
+                                          break;
+                                          case 'yams':
+                                          unique = 23;
+                                          break;
+                                          case 'zucchini':
+                                          unique = 24;
+                                          break;
+                                          case 'buildings':
+                                          unique = 25;
+                                          break;
+                                          case 'bare-land':
+                                          unique = 26;
+                                          break;
+                                          case 'dams':
+                                          unique = 27;
+                                          break;
+                                          case 'rock':
+                                          unique = 28;
+                                          break;
+                                          case 'forest':
+                                          unique = 29;
+                                          break;
+                                          case 'grassland':
+                                          unique = 30;
+                                          break;
+                                          case 'road':
+                                          unique = 31;
+                                          break;
+                                          case 'range-land':
+                                          unique = 32;
+                                          break;
+                                          case 'swamps':
+                                          unique = 33;
+                                          break;
+                                          case 'river':
+                                          unique = 34;
+                                          break;
+                                          case 'shrub-land':
+                                          unique = 35;
+                                          break;
+                                          case 'cauliflower':
+                                          unique = 36;
+                                          break;
+                                          case 'cucumber':
+                                          unique = 37;
+                                          break;
+                                          case 'garlic':
+                                          unique = 38;
+                                          break;
+                                          case 'lettuce':
+                                          unique = 39;
+                                          break;
+                                          case 'godget':
+                                          unique = 40;
+                                          break;
+                                    
+                                       
+                                       
                                       }
                                       
                                     });
