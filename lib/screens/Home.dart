@@ -1121,7 +1121,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-              //the code to add the map\
+              //the code to add the date of plantation of that crop
               Padding(
                 padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
                 child: Material(
