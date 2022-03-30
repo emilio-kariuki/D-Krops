@@ -1,7 +1,10 @@
 import 'package:finalspace/screens/Home.dart';
 import "package:flutter/material.dart";
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:lottie/lottie.dart';
 
 
@@ -13,6 +16,53 @@ class Splash extends StatefulWidget {
 }
 
 class _SplashState extends State<Splash> {
+  getLocation() async {
+    bool serviceEnabled;
+    LocationPermission permission;
+    // Test if location services are enabled.
+    serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    if (!serviceEnabled) {
+      // Location services are not enabled don't continue
+      // accessing the position and request users of the
+      // App to enable the location services.
+      await Geolocator.openLocationSettings();
+      return Fluttertoast.showToast(
+          backgroundColor: Colors.red,
+          msg: "Location Services are disabled.",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIosWeb: 1,
+          fontSize: 16.0);
+    }
+    permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+      if (permission == LocationPermission.denied) {
+        return Fluttertoast.showToast(
+            backgroundColor: Colors.red,
+            msg: "Location permissions denied.",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            fontSize: 16.0);
+      }
+    }
+    if (permission == LocationPermission.deniedForever) {
+      // Permissions are denied forever, handle appropriately.
+      return Fluttertoast.showToast(
+          backgroundColor: Colors.red,
+          msg:
+              "Location permissions are permanently denied, we cannot request permissions.",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIosWeb: 1,
+          fontSize: 16.0);
+    }
+    // When we reach here, permissions are granted and we can
+    // continue accessing the position of the device.
+    var locate = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.high);
+  }
   @override
   void initState() {
     super.initState();
