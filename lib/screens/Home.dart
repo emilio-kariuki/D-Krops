@@ -275,6 +275,13 @@ class _HomeState extends State<Home> {
           fontSize: 16.0);
     } else if (connectivityResult == ConnectivityResult.wifi) {
       // I am connected to a wifi network.
+      Fluttertoast.showToast(
+          backgroundColor: Colors.red,
+          msg: "Connected to Wifi Network",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.TOP,
+          timeInSecForIosWeb: 1,
+          fontSize: 16.0);
     }
   }
 
@@ -284,6 +291,7 @@ class _HomeState extends State<Home> {
     // ignore: todo
     // TODO: implement initState
     super.initState();
+    checkConnectivity();
     InternetPopup().initialize(context: context);
     setState(() {
       print('Refreshed');
