@@ -631,93 +631,99 @@ class _HomeState extends State<Home> {
                                       selectedType = value as String;
                                       print(selectedType);
                                       isActivated = true;
-                                      if (selectedType == 'maize') {
-                                        unique = 1;
-                                      } else if (selectedType == "coffee") {
-                                        unique = 2;
-                                      } else if (selectedType == "bananas") {
-                                        unique = 3;
-                                      } else if (selectedType == "forest") {
-                                        unique = 4;
-                                      } else if (selectedType == "avocado") {
-                                        unique = 5;
-                                      } else if (selectedType == "beans") {
-                                        unique = 6;
-                                      } else if (selectedType == "cabbage") {
-                                        unique = 7;
-                                      } else if (selectedType == "capcicum") {
-                                        unique = 8;
-                                      } else if (selectedType == "coriander") {
-                                        unique = 9;
-                                      } else if (selectedType == "carrots") {
-                                        unique = 10;
-                                      } else if (selectedType ==
-                                          "green grams") {
-                                        unique = 11;
-                                      } else if (selectedType == "kales") {
-                                        unique = 12;
-                                      } else if (selectedType ==
-                                          "napier grass") {
-                                        unique = 13;
-                                      } else if (selectedType == "onions") {
-                                        unique = 14;
-                                      } else if (selectedType == "peas") {
-                                        unique = 15;
-                                      } else if (selectedType == "potatoes") {
-                                        unique = 16;
-                                      } else if (selectedType == "pumpkins") {
-                                        unique = 17;
-                                      } else if (selectedType == "spinach") {
-                                        unique = 18;
-                                      } else if (selectedType == "sorghum") {
-                                        unique = 19;
-                                      } else if (selectedType ==
-                                          "sweet-potatoes") {
-                                        unique = 20;
-                                      } else if (selectedType == "tomatoes") {
-                                        unique = 21;
-                                      } else if (selectedType == "tea") {
-                                        unique = 22;
-                                      } else if (selectedType == "wheat") {
-                                        unique = 23;
-                                      } else if (selectedType == "yams") {
-                                        unique = 24;
-                                      } else if (selectedType == "zucchini") {
-                                        unique = 25;
-                                      } else if (selectedType == "buildings") {
-                                        unique = 26;
-                                      } else if (selectedType ==
-                                          "barren-land") {
-                                        unique = 27;
-                                      } else if (selectedType == "bare-rock") {
-                                        unique = 28;
-                                      } else if (selectedType == "dams") {
-                                        unique = 29;
-                                      } else if (selectedType == "forest") {
-                                        unique = 30;
-                                      } else if (selectedType == "grassland") {
-                                        unique = 31;
-                                      } else if (selectedType == "road") {
-                                        unique = 32;
-                                      } else if (selectedType == "range-land") {
-                                        unique = 33;
-                                      } else if (selectedType == "swamps") {
-                                        unique = 34;
-                                      } else if (selectedType == "river") {
-                                        unique = 35;
-                                      } else if (selectedType == "shrubland") {
-                                        unique = 36;
-                                      } else if (selectedType ==
-                                          "cauliflower") {
-                                        unique = 37;
-                                      } else if (selectedType == "cucumber") {
-                                        unique = 38;
-                                      } else if (selectedType == "eggplant") {
-                                        unique = 39;
-                                      } else if (selectedType == "garlic") {
-                                        unique = 40;
-                                      } else if (selectedType == "lettuce") {
-                                        unique = 41;
+                                      switch (selectedType) {
+                                        case 'maize':
+                                          unique = 1;
+                                          break;
+                                        case 'coffee':
+                                          unique = 2;
+                                          break;
+                                        // } else if (selectedType == "coffee") {
+                                        //   unique = 2;
+                                        // } else if (selectedType == "bananas") {
+                                        //   unique = 3;
+                                        // } else if (selectedType == "forest") {
+                                        //   unique = 4;
+                                        // } else if (selectedType == "avocado") {
+                                        //   unique = 5;
+                                        // } else if (selectedType == "beans") {
+                                        //   unique = 6;
+                                        // } else if (selectedType == "cabbage") {
+                                        //   unique = 7;
+                                        // } else if (selectedType == "capcicum") {
+                                        //   unique = 8;
+                                        // } else if (selectedType == "coriander") {
+                                        //   unique = 9;
+                                        // } else if (selectedType == "carrots") {
+                                        //   unique = 10;
+                                        // } else if (selectedType ==
+                                        //     "green grams") {
+                                        //   unique = 11;
+                                        // } else if (selectedType == "kales") {
+                                        //   unique = 12;
+                                        // } else if (selectedType ==
+                                        //     "napier grass") {
+                                        //   unique = 13;
+                                        // } else if (selectedType == "onions") {
+                                        //   unique = 14;
+                                        // } else if (selectedType == "peas") {
+                                        //   unique = 15;
+                                        // } else if (selectedType == "potatoes") {
+                                        //   unique = 16;
+                                        // } else if (selectedType == "pumpkins") {
+                                        //   unique = 17;
+                                        // } else if (selectedType == "spinach") {
+                                        //   unique = 18;
+                                        // } else if (selectedType == "sorghum") {
+                                        //   unique = 19;
+                                        // } else if (selectedType ==
+                                        //     "sweet-potatoes") {
+                                        //   unique = 20;
+                                        // } else if (selectedType == "tomatoes") {
+                                        //   unique = 21;
+                                        // } else if (selectedType == "tea") {
+                                        //   unique = 22;
+                                        // } else if (selectedType == "wheat") {
+                                        //   unique = 23;
+                                        // } else if (selectedType == "yams") {
+                                        //   unique = 24;
+                                        // } else if (selectedType == "zucchini") {
+                                        //   unique = 25;
+                                        // } else if (selectedType == "buildings") {
+                                        //   unique = 26;
+                                        // } else if (selectedType ==
+                                        //     "barren-land") {
+                                        //   unique = 27;
+                                        // } else if (selectedType == "bare-rock") {
+                                        //   unique = 28;
+                                        // } else if (selectedType == "dams") {
+                                        //   unique = 29;
+                                        // } else if (selectedType == "forest") {
+                                        //   unique = 30;
+                                        // } else if (selectedType == "grassland") {
+                                        //   unique = 31;
+                                        // } else if (selectedType == "road") {
+                                        //   unique = 32;
+                                        // } else if (selectedType == "range-land") {
+                                        //   unique = 33;
+                                        // } else if (selectedType == "swamps") {
+                                        //   unique = 34;
+                                        // } else if (selectedType == "river") {
+                                        //   unique = 35;
+                                        // } else if (selectedType == "shrubland") {
+                                        //   unique = 36;
+                                        // } else if (selectedType ==
+                                        //     "cauliflower") {
+                                        //   unique = 37;
+                                        // } else if (selectedType == "cucumber") {
+                                        //   unique = 38;
+                                        // } else if (selectedType == "eggplant") {
+                                        //   unique = 39;
+                                        // } else if (selectedType == "garlic") {
+                                        //   unique = 40;
+                                        // } else if (selectedType == "lettuce") {
+                                        //   unique = 41;
+                                        // }
                                       }
                                       print(unique);
                                     });
