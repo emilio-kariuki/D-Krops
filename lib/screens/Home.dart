@@ -210,11 +210,9 @@ class _HomeState extends State<Home> {
     'tea',
     'wheat',
     'yams',
-    'zucchini',
     "------------",
     'buildings',
     'bare-land',
-    'rock',
     'dams',
     'forest',
     'grassland',
@@ -704,9 +702,7 @@ class _HomeState extends State<Home> {
                                         case 'yams':
                                           unique = 23;
                                           break;
-                                        case 'zucchini':
-                                          unique = 24;
-                                          break;
+                                      
                                         case 'buildings':
                                           unique = 25;
                                           break;
@@ -716,9 +712,7 @@ class _HomeState extends State<Home> {
                                         case 'dams':
                                           unique = 27;
                                           break;
-                                        case 'rock':
-                                          unique = 28;
-                                          break;
+                                       
                                         case 'forest':
                                           unique = 29;
                                           break;
