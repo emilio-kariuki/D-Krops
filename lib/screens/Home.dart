@@ -21,6 +21,7 @@ import 'package:location/location.dart' hide LocationAccuracy;
 import 'package:lottie/lottie.dart' hide Marker;
 import 'package:get/get.dart' hide FormData;
 import 'package:internet_popup/internet_popup.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -258,6 +259,22 @@ class _HomeState extends State<Home> {
           gravity: ToastGravity.TOP,
           timeInSecForIosWeb: 1,
           fontSize: 16.0);
+    }
+  }
+
+  void checkConnectivity() async {
+    var connectivityResult = await (Connectivity().checkConnectivity());
+    if (connectivityResult == ConnectivityResult.mobile) {
+      // I am connected to a mobile network.
+      Fluttertoast.showToast(
+          backgroundColor: Colors.red,
+          msg: "Connected to Mobile Network",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.TOP,
+          timeInSecForIosWeb: 1,
+          fontSize: 16.0);
+    } else if (connectivityResult == ConnectivityResult.wifi) {
+      // I am connected to a wifi network.
     }
   }
 
