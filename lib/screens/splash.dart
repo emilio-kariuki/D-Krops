@@ -66,9 +66,9 @@ class _SplashState extends State<Splash> {
 
   void location() async {
     BackgroundLocation.setAndroidNotification(
-      title: 'Background service is running',
+      title: 'D-krops',
       message: 'Background location in progress',
-      icon: 'asssets/images/logo.png',
+      icon: 'assets/images/logo.png',
     );
     //await BackgroundLocation.setAndroidConfiguration(1000);
     await BackgroundLocation.startLocationService(distanceFilter: 20);
