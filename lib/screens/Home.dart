@@ -632,6 +632,9 @@ class _HomeState extends State<Home> {
                                       print(selectedType);
                                       isActivated = true;
                                       switch (selectedType) {
+                                        case 'godget':
+                                          unique = 0;
+                                          break;
                                         case 'maize':
                                           unique = 1;
                                           break;
@@ -749,9 +752,7 @@ class _HomeState extends State<Home> {
                                         case 'lettuce':
                                           unique = 39;
                                           break;
-                                        case 'godget':
-                                          unique = 40;
-                                          break;
+                                        
                                       }
                                       print(unique);
                                     });
