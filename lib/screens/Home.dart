@@ -803,45 +803,45 @@ class _HomeState extends State<Home> {
                               ],
                             ),
                           ),
-                          // Padding(
-                          //   padding: const EdgeInsets.only(
-                          //       left: 20, bottom: 8, top: 5),
-                          //   child: Row(
-                          //     children: [
-                          //       LottieContain(
-                          //           lottieUrl: "assets/lottie/balls.json"),
-                          //       SizedBox(width: size.width * 0.06),
-                          //       Flexible(
-                          //         flex: 1,
-                          //         child: TextFormField(
-                          //           //keyboardType: TextInputType.multiline,
-                          //           // style: TextStyle(height:10),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                left: 20, bottom: 8, top: 5),
+                            child: Row(
+                              children: [
+                                LottieContain(
+                                    lottieUrl: "assets/lottie/balls.json"),
+                                SizedBox(width: size.width * 0.06),
+                                Flexible(
+                                  flex: 1,
+                                  child: TextFormField(
+                                    //keyboardType: TextInputType.multiline,
+                                    // style: TextStyle(height:10),
 
-                          //           decoration: InputDecoration(
-                          //               isDense: true,
-                          //               contentPadding:
-                          //                   EdgeInsets.fromLTRB(15, 20, 15, 15),
-                          //               // contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
-                          //               border: OutlineInputBorder(
-                          //                 borderRadius:
-                          //                     BorderRadius.circular(10.0),
-                          //               ),
-                          //               // icon: Icon(Icons.person,size:30,color: Colors.black),
-                          //               filled: true,
-                          //               hintStyle:
-                          //                   TextStyle(color: Colors.grey[800]),
-                          //               focusColor: Colors.red,
-                          //               hintText: "Identify",
-                          //               // suffixText: "10",
-                          //               // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
-                          //               fillColor: Colors.grey[200]),
-                          //           controller: variety,
-                          //         ),
-                          //       ),
-                          //       SizedBox(width: 15),
-                          //     ],
-                          //   ),
-                          // ),
+                                    decoration: InputDecoration(
+                                        isDense: true,
+                                        contentPadding:
+                                            EdgeInsets.fromLTRB(15, 20, 15, 15),
+                                        // contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
+                                        border: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        // icon: Icon(Icons.person,size:30,color: Colors.black),
+                                        filled: true,
+                                        hintStyle:
+                                            TextStyle(color: Colors.grey[800]),
+                                        focusColor: Colors.red,
+                                        hintText: "Identify",
+                                        // suffixText: "10",
+                                        // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
+                                        fillColor: Colors.grey[200]),
+                                    controller: variety,
+                                  ),
+                                ),
+                                SizedBox(width: 15),
+                              ],
+                            ),
+                          ),
                           Padding(
                             padding: const EdgeInsets.only(left: 5),
                             child: Row(
@@ -1486,7 +1486,7 @@ class _HomeState extends State<Home> {
       //the crop type choosen
       "type": selectedType,
       //the variety of the crop taken
-      // "variety": variety_1,
+      "variety": variety_1,
       //the height of the crop
       "height": height_1,
       //the plantation method
