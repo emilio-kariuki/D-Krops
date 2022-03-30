@@ -187,13 +187,13 @@ class _HomeState extends State<Home> {
     "beans",
     "cabbage",
     'capcicum',
-    'coriander',
     'cauliflower',
     'cucumber',
     "carrots",
     'coffee',
+    'dania',
+    'dengu',
     'eggplant',
-    "green grams",
     'garlic',
     "kales",
     'lettuce',
@@ -638,27 +638,32 @@ class _HomeState extends State<Home> {
                                         case 'coffee':
                                           unique = 2;
                                           break;
-                                        // } else if (selectedType == "coffee") {
-                                        //   unique = 2;
-                                        // } else if (selectedType == "bananas") {
-                                        //   unique = 3;
-                                        // } else if (selectedType == "forest") {
-                                        //   unique = 4;
-                                        // } else if (selectedType == "avocado") {
-                                        //   unique = 5;
-                                        // } else if (selectedType == "beans") {
-                                        //   unique = 6;
-                                        // } else if (selectedType == "cabbage") {
-                                        //   unique = 7;
-                                        // } else if (selectedType == "capcicum") {
-                                        //   unique = 8;
-                                        // } else if (selectedType == "coriander") {
-                                        //   unique = 9;
-                                        // } else if (selectedType == "carrots") {
-                                        //   unique = 10;
-                                        // } else if (selectedType ==
-                                        //     "green grams") {
-                                        //   unique = 11;
+                                          case 'bananas':
+                                          unique = 3;
+                                          break;
+                                          case 'avocado':
+                                          unique = 4;
+                                          break;
+                                          case 'beans':
+                                          unique = 5;
+                                          break;
+                                          case 'cabbage':
+                                          unique = 6;
+                                          break;
+                                          case 'capcicum':
+                                          unique = 7;
+                                          break;
+                                          case 'dania':
+                                          unique = 8;
+                                          break;
+                                          case 'carrots':
+                                          unique = 9;
+                                          break;
+                                          case 'dengu':
+                                          unique = 10;
+                                          break;
+                                        
+                                        
                                         // } else if (selectedType == "kales") {
                                         //   unique = 12;
                                         // } else if (selectedType ==
