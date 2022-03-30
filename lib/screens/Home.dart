@@ -193,7 +193,7 @@ class _HomeState extends State<Home> {
     'coffee',
     'dania',
     'dengu',
-    'eggplant',
+    'godget',
     'garlic',
     "kales",
     'lettuce',
@@ -211,7 +211,7 @@ class _HomeState extends State<Home> {
     'wheat',
     'yams',
     'zucchini',
-    " ",
+    "------------",
     'buildings',
     'bare-land',
     'rock',
@@ -752,9 +752,6 @@ class _HomeState extends State<Home> {
                                           case 'godget':
                                           unique = 40;
                                           break;
-                                    
-                                       
-                                       
                                       }
                                       
                                     });
