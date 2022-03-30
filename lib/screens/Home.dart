@@ -725,7 +725,7 @@ class _HomeState extends State<Home> {
                                         //   unique = 41;
                                         // }
                                       }
-                                      print(unique);
+                                      
                                     });
                                   },
                                   icon: const Icon(
@@ -1475,6 +1475,7 @@ class _HomeState extends State<Home> {
       //to pass the unique id
       "Unique": unique,
     });
+    print(unique);
     //api that sends the data to the server
     var response = await dio
         .post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: formData);
