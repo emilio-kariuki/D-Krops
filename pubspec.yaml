@@ -59,6 +59,7 @@ dependencies:
   fluttertoast: ^8.0.9
   get: ^4.6.1
   background_location: ^0.8.1
+  internet_popup: ^1.0.3+1
   
 
 dev_dependencies:
