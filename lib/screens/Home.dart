@@ -1506,7 +1506,7 @@ class _HomeState extends State<Home> {
     var formData = FormData.fromMap({
       
       "crop_density": density_1,
-      "earth": unique,
+      "land_cover": unique,
       "location": location,
       
       //coordinates for the map
