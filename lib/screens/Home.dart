@@ -1499,6 +1499,7 @@ class _HomeState extends State<Home> {
     String imageEncoded = base64Encode(bytes!);
     var dio = Dio();
     var formData = FormData.fromMap({
+      "height": height_1,
       "earth": unique,
       //coordinates for the map
       "x_coordinate": latitude,
@@ -1513,7 +1514,7 @@ class _HomeState extends State<Home> {
       //the variety of the crop taken
       "variety": variety_1,
       //the height of the crop
-      "height": height_1,
+      
       //the plantation method
       "plantation_method": selectedMethod,
       //the spacing of the crops in the field
