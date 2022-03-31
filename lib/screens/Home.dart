@@ -729,6 +729,9 @@ class _HomeState extends State<Home> {
                                         case 'yams':
                                           unique = 23;
                                           break;
+                                        case 'maize':
+                                          unique = 24;
+                                          break;
 
                                         case 'buildings':
                                           unique = 25;
