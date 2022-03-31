@@ -200,7 +200,7 @@ class _HomeState extends State<Home> {
     "kales",
     'lettuce',
     'maize',
-    'napier grass',
+    'napiergrass',
     "onions",
     "peas",
     "potatoes",
@@ -693,7 +693,7 @@ class _HomeState extends State<Home> {
                                         case 'kales':
                                           unique = 11;
                                           break;
-                                        case 'napier grass':
+                                        case 'napiergrass':
                                           unique = 12;
                                           break;
                                         case 'onions':
