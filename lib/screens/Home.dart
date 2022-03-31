@@ -1499,8 +1499,9 @@ class _HomeState extends State<Home> {
     String imageEncoded = base64Encode(bytes!);
     var dio = Dio();
     var formData = FormData.fromMap({
-      "height": height_1,
+      
       "earth": unique,
+      "height": height_1,
       //coordinates for the map
       "x_coordinate": latitude,
       "y_coordinate": longitude,
