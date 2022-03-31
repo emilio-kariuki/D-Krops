@@ -1501,7 +1501,7 @@ class _HomeState extends State<Home> {
     var formData = FormData.fromMap({
       
       "earth": unique,
-      "height": height_1,
+      // "height": height_1,
       //coordinates for the map
       "x_coordinate": latitude,
       "y_coordinate": longitude,
