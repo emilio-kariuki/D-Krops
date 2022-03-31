@@ -54,6 +54,10 @@ class _HomeState extends State<Home> {
   Location location = Location();
   double? unique;
   double? density;
+  // double? row_2;
+  // double? column_2;
+  // var row_2 = double.parse(row.text);
+  // var column_2 = double.parse(column.text);
 
   // LatLng ltPosition = LatLng(latitude!, longitude!);
   //function to get the current location of the user
@@ -1260,6 +1264,9 @@ class _HomeState extends State<Home> {
                                               today = value;
                                               today = DateFormat.yMMM()
                                                   .format(today!) as DateTime?;
+                                              // row_2 = double.parse(row.text);
+                                              // column_2 =
+                                              //     double.parse(column.text);
                                             });
                                           });
                                         });
@@ -1495,10 +1502,9 @@ class _HomeState extends State<Home> {
     final DateFormat formatter = DateFormat('yyyy-MM-dd');
     final String formatted = formatter.format(today!);
     final String date_1 = today.toString();
-    final double row_2 = double.parse(row.text);
-    final double column_2 = double.parse(column.text);
-    final double density_1 = row_2 * column_2;
-    print(density_1);
+
+    // final double density_1 = row_2! * column_2!;
+    // print(density_1);
 
     final bytes = image?.readAsBytesSync();
     String imageEncoded = base64Encode(bytes!);
