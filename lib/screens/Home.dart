@@ -1511,7 +1511,7 @@ class _HomeState extends State<Home> {
     var dio = Dio();
     var formData = FormData.fromMap({
       "earth": unique,
-      // "height": height_1,
+      "location": height_1,
       //coordinates for the map
       "x_coordinate": latitude,
       "y_coordinate": longitude,
