@@ -1510,8 +1510,10 @@ class _HomeState extends State<Home> {
     String imageEncoded = base64Encode(bytes!);
     var dio = Dio();
     var formData = FormData.fromMap({
-      "earth": unique,
+      "density": double.parse(row.text) * double.parse(column.text),
       "location": location,
+      "earth": unique,
+      
       //coordinates for the map
       "x_coordinate": latitude,
       "y_coordinate": longitude,
