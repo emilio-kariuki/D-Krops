@@ -1113,7 +1113,7 @@ class _HomeState extends State<Home> {
                                   child: TextFormField(
                                     // focusNode:FocusManager.instance.primaryFocus!.unfocus(),
 
-                                    //keyboardType: TextInputType.number,
+                                    keyboardType: TextInputType.text,
                                     inputFormatters: <TextInputFormatter>[
                                       FilteringTextInputFormatter.digitsOnly
                                     ], //
