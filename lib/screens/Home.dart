@@ -1497,7 +1497,7 @@ class _HomeState extends State<Home> {
     final String formatted = formatter.format(today!);
     final String date_1 = today.toString();
 
-    // final double density_1 = row_2! * column_2!;
+    final double density_1 = double.parse(row.text) * double.parse(column.text);
     // print(density_1);
 
     final bytes = image?.readAsBytesSync();
@@ -1506,9 +1506,8 @@ class _HomeState extends State<Home> {
     var formData = FormData.fromMap({
       
       "location": location,
-      "density": double.parse(row.text) * double.parse(column.text),
+      "density": density_1,
       "earth": unique,
-      
       //coordinates for the map
       "x_coordinate": latitude,
       "y_coordinate": longitude,
