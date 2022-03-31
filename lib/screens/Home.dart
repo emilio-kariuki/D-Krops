@@ -1498,7 +1498,7 @@ class _HomeState extends State<Home> {
     final String variety_1 = variety.text;
     final String row_1 = row.text;
     final String column_1 = column.text;
-    final String height_1 = heights.text;
+    final String location = heights.text;
     final DateFormat formatter = DateFormat('yyyy-MM-dd');
     final String formatted = formatter.format(today!);
     final String date_1 = today.toString();
@@ -1511,7 +1511,7 @@ class _HomeState extends State<Home> {
     var dio = Dio();
     var formData = FormData.fromMap({
       "earth": unique,
-      "location": height_1,
+      "location": location,
       //coordinates for the map
       "x_coordinate": latitude,
       "y_coordinate": longitude,
