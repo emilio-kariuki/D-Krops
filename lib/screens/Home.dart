@@ -184,7 +184,6 @@ class _HomeState extends State<Home> {
   );
   List<String> items = [
     'arrow-roots',
-    'avocado',
     'bananas',
     "beans",
     "cabbage",
@@ -669,9 +668,7 @@ class _HomeState extends State<Home> {
                                         case 'bananas':
                                           unique = 3;
                                           break;
-                                        case 'avocado':
-                                          unique = 4;
-                                          break;
+                                        
                                         case 'beans':
                                           unique = 5;
                                           break;
