@@ -1109,7 +1109,7 @@ class _HomeState extends State<Home> {
                                   child: TextFormField(
                                     // focusNode:FocusManager.instance.primaryFocus!.unfocus(),
 
-                                    keyboardType: TextInputType.number,
+                                    //keyboardType: TextInputType.text,
                                     inputFormatters: <TextInputFormatter>[
                                       FilteringTextInputFormatter.digitsOnly
                                     ], //
@@ -1130,7 +1130,7 @@ class _HomeState extends State<Home> {
                                         hintStyle:
                                             TextStyle(color: Colors.grey[800]),
                                         focusColor: Colors.red,
-                                        hintText: "Height",
+                                        hintText: "place",
                                         // suffixText: "10",
                                         // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
                                         fillColor: Colors.grey[200]),
@@ -1472,7 +1472,7 @@ class _HomeState extends State<Home> {
                                   loading = false;
                                 });
                                 selectedType = null;
-                                selectedMethod = null;
+                                //selectedMethod = null;
                               }
                             },
                           ),
