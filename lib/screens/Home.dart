@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
   DateTime? today;
   DateTime? plantation;
 
-  final places = TextEditingController();
+  final heights = TextEditingController();
   final variety = TextEditingController();
   final row = TextEditingController();
   final column = TextEditingController();
@@ -1134,7 +1134,7 @@ class _HomeState extends State<Home> {
                                         // suffixText: "10",
                                         // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
                                         fillColor: Colors.grey[200]),
-                                    controller: places,
+                                    controller: heights,
                                   ),
                                 ),
                                 SizedBox(width: 15),
@@ -1491,7 +1491,7 @@ class _HomeState extends State<Home> {
     final String variety_1 = variety.text;
     final String row_1 = row.text;
     final String column_1 = column.text;
-    final String place = places.text;
+    final String height_1 = heights.text;
     final DateFormat formatter = DateFormat('yyyy-MM-dd');
     final String formatted = formatter.format(today!);
     final String date_1 = today.toString();
@@ -1514,7 +1514,7 @@ class _HomeState extends State<Home> {
       //the variety of the crop taken
       "variety": variety_1,
       //the height of the crop
-      "height": place,
+      "height": height_1,
       //the plantation method
       "plantation_method": selectedMethod,
       //the spacing of the crops in the field
