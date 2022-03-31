@@ -53,6 +53,7 @@ class _HomeState extends State<Home> {
   double? long;
   Location location = Location();
   double? unique;
+  double? density;
 
   // LatLng ltPosition = LatLng(latitude!, longitude!);
   //function to get the current location of the user
@@ -668,7 +669,7 @@ class _HomeState extends State<Home> {
                                         case 'bananas':
                                           unique = 3;
                                           break;
-                                        
+
                                         case 'beans':
                                           unique = 5;
                                           break;
@@ -1494,12 +1495,15 @@ class _HomeState extends State<Home> {
     final DateFormat formatter = DateFormat('yyyy-MM-dd');
     final String formatted = formatter.format(today!);
     final String date_1 = today.toString();
+    final double row_2 = double.parse(row.text);
+    final double column_2 = double.parse(column.text);
+    final double density_1 = row_2 * column_2;
+    print(density_1);
 
     final bytes = image?.readAsBytesSync();
     String imageEncoded = base64Encode(bytes!);
     var dio = Dio();
     var formData = FormData.fromMap({
-      
       "earth": unique,
       // "height": height_1,
       //coordinates for the map
@@ -1515,7 +1519,7 @@ class _HomeState extends State<Home> {
       //the variety of the crop taken
       "variety": variety_1,
       //the height of the crop
-      
+
       //the plantation method
       "plantation_method": selectedMethod,
       //the spacing of the crops in the field
