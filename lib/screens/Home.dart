@@ -1504,20 +1504,21 @@ class _HomeState extends State<Home> {
     String imageEncoded = base64Encode(bytes!);
     var dio = Dio();
     var formData = FormData.fromMap({
-      "variety": variety_1,
-      "crop_density": density_1,
-      "land_cover": unique,
-      "location": location,
+      
+      "image": imageEncoded,
       "x_coordinate": latitude,
       "y_coordinate": longitude,
       "latitude": latitude,
       "longitude": longitude,
-      "image": imageEncoded,
       "type": selectedType,
+      "location": location,
+      "crop_density": density_1,
       "plantation_method": selectedMethod,
       "row": row_1,
       "column": column_1,
       "date_of_plantation": formatted,
+      "variety": variety_1,
+      "land_cover": unique,
     });
     print(unique);
     print(double.parse(row.text) * double.parse(column.text));
