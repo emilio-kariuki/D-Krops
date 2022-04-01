@@ -1520,12 +1520,24 @@ class _HomeState extends State<Home> {
       "variety": variety_1,
       "land_cover": unique,
     });
+    print(imageEncoded);
+    print(latitude);
+    print(longitude);
+    print(selectedType);
+    print(location);
+    print(density_1);
+    print(selectedMethod);
+    print(row_1);
+    print(column_1);
+    print(formatted);
+    print(variety_1);
     print(unique);
+    
     print(double.parse(row.text) * double.parse(column.text));
     //api that sends the data to the server
-    var response = await dio
-        .post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: formData);
-    print(response);
+    // var response = await dio
+    //     .post('https://iggresapps.dkut.ac.ke/crop_mapping.php', data: formData);
+    // print(response);
     getLocation();
     loading = false;
   }
