@@ -673,7 +673,6 @@ class _HomeState extends State<Home> {
                                         case 'bananas':
                                           unique = 3;
                                           break;
-
                                         case 'beans':
                                           unique = 5;
                                           break;
