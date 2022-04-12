@@ -1128,7 +1128,7 @@ class _HomeState extends State<Home> {
                                         hintStyle:
                                             TextStyle(color: Colors.grey[800]),
                                         focusColor: Colors.red,
-                                        hintText: "Identify",
+                                        hintText: "Enter project Name",
                                         // suffixText: "10",
                                         // prefixIcon: Icon(Icons.mail,color: Colors.blueGrey[900]),
                                         fillColor: Colors.grey[200]),
