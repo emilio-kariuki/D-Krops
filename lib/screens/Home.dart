@@ -1517,8 +1517,6 @@ class _HomeState extends State<Home> {
       "type": selectedType,
       "date_of_plantation": formatted,
       "land_cover": unique,
-      
-      
     });
     print(imageEncoded);
     print(latitude);
