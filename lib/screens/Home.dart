@@ -673,6 +673,9 @@ class _HomeState extends State<Home> {
                                         case 'bananas':
                                           unique = 3;
                                           break;
+                                          case 'lettuce':
+                                          unique = 4;
+                                          break;
                                         case 'beans':
                                           unique = 5;
                                           break;
@@ -773,9 +776,7 @@ class _HomeState extends State<Home> {
                                         case 'garlic':
                                           unique = 38;
                                           break;
-                                        case 'lettuce':
-                                          unique = 39;
-                                          break;
+                                        
                                       }
                                       print(unique);
                                     });
