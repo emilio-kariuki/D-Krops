@@ -54,8 +54,8 @@ android {
         applicationId "com.space.mapping"
         minSdkVersion 21
         targetSdkVersion 31
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
+        versionCode 1
+        versionName "1.0"
     }
 
 
