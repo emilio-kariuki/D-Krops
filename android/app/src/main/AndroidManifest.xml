@@ -10,6 +10,7 @@
         android:allowBackup="false"
         android:label="D-krops"
         android:name="${applicationName}"
+        android:extractNativeLibs="true"
         android:icon="@mipmap/ic_launcher">
         <meta-data android:name="com.google.android.geo.API_KEY"
                android:value="AIzaSyCNQGEtMQ1uOXohcwZ2QOjlVSVMBHw9foQ"/>
