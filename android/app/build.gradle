@@ -59,7 +59,7 @@ android {
     }
 
 
-       signingConfigs {
+          signingConfigs {
        release {
            keyAlias keystoreProperties['keyAlias']
            keyPassword keystoreProperties['keyPassword']
@@ -69,12 +69,10 @@ android {
    }
    buildTypes {
        release {
-           shrinkResources false
-            minifyEnabled true
-            useProguard true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+           signingConfig signingConfigs.release
        }
    }
+
 
 
 
