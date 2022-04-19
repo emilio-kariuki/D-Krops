@@ -333,10 +333,6 @@ class _HomeState extends State<Home> {
                   height: size.height * 0.07,
                   width: size.width,
                   decoration: BoxDecoration(
-                    // // border: Border(bottom: BorderSide(color: Colors.blueGrey![800])),
-                    // borderRadius: BorderRadius.only(
-                    //     bottomLeft: Radius.circular(20),
-                    //     bottomRight: Radius.circular(20)),
                     color: Color.fromARGB(255, 14, 14, 20),
                     shape: BoxShape.rectangle,
                   ),
@@ -346,19 +342,7 @@ class _HomeState extends State<Home> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          // Padding(
-                          //   padding: const EdgeInsets.only(
-                          //       left: 18, bottom: 8, top: 8),
-                          //   child: GestureDetector(
-                          //     onTap: () => Navigator.pop(context),
-                          //     child: BuildBar(
-                          //       iconUrl: "assets/lottie/backward.json",
-                          //       func: () {
-                          //         Navigator.pop(context);
-                          //       },
-                          //     ),
-                          //   ),
-                          // ),
+                          
 
                           Center(
                             child: Column(
