@@ -14,7 +14,6 @@
 **Technologies Used in the Project**
  1. Flutter 3.3.1
  2. Dart
- 3. PHP
 
 
 ## Documentation
